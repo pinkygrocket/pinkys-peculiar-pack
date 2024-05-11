@@ -23,6 +23,7 @@ fancymenu_data/
 local/
 map_atlases/
 modernfix/
+resourcepacks/
 server-resource-packs/
 shaderpacks/
 screenshots/
@@ -36,3 +37,14 @@ TrashSlotSaveState.json
 icon.png
 servers.dat
 servers.dat_old
+rhino.local.properties
+options.txt
+
+# Readme files, example files
+
+README.md
+README.txt
+scripts/examples/
+example.js
+example_block.png
+example_item.png
