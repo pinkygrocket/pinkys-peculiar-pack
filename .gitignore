@@ -1,0 +1,38 @@
+# Log files
+
+*.log
+*.log.gz
+
+crash-reports/
+ct_dumps/
+log/
+
+# Mod files
+
+*.jar
+
+.mixin.out/
+coremods/
+mods/
+
+# User data
+
+ESM/
+exposures/
+fancymenu_data/
+local/
+map_atlases/
+modernfix/
+server-resource-packs/
+shaderpacks/
+screenshots/
+simplebackups/
+saves/
+
+usercache.json
+usernamecache.json
+TrashSlotSaveState.json
+
+icon.png
+servers.dat
+servers.dat_old
