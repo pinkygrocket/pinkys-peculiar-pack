@@ -1,0 +1,24 @@
+#Make cicadas silent for those having sound library problems, or otherwise finding them annoying.
+silentCicadas = false
+#Make cicadas silent when sitting on your head. If the above option is already true, this won't have any effect.
+silentCicadasOnHead = false
+#Controls whether various effects from the mod are rendered while in first-person view. Turn this off if you find them distracting.
+firstPersonEffects = true
+#Rotate trophy heads on item model. Has no performance impact at all. For those who don't like fun.
+rotateTrophyHeadsGui = true
+#Disable the nag screen when Optifine is installed.
+disableOptifineNagScreen = false
+#Disables the toasts that appear when a biome is locked. Not recommended if you're not familiar with progression.
+disableLockedBiomeToasts = false
+#Renders a little check mark or x above your crosshair depending on if fed the Quest Ram that color of wool. Turn this off if you find it intrusive.
+questRamWoolIndicator = true
+#Renders precipitation underneath cloud blocks. -1 sets it to be synced with the common config.
+#Set this to a lower number if you're experiencing poor performance, or set it to 0 if you wish to turn it off
+#Range: > -1
+cloudBlockPrecipitationDistance = -1
+#List of player UUIDs whose skins the giants of Twilight Forest should use.
+#If left empty, the giants will appear the same as the player viewing them does.
+giantSkinUUIDs = ["8eb57c51-5df2-4ad7-9a07-01d67d1e0a41", "853c80ef-3c37-49fd-aa49-938b674adae6", "9c2ac958-5de9-45a8-8ca1-4122eb4c0b9e", "6a085b2c-19fb-4986-b453-231aa942bbec", "13655ac1-584d-4785-b227-650308195121", "0347bd5f-4dfb-4ad5-a433-3f4cd395b435"]
+#Defines which biomes the aurora shader effect will appear in. Leave the list empty to disable the effect.
+auroraBiomes = ["twilightforest:glacier"]
+

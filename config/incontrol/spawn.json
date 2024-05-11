@@ -1,0 +1,47 @@
+[
+	{
+		"block" : "twilightforest:weathered_deadrock",
+		"when": "onjoin",
+		"result" : "deny"
+	},
+	{
+		"mob" : "weeping_angels:weeping_angel",
+		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
+		"seesky" : false,
+		"maxlight_full": 8,
+		"when": "onjoin",
+		"result": "allow"
+	},
+	{
+		"mob": "observed:observer",
+		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
+		"seesky" : false,
+		"maxlight_full": 8,
+		"when": "onjoin",
+		"result" : "allow"
+	},
+	{
+		"mob": "eyesinthedarkness:eyes",
+		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"when": "onjoin",
+		"result" : "allow"
+	},
+	{
+		"mob": "distantfriends:friend",
+		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
+		"when": "onjoin",
+		"result" : "allow"
+	},
+	{
+		"mob": "cataclysm:flame_strike",
+		"result": "allow"
+	},
+	{
+		"mod": ["cataclysm", "observed", "weeping_angels", "eyesinthedarkness", "distantfriends"],
+		"when": "onjoin",
+		"result": "deny"
+	}
+]

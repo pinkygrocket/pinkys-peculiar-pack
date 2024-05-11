@@ -1,0 +1,90 @@
+[
+	{
+		"mob": "weeping_angels:weeping_angel",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 1,
+			"maximum": 1,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inwater": false,
+			"inair": false,
+			"inlava" : false,
+			"maxthis": 20,
+			"mindist" : 20,
+			"maxdist" : 120,
+			"minheight": 100,
+			"maxheight": 200
+		}
+	},
+	{
+		"mob": "observed:observer",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 1,
+			"maximum": 1,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inwater": false,
+			"inair": false,
+			"inlava" : false,
+			"maxthis": 20,
+			"mindist" : 20,
+			"maxdist" : 120,
+			"minheight": 100,
+			"maxheight": 200
+		}
+	},
+	{
+		"mob": "distantfriends:friend",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 1,
+			"maximum": 1,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inwater": false,
+			"inair": false,
+			"inlava" : false,
+			"maxthis": 10,
+			"mindist" : 20,
+			"maxdist" : 120,
+			"minheight": 100,
+			"maxheight": 200
+		}
+	},
+	{
+		"mob": "eyesinthedarkness:eyes",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 2,
+			"maximum": 4,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inair": true,
+			"inlava" : false,
+			"inwater": false,
+			"maxthis": 50,
+			"mindist" : 10,
+			"maxdist" : 120,
+			"minheight": 100,
+			"maxheight": 200
+		}
+	}
+]

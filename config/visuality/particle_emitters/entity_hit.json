@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "min_amount": 1,
+  "max_amount": 20,
+  "entries": [
+    {
+      "entity": "minecraft:wither_skeleton",
+      "particle": {
+        "type": "visuality:wither_bone"
+      }
+    },
+    {
+      "entity": [
+        "minecraft:villager",
+        "minecraft:wandering_trader"
+      ],
+      "particle": {
+        "type": "visuality:emerald"
+      }
+    }
+  ]
+}

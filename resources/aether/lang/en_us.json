@@ -1,0 +1,10 @@
+{
+	"aether.jei.hint.ice_pendant" : "A magic pendant that freezes water and lava walked on when worn.",
+	"aether.jei.hint.ice_ring" : "A magic ring that freezes water and lava walked on when worn.",
+	"aether.jei.hint.gold_ring" : "A decorative accessory that can be used to craft Ice Rings.",
+	"aether.jei.hint.iron_ring" : "A decorative accessory that can be used to craft Ice Rings.",
+	"aether.jei.hint.gold_pendant" : "A decorative accessory that can be used to craft Ice Pendants.",
+	"aether.jei.hint.iron_pendant" : "A decorative accessory that can be used to craft Ice Pendants.",
+	"aether.jei.hint.regeneration_stone" : "A magical stone that regenerates health passively when equipped. This effect stacks with other Regeneration Stones.",
+	"aether.jei.hint.iron_bubble" : "A magical trinket that allows the wearer to breathe underwater indefintely."
+}

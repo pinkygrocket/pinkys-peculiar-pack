@@ -1,0 +1,8 @@
+{
+	"chimes.jei.hint.carved_bamboo_chimes" : "A wind chime that produces a gentle chime. Repels Phantoms within a 25-block radius when active. Shift-right click with an empty hand to tie/untie.",
+	"chimes.jei.hint.bamboo_chimes" : "A wind chime that produces a gentle chime. Repels Phantoms within a 25-block radius when active. Shift-right click with an empty hand to tie/untie.",
+	"chimes.jei.hint.iron_chimes" : "A wind chime that produces a gentle chime. Repels Phantoms within a 25-block radius when active. Shift-right click with an empty hand to tie/untie.",
+	"chimes.jei.hint.copper_chimes" : "A wind chime that produces a gentle chime. Repels Phantoms within a 25-block radius when active. Shift-right click with an empty hand to tie/untie.",
+	"chimes.jei.hint.glass_bells" : "A wind chime that produces a gentle chime. Repels Phantoms within a 25-block radius. Cannot be tied/untied. Can be dyed by placing dye above or below it in a crafting interface.",
+	"chimes.jei.hint.amethyst_chimes" : "A wind chime that produces a gentle chime and light. Repels Phantoms within a 25-block radius when active. Shift-right click with an empty hand to tie/untie."
+}
