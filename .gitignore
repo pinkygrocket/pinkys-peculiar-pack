@@ -33,6 +33,8 @@ saves/
 usercache.json
 usernamecache.json
 TrashSlotSaveState.json
+bookmarks.ini
+bookmark.ini
 
 icon.png
 servers.dat
