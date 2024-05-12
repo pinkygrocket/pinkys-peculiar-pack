@@ -41,6 +41,107 @@
       "particle": {
         "type": "visuality:soul"
       }
-    }
+    },
+	{
+		"block": [
+			"aether:cold_aercloud",
+			"twilightforest:fluffy_cloud",
+			"twilightforest:rainy_cloud",
+			"twilightforest:snowy_cloud",
+			"twilightforest:wispy_cloud"
+		],
+		"particle": {
+			"type": "minecraft:poof"
+		}
+	},
+	{
+		"block": [
+			"minecraft:gold_ore",
+			"minecraft:deepslate_gold_ore",
+			"minecraft:nether_gold_ore",
+			"minecraft:raw_gold_block",
+			"supplementaries:gold_door",
+			"supplementaries:gold_trapdoor",
+			"quark:raw_gold_bricks",
+			"quark:raw_gold_bricks_stairs",
+			"quark:raw_gold_bricks_slab",
+			"quark:golden_carrot_crate",
+			"quark:gold_bars",
+			"cratedelight:golden_apple_crate",
+			"minecraft:gold_block",
+			"minecraft:gilded_blackstone",
+			"minecraft:bell",
+			"quark:gold_button",
+			"minecraft:light_weighted_pressure_plate"
+		],
+		"particle": {
+			"type" : "visuality:sparkle",
+			"value" : [
+				0.99607843,
+				1.0,
+				0.7411765
+			]
+		}
+	},
+	{
+		"block": [
+			"twilightforest:pink_force_field",
+			"twilightforest:orange_force_field",
+			"twilightforest:blue_force_field",
+			"twilightforest:green_force_field",
+			"twilightforest:violet_force_field"
+		],
+		"particle": {
+			"type": "minecraft:enchant"
+		}
+	},
+	{
+		"block": [
+			"twilightforest:fiery_block"
+		],
+		"particle" : {
+			"type": "minecraft:flame"
+		}
+	},
+	{
+		"block": [
+			"tflostblocks:cracked_castle_brick_wall",
+			"tflostblocks:mossy_castle_brick_wall",
+			"tflostblocks:encased_castle_brick_wall",
+			"tflostblocks:bold_castle_brick_wall",
+			"v_slab_compat:tflostblocks/castle_brick_tile_vertical_slab",
+			"twilightforest:castle_brick",
+			"twilightforest:worn_castle_brick",
+			"twilightforest:cracked_castle_brick",
+			"twilightforest:mossy_castle_brick",
+			"twilightforest:thick_castle_brick",
+			"twilightforest:encased_castle_brick_pillar",
+			"twilightforest:encased_castle_brick_tile",
+			"twilightforest:bold_castle_brick_pillar",
+			"twilightforest:bold_castle_brick_tile",
+			"twilightforest:castle_brick_stairs",
+			"twilightforest:worn_castle_brick_stairs",
+			"twilightforest:cracked_castle_brick_stairs",
+			"twilightforest:mossy_castle_brick_stairs",
+			"twilightforest:encased_castle_brick_stairs",
+			"twilightforest:bold_castle_brick_stairs",
+			"tflostblocks:castle_brick_tiles",
+			"tflostblocks:castle_brick_tile_stairs",
+			"tflostblocks:castle_brick_slab",
+			"tflostblocks:castle_brick_tile_slab",
+			"tflostblocks:worn_castle_brick_slab",
+			"tflostblocks:cracked_castle_brick_slab",
+			"tflostblocks:mossy_castle_brick_slab",
+			"tflostblocks:encased_castle_brick_slab",
+			"tflostblocks:bold_castle_brick_slab",
+			"tflostblocks:castle_brick_wall",
+			"tflostblocks:castle_brick_tile_wall",
+			"tflostblocks:worn_castle_brick_wall"
+		],
+		"direction": "up",
+		"particle" : {
+			"type": "minecraft:mycelium"
+		}
+	}
   ]
 }

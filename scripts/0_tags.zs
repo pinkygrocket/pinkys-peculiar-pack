@@ -13,7 +13,6 @@ import stdlib.List;
 
 val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
-	<tag:items:curios:hands> : [ <item:kubejs:atlas> ],
 	<tag:items:farmersdelight:serving_containers>: [<item:ecologics:coconut_husk>],
 	<tag:items:crafttweaker:maps> : [ <item:minecraft:map>, <item:minecraft:filled_map>],
 	<tag:items:crafttweaker:adhesives> : [<item:minecraft:slime_ball>, <item:minecraft:honey_bottle>, <item:aether:swet_ball>],
