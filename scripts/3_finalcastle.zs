@@ -38,6 +38,8 @@ val ANGEL_BIOMES as string[] = [
 
 /* Events */
 
+// Kill Weeping Angels if they manage to escape/leave the Thornlands & Final Plateu 
+
 events.register<crafttweaker.forge.api.event.tick.PlayerTickEvent>(event => {
 	
 	val player = event.player;

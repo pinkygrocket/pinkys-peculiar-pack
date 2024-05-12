@@ -1,21 +1,25 @@
 [
 	{
+		"mob": "cataclysm:flame_strike",
+		"result": "allow"
+	},
+	{
 		"block" : "twilightforest:weathered_deadrock",
 		"when": "onjoin",
 		"result" : "deny"
 	},
 	{
 		"mob" : "weeping_angels:weeping_angel",
-		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"seesky" : false,
-		"maxlight_full": 8,
+		"maxlight_full": 3,
 		"when": "onjoin",
 		"result": "allow"
 	},
 	{
 		"mob": "observed:observer",
-		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"seesky" : false,
 		"maxlight_full": 8,
@@ -24,24 +28,30 @@
 	},
 	{
 		"mob": "eyesinthedarkness:eyes",
-		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
 		"mob": "distantfriends:friend",
-		"biome" : ["twilightforest:final_plateau", "twilight_forest:thornlands"],
+		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
-		"mob": "cataclysm:flame_strike",
-		"result": "allow"
+		"mob": "babyfat:ranchu",
+		"dimension" : "twilightforest:twilight_forest",
+		"block": "minecraft:water",
+		"when": "onjoin",
+		"result" : "allow"
 	},
 	{
 		"mod": ["cataclysm", "observed", "weeping_angels", "eyesinthedarkness", "distantfriends"],
-		"when": "onjoin",
+		"result": "deny"
+	},
+	{
+		"mod": "babyfat",
 		"result": "deny"
 	}
 ]

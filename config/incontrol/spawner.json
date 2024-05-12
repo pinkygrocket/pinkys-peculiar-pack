@@ -86,5 +86,27 @@
 			"minheight": 100,
 			"maxheight": 200
 		}
+	},
+	{
+		"mob": "babyfat:ranchu",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 2,
+			"maximum": 4,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inair": false,
+			"inlava" : false,
+			"inwater": true,
+			"maxthis": 40,
+			"mindist" : 5,
+			"maxdist" : 120,
+			"minheight": -64,
+			"maxheight": 0
+		}
 	}
 ]

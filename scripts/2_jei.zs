@@ -26,7 +26,9 @@ val itemsWithHints as string[IItemStack] = {
 	<item:aether:iron_pendant> : game.localize("aether.jei.hint.iron_pendant"),
 	<item:aether:regeneration_stone> : game.localize("aether.jei.hint.regeneration_stone"),
 	<item:aether:iron_bubble> : game.localize("aether.jei.hint.iron_bubble"),
-	<item:weeping_angels:angel_spawner> : game.localize("weeping_angels.jei.hint.weeping_angel")
+	<item:weeping_angels:angel_spawner> : game.localize("weeping_angels.jei.hint.weeping_angel"),
+	<item:babyfat:ranchu_bucket> : game.localize("babyfat.jei.hint.ranchu"),
+	<item:babyfat:ranchu_spawn_egg> : game.localize("babyfat.jei.hint.ranchu")
 };
 
 for hintItem, hintText in itemsWithHints {
