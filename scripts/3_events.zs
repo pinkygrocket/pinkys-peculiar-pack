@@ -10,15 +10,12 @@ import crafttweaker.api.world.ServerLevel;
 import crafttweaker.api.entity.Entity;
 import crafttweaker.api.entity.EntityType;
 import crafttweaker.api.entity.LivingEntity;
-import crafttweaker.api.entity.type.player.Player;
 
 import crafttweaker.forge.api.event.Event;
 import crafttweaker.forge.api.event.entity.EntityEvent;
 import crafttweaker.forge.api.event.entity.living.LivingEvent;
 import crafttweaker.forge.api.event.entity.player.PlayerEvent;
 import crafttweaker.forge.api.event.entity.EntityJoinLevelEvent;
-import crafttweaker.forge.api.interact.PlayerInteractEvent;
-import crafttweaker.forge.api.event.interact.EntityInteractEvent;
 
 import crafttweaker.api.resource.ResourceLocation;
 

@@ -45,49 +45,45 @@ events.register<crafttweaker.forge.api.event.tick.PlayerTickEvent>(event => {
 	val player = event.player;
 	val level = player.level;
 	
-	if level.isClientSide {
-        // Since it is the client, we are just going to do nothing and return.
-        return;
-    }
+	if !level.isClientSide {
 	
-	val entitiesToCheck = level.getEntitiesOfClass<Entity>((player.x - ENTITY_CHECK_RADIUS), (player.y - ENTITY_CHECK_RADIUS), (player.z - ENTITY_CHECK_RADIUS), (player.x + ENTITY_CHECK_RADIUS), (player.y + ENTITY_CHECK_RADIUS), (player.z + ENTITY_CHECK_RADIUS)) as stdlib.List<Entity>; // Generate a list of entites surrounding the player in a box with a radius of ENTITY_CHECK_RADIUS, centered on the player
+        val entitiesToCheck = level.getEntitiesOfClass<Entity>((player.x - ENTITY_CHECK_RADIUS), (player.y - ENTITY_CHECK_RADIUS), (player.z - ENTITY_CHECK_RADIUS), (player.x + ENTITY_CHECK_RADIUS), (player.y + ENTITY_CHECK_RADIUS), (player.z + ENTITY_CHECK_RADIUS)) as stdlib.List<Entity>; // Generate a list of entites surrounding the player in a box with a radius of ENTITY_CHECK_RADIUS, centered on the player
 		
-	for entity in entitiesToCheck { 
-			
-		val entityBiome = level.getBiome(new BlockPos(entity.x as int, entity.y as int, entity.z as int)).registryName.toString();
-		val entityTypeName = entity.type.registryName.toString();
-		
-		var isOutOfBounds as bool = true;
-		var isTargetedType as bool = false;
-		
-		for biomeToCheckFor in ANGEL_BIOMES {
-			
-			if (biomeToCheckFor == entityBiome) {
+		for entity in entitiesToCheck { 
 				
-				isOutOfBounds = false;
+			val entityBiome = level.getBiome(new BlockPos(entity.x as int, entity.y as int, entity.z as int)).registryName.toString();
+			val entityTypeName = entity.type.registryName.toString();
+			
+			var isOutOfBounds as bool = true;
+			var isTargetedType as bool = false;
+			
+			for biomeToCheckFor in ANGEL_BIOMES {
+				
+				if (biomeToCheckFor == entityBiome) {
+					
+					isOutOfBounds = false;
+					
+				}
 				
 			}
 			
-		}
-		
-		for typeToCheckFor in ANGEL_TYPES {
-			
-			if (typeToCheckFor == entityTypeName) {
+			for typeToCheckFor in ANGEL_TYPES {
 				
-				isTargetedType = true;
+				if (typeToCheckFor == entityTypeName) {
+					
+					isTargetedType = true;
+				}
+				
 			}
 			
-		}
-		
-		if (isTargetedType && isOutOfBounds) {
+			if (isTargetedType && isOutOfBounds) {
+					
+				entity.kill();
 				
-			entity.kill();
-			return;
-			
-		}
+			}
 
-	}
-	
-	return;
+		}
+		
+    }
 	
 });

@@ -1,7 +1,11 @@
 /* Imports */
 
 import crafttweaker.api.game.Game;
+
 import crafttweaker.api.text.Component;
+import crafttweaker.api.text.MutableComponent;
+import crafttweaker.api.text.Message;
+import crafttweaker.api.text.FormattedText;
 
 import mods.jeitweaker.Jei;
 import mods.jeitweaker.ingredient.JeiIngredient;
@@ -11,29 +15,30 @@ import crafttweaker.api.item.IItemStack;
 
 /* Variables */
 
-val itemsWithHints as string[IItemStack] = {
-	<item:chimes:bamboo_chimes> : game.localize("chimes.jei.hint.bamboo_chimes"),
-	<item:chimes:iron_chimes> : game.localize("chimes.jei.hint.iron_chimes"),
-	<item:chimes:carved_bamboo_chimes> : game.localize("chimes.jei.hint.carved_bamboo_chimes"),
-	<item:chimes:copper_chimes> : game.localize("chimes.jei.hint.copper_chimes"),
-	<item:chimes:amethyst_chimes> : game.localize("chimes.jei.hint.amethyst_chimes"),
-	<item:chimes:glass_bells> : game.localize("chimes.jei.hint.glass_bells"),
-	<item:aether:ice_pendant> : game.localize("aether.jei.hint.ice_pendant"),
-	<item:aether:ice_ring> : game.localize("aether.jei.hint.ice_ring"),
-	<item:aether:golden_ring> : game.localize("aether.jei.hint.gold_ring"),
-	<item:aether:iron_ring> : game.localize("aether.jei.hint.iron_ring"),
-	<item:aether:golden_pendant> : game.localize("aether.jei.hint.gold_pendant"),
-	<item:aether:iron_pendant> : game.localize("aether.jei.hint.iron_pendant"),
-	<item:aether:regeneration_stone> : game.localize("aether.jei.hint.regeneration_stone"),
-	<item:aether:iron_bubble> : game.localize("aether.jei.hint.iron_bubble"),
-	<item:weeping_angels:angel_spawner> : game.localize("weeping_angels.jei.hint.weeping_angel"),
-	<item:babyfat:ranchu_bucket> : game.localize("babyfat.jei.hint.ranchu"),
-	<item:babyfat:ranchu_spawn_egg> : game.localize("babyfat.jei.hint.ranchu")
+val itemsWithHints as MutableComponent[IItemStack] = {
+	<item:chimes:bamboo_chimes> : Component.translatable("chimes.jei.hint.bamboo_chimes"),
+	<item:chimes:iron_chimes> : Component.translatable("chimes.jei.hint.iron_chimes"),
+	<item:chimes:carved_bamboo_chimes> : Component.translatable("chimes.jei.hint.carved_bamboo_chimes"),
+	<item:chimes:copper_chimes> : Component.translatable("chimes.jei.hint.copper_chimes"),
+	<item:chimes:amethyst_chimes> : Component.translatable("chimes.jei.hint.amethyst_chimes"),
+	<item:chimes:glass_bells> : Component.translatable("chimes.jei.hint.glass_bells"),
+	<item:aether:ice_pendant> : Component.translatable("aether.jei.hint.ice_pendant"),
+	<item:aether:ice_ring> : Component.translatable("aether.jei.hint.ice_ring"),
+	<item:aether:golden_ring> : Component.translatable("aether.jei.hint.gold_ring"),
+	<item:aether:iron_ring> : Component.translatable("aether.jei.hint.iron_ring"),
+	<item:aether:golden_pendant> : Component.translatable("aether.jei.hint.gold_pendant"),
+	<item:aether:iron_pendant> : Component.translatable("aether.jei.hint.iron_pendant"),
+	<item:aether:regeneration_stone> : Component.translatable("aether.jei.hint.regeneration_stone"),
+	<item:aether:iron_bubble> : Component.translatable("aether.jei.hint.iron_bubble"),
+	<item:weeping_angels:angel_spawner> : Component.translatable("weeping_angels.jei.hint.weeping_angel"),
+	<item:babyfat:ranchu_bucket> : Component.translatable("babyfat.jei.hint.ranchu"),
+	<item:babyfat:ranchu_spawn_egg> : Component.translatable("babyfat.jei.hint.ranchu"),
+	<item:crafting_on_a_stick:crafting_table> : Component.translatable("crafting_on_a_stick.jei.hint.crafting_table", [Component.keybind("key.use"), Component.keybind("crafting_on_a_stick.key.open_curios")] as Component[])
 };
 
 for hintItem, hintText in itemsWithHints {
 	
-	Jei.addIngredientInformation(hintItem, Component.literal(hintText));
+	Jei.addIngredientInformation(hintItem, hintText);
 	
 }
 
