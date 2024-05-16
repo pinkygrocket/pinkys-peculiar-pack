@@ -43,13 +43,22 @@ events.register<crafttweaker.forge.api.event.entity.EntityJoinLevelEvent>(event 
 		
 		}
 		
+		// Generate random Ranchu variations on spawn
+		
 		if (entity.type == <entitytype:babyfat:ranchu>) {
 			
 			val ranchuVarient = level.random.nextInt(RANCHU_VARIENT_MIN, RANCHU_VARIENT_MAX);
 			entity.updateData({Variant: ranchuVarient});
 			
 		}
-	
+		
+		// Ensue Weeping Angels stick to one variety
+		
+		if (entity.type = <entitytype:weepingangels:weeping_angel>) {
+			
+			entity.updateData({angelVariant: "doctor"});
+		}
+		
     }
 	
 });
