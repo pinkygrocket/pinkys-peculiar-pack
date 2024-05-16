@@ -76,7 +76,8 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	<tag:worldgen/biome:repurposed_structures:has_structure/villages/bamboo> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:minecraft:is_overworld> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:minecraft:is_forest> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest> ],
-	<tag:worldgen/biome:minecraft:has_structure/stronghold> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ]
+	<tag:worldgen/biome:minecraft:has_structure/stronghold> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
+	<tag:worldgen/biome:twilightforest:in_twilight_forest> : [ <resource:twilightforest:mountains> ]
 };
 
 val tagsToClear as KnownTag<Worldgen>[] = [

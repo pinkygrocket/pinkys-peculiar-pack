@@ -108,5 +108,27 @@
 			"minheight": -64,
 			"maxheight": 0
 		}
+	},
+	{
+		"mob": "crittersandcompanions:shima_enaga",
+		"persecond": 0.5,
+		"attempts": 20,
+		"amount": {
+			"minimum": 1,
+			"maximum": 1,
+			"groupdistance": 1
+		},
+		"conditions": {
+			"dimension" : "twilightforest:twilight_forest",
+			"norestrictions": true,
+			"inair": false,
+			"inlava" : false,
+			"inwater": false,
+			"maxthis": 20,
+			"mindist" : 5,
+			"maxdist" : 120,
+			"minheight": 0,
+			"maxheight": 120
+		}
 	}
 ]

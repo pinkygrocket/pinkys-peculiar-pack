@@ -1,6 +1,7 @@
 [
 	{
 		"mob": "cataclysm:flame_strike",
+		"when": "onjoin",
 		"result": "allow"
 	},
 	{
@@ -10,6 +11,7 @@
 	},
 	{
 		"mob" : "weeping_angels:weeping_angel",
+		"dimension" : "twilightforest:twilight_forest",
 		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"seesky" : false,
@@ -19,6 +21,7 @@
 	},
 	{
 		"mob": "observed:observer",
+		"dimension" : "twilightforest:twilight_forest",
 		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"seesky" : false,
@@ -28,12 +31,14 @@
 	},
 	{
 		"mob": "eyesinthedarkness:eyes",
+		"dimension" : "twilightforest:twilight_forest",
 		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
 		"mob": "distantfriends:friend",
+		"dimension" : "twilightforest:twilight_forest",
 		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
 		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
 		"when": "onjoin",
@@ -42,16 +47,31 @@
 	{
 		"mob": "babyfat:ranchu",
 		"dimension" : "twilightforest:twilight_forest",
+		"biome": "twilight_forest:stream",
 		"block": "minecraft:water",
 		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
-		"mod": ["cataclysm", "observed", "weeping_angels", "eyesinthedarkness", "distantfriends"],
-		"result": "deny"
+		"mob": "crittersandcompanions:shima_enaga",
+		"dimension" : "twilightforest:twilight_forest",
+		"block": ["minecraft:snow_block", "minecraft:snow", "minecraft:spruce_leaves", "minecraft:stone", "minecraft:ice", "quark:blue_blossom_leaves"],
+		"when": "onjoin",
+		"result" : "allow"
 	},
 	{
 		"mod": "babyfat",
+		"dimension": "minecraft:overworld",
+		"result": "deny"
+	},
+	{
+		"mod": ["cataclysm", "observed", "weeping_angels", "eyesinthedarkness", "distantfriends"],
+		"when": "onjoin",
+		"result": "deny"
+	},
+	{
+		"mob": "crittersandcompanions:shima_enaga",
+		"when": "onjoin",
 		"result": "deny"
 	}
 ]
