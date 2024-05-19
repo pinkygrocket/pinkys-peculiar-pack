@@ -87,6 +87,7 @@ to make editing this file much easier.
 	"swapper": {
 		"weeping_angels:deepslate_kontron_ore": "minecraft:deepslate",
 	   	"weeping_angels:kontron_ore": "minecraft:stone",
-		"weeping_angels:snow_angel": "minecraft:snow"
+		"weeping_angels:snow_angel": "minecraft:snow",
+		"babyfat:water_lettuce" : "minecraft:air"
 	}
 }

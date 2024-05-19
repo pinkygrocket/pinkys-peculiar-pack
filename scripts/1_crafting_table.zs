@@ -603,7 +603,15 @@ val completeItemRemoval as IItemStack[] = [
 	<item:v_slab_compat:aether/holystone_brick_vertical_slab>,
 	<item:v_slab_compat:aether/icestone_vertical_slab>,
 	<item:cataclysm:stone_tiles>,
-	<item:supplementaries:stone_tile>
+	<item:supplementaries:stone_tile>,
+	<item:supplementaries:rope>,
+	<item:berry_good:music_disc_fox>,
+	<item:create_connected:music_disc_interlude>,
+	<item:create_connected:music_disc_elevator>,
+	<item:cookingforblockheads:heating_unit>,
+	<item:weeping_angels:snow_angel>,
+	<item:weeping_angels:statue>,
+	<item:babyfat:water_lettuce>
 ];
 
 val recipeRemovalByName as string[] = [

@@ -10,7 +10,7 @@
 	#custombossbar(on/off)
 	"custombossbar(on/off)" = true
 	#AddedServerlist(on/off)
-	"AddedServerlist(on/off)" = true
+	"AddedServerlist(on/off)" = false
 	#BossMusic(on/off)
 	"BossMusic(on/off)" = true
 	#BossMusicVolume(denominator)

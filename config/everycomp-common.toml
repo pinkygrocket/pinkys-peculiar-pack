@@ -396,6 +396,15 @@
 				polished_icestone = true
 				icestone_brick = true
 
+			[general.types.cut_block_type.sullysmod]
+				rough_jade_brick = true
+				smoothed_rough_jade = true
+				rough_jade_tile = true
+				polished_jade_brick = true
+				polished_small_jade_brick = true
+				polished_jade_shingle = true
+				polished_jade_tile = true
+
 		[general.types.leaves_type]
 
 			[general.types.leaves_type.twilightforest]

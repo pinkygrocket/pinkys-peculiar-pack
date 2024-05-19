@@ -1,6 +1,15 @@
 {
   "blacklisted_items": [
     "//Items here will be unusable completely",
+	"weeping_angels:chisel",
+	"weeping_angels:chronodyne_generator",
+	"weeping_angels:coffin",
+	"weeping_angels:deepslate_kontron_ore",
+	"weeping_angels:kontron_ore",
+	"weeping_angels:music_disc_time_prevails",
+	"weeping_angels:music_disc_sally",
+	"weeping_angels:kontron_ingot",
+	"weeping_angels:plinth",
 	"cataclysm:abyssal_egg",
 	"cataclysm:modern_remnant_spawn_egg",
 	"cataclysm:ancient_remnant_spawn_egg",
@@ -146,7 +155,15 @@
 	"v_slab_compat:aether/holystone_brick_vertical_slab",
 	"v_slab_compat:aether/icestone_vertical_slab",
 	"cataclysm:stone_tiles",
-	"supplementaries:stone_tile"
+	"supplementaries:stone_tile",
+	"supplementaries:rope",
+	"berry_good:music_disc_fox",
+	"create_connected:music_disc_interlude",
+	"create_connected:music_disc_elevator",
+	"cookingforblockheads:heating_unit",
+	"weeping_angels:snow_angel",
+	"weeping_angels:statue",
+	"babyfat:water_lettuce"
   ],
   "only_disable_interactions": [
     "//Items here will not be able to be right-clicked (Interact)",

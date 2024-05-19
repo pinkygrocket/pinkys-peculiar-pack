@@ -53,8 +53,17 @@
 		"result" : "allow"
 	},
 	{
+		"mob": "crittersandcompanions:koi_fish",
+		"dimension" : "twilightforest:twilight_forest",
+		"biome": "twilight_forest:lake",
+		"block": "minecraft:water",
+		"when": "onjoin",
+		"result" : "allow"
+	},
+	{
 		"mob": "crittersandcompanions:shima_enaga",
 		"dimension" : "twilightforest:twilight_forest",
+		"biome": ["twilightforest:snowy_forest", "twilightforest:mountains"],
 		"block": ["minecraft:snow_block", "minecraft:snow", "minecraft:spruce_leaves", "minecraft:stone", "minecraft:ice", "quark:blue_blossom_leaves"],
 		"when": "onjoin",
 		"result" : "allow"
@@ -70,7 +79,7 @@
 		"result": "deny"
 	},
 	{
-		"mob": "crittersandcompanions:shima_enaga",
+		"mob": [ "crittersandcompanions:shima_enaga", "crittersandcompanions:koi_fish" ],
 		"when": "onjoin",
 		"result": "deny"
 	}
