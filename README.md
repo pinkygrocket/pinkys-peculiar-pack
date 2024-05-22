@@ -1,4 +1,3 @@
 # pinkys-peculiar-pack
 
-Repository for Pinky's Peculiar Pack, a personal Minecraft modpack for 1.20.1 focused on providing an accessible modded experience focused around three main mods: Create, The Aether, and the Twilight Forest.
-
+Repository for Pinky's Peculiar Pack, a personal Minecraft modpack for Forge 1.20.1 focused on providing a gentle yet engaging modded experience accessible to newcomers and those looking for a lighter modded experience. This is achieved by focusing on a few large mods (The Aether, Create, and Twilight Forest) and rounding out the pack with mods that build upon Minecraft's existing features without replacing them entirely. Other pack features include a robust in-game documentation system, an advancement system that encourages experimentation, and various tweaks and custom features to tie everything together.
