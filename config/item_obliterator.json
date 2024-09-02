@@ -55,7 +55,8 @@
 	"create_mechanical_spawner:spawn_fluid_skeleton_bucket",
 	"create_mechanical_spawner:spawn_fluid_slime_bucket",
 	"create_mechanical_spawner:spawn_fluid_spider_bucket",
-	"create_mechanical_spawner:spawn_fluid_zombie_bucket"
+	"create_mechanical_spawner:spawn_fluid_zombie_bucket",
+	"quark:golden_carrot_crate"
   ],
   "only_disable_interactions": [
     "//Items here will not be able to be right-clicked (Interact)",

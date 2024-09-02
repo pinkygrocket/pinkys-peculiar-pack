@@ -6,7 +6,7 @@
 	#1 = Vanilla Style
 	#2 = Texture Pack Style.
 	#Range: 0 ~ 2
-	bnsMinecraftStyle = 0
+	bnsMinecraftStyle = 1
 	#How much padding to add to the docked windows.
 	#Range: 0 ~ 50
 	bnsDockPadding = 0

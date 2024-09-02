@@ -454,6 +454,7 @@ val completeItemRemoval as IItemStack[] = [
 	<item:quark:berry_sack>,
 	<item:quark:apple_crate>,
 	<item:quark:golden_apple_crate>,
+	<item:quark:golden_carrot_crate>,
 	<item:supplementaries:sugar_cube>,
 	<item:quark:glowberry_sack>,
 	<item:quark:cocoa_beans_sack>,

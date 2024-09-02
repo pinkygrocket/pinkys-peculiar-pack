@@ -102,7 +102,8 @@ val fluidTagEntries as IFluidStack[][KnownTag<Fluid>] = {
 	
 	# Wither Storm Mod - Prevent Wither Sickness from affecting boss mobs from Aether and Twilight Forest and some non-mob entities
 	<tag:entity_types:witherstormmod:wither_sickness_immune> : [ <entitytype:twilightforest:alpha_yeti>, <entitytype:twilightforest:hydra>, <entitytype:twilightforest:knight_phantom>, <entitytype:twilightforest:lich>, <entitytype:twilightforest:minoshroom>, <entitytype:twilightforest:naga>, <entitytype:twilightforest:plateau_boss>, <entitytype:twilightforest:snow_queen>, <entitytype:twilightforest:ur_ghast>, <entitytype:dummmmmmy:target_dummy>, <entitytype:xercapaint:easel>, <entitytype:supplementaries:hat_stand>  ],
-	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : [],	
+	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : []
+	
 }; */
 
 val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {

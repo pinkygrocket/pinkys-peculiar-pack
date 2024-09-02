@@ -83,7 +83,7 @@
 
 	[gamerules.updates]
 		#Whether the daylight cycle and moon phases progress.
-		do_daylight_cycle = false
+		do_daylight_cycle = true
 		#Whether fire should spread and naturally extinguish
 		do_fire_tick = true
 		#Whether vines can spread to other blocks. Cave vines, weeping vines, and twisting vines are not affected.
@@ -113,7 +113,7 @@
 		#Whether patrols can spawn.
 		do_patrol_spawning = true
 		#Whether wandering traders can spawn.
-		do_trader_spawning = true
+		do_trader_spawning = false
 		#Whether wardens can spawn.
 		do_warden_spawning = true
 		#Non Vanilla gamerule: 'mobSculkSaprophyteCount'

@@ -36,12 +36,15 @@ screenshots/
 schematics/
 simplebackups/
 saves/
+config/ichunutil/themes/
+config/jei/world/local/
 
 usercache.json
 usernamecache.json
 TrashSlotSaveState.json
 bookmarks.ini
 bookmark.ini
+embeddium-fingerprint.json
 
 icon.png
 servers.dat
