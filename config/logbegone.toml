@@ -1,5 +1,5 @@
 
 [logbegone]
-	regex = ["Detected a mod with a broken basalt columns "]
-	phrases = ["Detected a mod with a broken basalt columns ", "ResourceKey[minecraft:worldgen/placed_feature / cogsofcarminite:striated_andesite_twilight_forest"]
+	regex = ["Disconnecting VANILLA connection attempt", "Channels "]
+	phrases = ["Disconnecting VANILLA connection attempt", "Channels "]
 

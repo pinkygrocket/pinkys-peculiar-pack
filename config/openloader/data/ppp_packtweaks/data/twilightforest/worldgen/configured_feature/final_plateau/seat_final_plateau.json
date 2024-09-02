@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:simple_block",
+	"config": {
+		"to_place": {
+			"type": "simple_state_provider",
+			"state": {
+				"Name": "everycomp:db/twilightforest/canopy_seat",
+				"Properties": {
+					"facing": "south",
+					"waterlogged": "false",
+					"occupied": "false",
+					"attached": "true"
+				}
+			}
+		}
+	}
+}

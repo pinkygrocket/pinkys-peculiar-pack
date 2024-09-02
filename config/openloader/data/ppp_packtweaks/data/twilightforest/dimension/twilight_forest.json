@@ -57,16 +57,16 @@
             },
             "depth": 0.025,
             "key_biome": "twilightforest:dark_forest",
-            "scale": 0.005
+            "scale": 0.25
           },
           {
             "biome_layers": {
               "-1.0": "twilightforest:dark_forest_center",
               "-3.0": "twilightforest:underground"
             },
-            "depth": 0.025,
+            "depth": 0.75,
             "key_biome": "twilightforest:dark_forest_center",
-            "scale": 0.005
+            "scale": 0.25
           },
           {
             "biome_layers": {
@@ -75,7 +75,7 @@
             },
             "depth": 0.1,
             "key_biome": "twilightforest:dense_forest",
-            "scale": 0.2
+            "scale": 1.0
           },
           {
             "biome_layers": {
@@ -84,7 +84,7 @@
             },
             "depth": 0.05,
             "key_biome": "twilightforest:dense_mushroom_forest",
-            "scale": 0.2
+            "scale": 1.0
           },
           {
             "biome_layers": {
@@ -93,7 +93,7 @@
             },
             "depth": 0.025,
             "key_biome": "twilightforest:enchanted_forest",
-            "scale": 0.05
+            "scale": 0.5
           },
           {
             "biome_layers": {
@@ -101,7 +101,7 @@
             },
             "depth": 13.75,
             "key_biome": "twilightforest:final_plateau",
-            "scale": 0.025
+            "scale": 0.0
           },
           {
             "biome_layers": {
@@ -119,7 +119,7 @@
             },
             "depth": 0.0625,
             "key_biome": "twilightforest:firefly_forest",
-            "scale": 0.05
+            "scale": 1.00
           },
           {
             "biome_layers": {
@@ -128,7 +128,7 @@
             },
             "depth": 0.025,
             "key_biome": "twilightforest:forest",
-            "scale": 0.05
+            "scale": 1.00
           },
           {
             "biome_layers": {
@@ -146,7 +146,7 @@
             },
             "depth": 3.0,
             "key_biome": "twilightforest:highlands",
-            "scale": 0.25
+            "scale": 0.5
           },
           {
             "biome_layers": {
@@ -164,7 +164,7 @@
             },
             "depth": 0.025,
             "key_biome": "twilightforest:mushroom_forest",
-            "scale": 0.25
+            "scale": 1.0
           },
           {
             "biome_layers": {
@@ -191,7 +191,7 @@
             },
             "depth": 0.05,
             "key_biome": "twilightforest:snowy_forest",
-            "scale": 0.15
+            "scale": 0.25
           },
           {
             "biome_layers": {
@@ -200,7 +200,7 @@
             },
             "depth": 0.025,
             "key_biome": "twilightforest:spooky_forest",
-            "scale": 0.05
+            "scale": 1.0
           },
           {
             "biome_layers": {

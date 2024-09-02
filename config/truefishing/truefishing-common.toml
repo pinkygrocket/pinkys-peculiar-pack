@@ -1,0 +1,15 @@
+#Multiplier for extra fish loot upon catch
+#Range: 1 ~ 10
+extra_fish_loot = 3
+#Should use vanilla additional fishing drop upon death
+use_vanilla_fishing_loot = true
+#Multiplier for luck of the sea enchant (Larger number like 10 seems to give a better effect)
+#Range: 1 ~ 100
+luck_of_the_sea_multiplier = 10
+#Spawn chance of a listed entity every 10 seconds nearby a hook
+#Range: 0.0 ~ 1.0
+spawn_chance = 0.01
+#Max nearby entities. When amount is reached within 10 blocks it will cancel custom entity spawn from this mod
+#Range: 1 ~ 100
+spawn_limit = 3
+

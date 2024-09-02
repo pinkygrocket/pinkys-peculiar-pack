@@ -1,0 +1,27 @@
+{
+  "feature": "twilightforest:final_plateau/gravel_rock_final_plateau",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 5
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+	{
+      "type": "twilightforest:no_structure",
+      "value": {
+        "additional_clearance": 999,
+        "occupies_surface": true,
+        "occupies_underground": false
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

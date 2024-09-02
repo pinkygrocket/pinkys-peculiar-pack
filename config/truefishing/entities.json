@@ -1,0 +1,30 @@
+[
+  {
+    "entity": "minecraft:salmon",
+    "endurance": 1.0,
+    "strength": 1.2,
+    "interestChance": 0.2,
+    "spawnWeight": 20
+  },
+  {
+    "entity": "minecraft:cod",
+    "endurance": 1.5,
+    "strength": 1.5,
+    "interestChance": 0.2,
+    "spawnWeight": 50
+  },
+  {
+    "entity": "minecraft:pufferfish",
+    "endurance": 1.1,
+    "strength": 0.8,
+    "interestChance": 0.07,
+    "spawnWeight": 10
+  },
+  {
+    "entity": "minecraft:tropical_fish",
+    "endurance": 1.0,
+    "strength": 1.0,
+    "interestChance": 0.4,
+    "spawnWeight": 50
+  }
+]

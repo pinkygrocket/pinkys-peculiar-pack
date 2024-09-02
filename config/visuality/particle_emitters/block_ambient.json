@@ -98,7 +98,8 @@
 	},
 	{
 		"block": [
-			"twilightforest:fiery_block"
+			"twilightforest:fiery_block",
+			"kubejs:fiery_blood"
 		],
 		"particle" : {
 			"type": "minecraft:flame"

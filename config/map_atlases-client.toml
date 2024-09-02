@@ -55,6 +55,9 @@
 	map_change_sound = false
 	#Automatically switches to the nearest slice when possible
 	automatic_slice_change = false
+	#Scale multiplier for Map Markers text on the mini-map
+	#Range: 0.0 ~ 10.0
+	map_markers_text_scale = 1.0
 
 [world_map]
 	crossair = false
@@ -86,6 +89,9 @@
 	compact_slices_indicator = false
 	#Allows minimap to follow player movement instead of only displaying current map
 	follow_player = true
+	#Scale multiplier for Map Markers text on the world-map
+	#Range: 0.0 ~ 10.0
+	map_markers_text_scale = 1.0
 
 [misc]
 	#Multiplier for all the Atlases sound float
@@ -94,12 +100,6 @@
 	#Render atlas like normal map when in hand
 	#Allowed Values: ON, NOT_LOCKED, OFF
 	in_hand_renderer = "NOT_LOCKED"
-	#Scale multiplier for Map Markers on the atlas
-	#Range: 0.0 ~ 10.0
-	map_markers_scale = 1.0
-	#Scale multiplier for Map Markers text on the atlas
-	#Range: 0.0 ~ 10.0
-	map_markers_text_scale = 1.0
 
 [moonlight_integration]
 	#Enables moonlight compat, which allows to place map markers on map via a special pin button

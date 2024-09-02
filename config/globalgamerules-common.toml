@@ -83,7 +83,7 @@
 
 	[gamerules.updates]
 		#Whether the daylight cycle and moon phases progress.
-		do_daylight_cycle = true
+		do_daylight_cycle = false
 		#Whether fire should spread and naturally extinguish
 		do_fire_tick = true
 		#Whether vines can spread to other blocks. Cave vines, weeping vines, and twisting vines are not affected.
@@ -98,10 +98,12 @@
 		#The maximum number of snow layers that can be accumulated on each block.
 		#Range: > 0
 		snow_accumulation_height = 1
-		#Whether new sources of water are allowed to form.
-		water_source_conversion = true
 		#Non Vanilla gamerule: 'tfEnforcedProgression'
 		tf_enforced_progression = true
+		#Whether new sources of water are allowed to form.
+		water_source_conversion = true
+		#Non Vanilla gamerule: 'sculkSpreads'
+		sculk_spreads = false
 
 	[gamerules.spawning]
 		#Whether phantoms can spawn in the nighttime.
@@ -111,9 +113,18 @@
 		#Whether patrols can spawn.
 		do_patrol_spawning = true
 		#Whether wandering traders can spawn.
-		do_trader_spawning = false
+		do_trader_spawning = true
 		#Whether wardens can spawn.
 		do_warden_spawning = true
+		#Non Vanilla gamerule: 'mobSculkSaprophyteCount'
+		#Range: > 0
+		mob_sculk_saprophyte_count = 1
+		#Non Vanilla gamerule: 'playerSculkSaprophyteCount'
+		#Range: > 0
+		player_sculk_saprophyte_count = 3
+		#Non Vanilla gamerule: 'sculkNestLimit'
+		#Range: > 0
+		sculk_nest_limit = 3
 
 #Configs related to difficult changes
 [difficulty]

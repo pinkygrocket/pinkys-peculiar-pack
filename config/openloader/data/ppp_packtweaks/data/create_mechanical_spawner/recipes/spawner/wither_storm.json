@@ -1,0 +1,9 @@
+{
+  "type": "create_mechanical_spawner:spawner",
+  "fluid": {
+    "fluid": "kubejs:unstable_compound",
+    "amount": 1000
+  },
+  "mob": "witherstormmod:wither_storm",
+  "processingTime": 2500
+}

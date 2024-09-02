@@ -62,7 +62,14 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+	  {
+        "type": "crittersandcompanions:shima_enaga",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 10
+      }
+	],
     "misc": [],
     "monster": [
       {

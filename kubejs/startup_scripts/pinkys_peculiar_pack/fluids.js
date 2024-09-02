@@ -1,0 +1,10 @@
+StartupEvents.registry('fluid', event => {
+	event.create('fiery_blood')
+       .thickTexture(0x5a0b0b)
+       .bucketColor(0x5a0b0b)
+       .displayName('Fiery Blood')
+	event.create('unstable_compound')
+	   .thickTexture(0x292929)
+       .bucketColor(0x292929)
+	   .displayName('Unstable Compound')
+})

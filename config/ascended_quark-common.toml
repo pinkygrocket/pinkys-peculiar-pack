@@ -19,6 +19,9 @@
 		"Enable Zephyr" = true
 		"Enable Cockatrice" = true
 
+	[aether.ambrosium_lamp]
+		"Enable Ambrosium Lamp" = true
+
 	[aether.extra_slime_and_swet_in_a_bucket]
 		#Disables Swets from dancing in The Aether. Note that this config only affects the client.
 		"Are Swets Exited In The Aether" = true
@@ -37,7 +40,4 @@
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
 		"Ignore Anti Overlap" = false
-
-	[aether.ambrosium_lamp]
-		"Enable Ambrosium Lamp" = true
 

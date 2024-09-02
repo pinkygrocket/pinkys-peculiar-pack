@@ -4,7 +4,6 @@
     "furnace": true,
     "harvest_tool.show_unbreakable": false,
     "animal_owner": true,
-    "animal_owner.fetch_names": true,
     "harvest_tool.effective_tool": true,
     "item_storage.normal_amount": 9,
     "item_storage": true,
@@ -53,6 +52,13 @@
   },
   "jadeaddons": {
     "equipment_requirement": ""
+  },
+  "exposure": {
+    "lightroom": true,
+    "photograph_frame": true
+  },
+  "create_mechanical_spawner": {
+    "spawner_data": true
   },
   "delightful": {
     "crop_progress": true,

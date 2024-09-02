@@ -1,53 +1,8 @@
 [
 	{
-		"mob": "cataclysm:flame_strike",
-		"when": "onjoin",
-		"result": "allow"
-	},
-	{
-		"block" : "twilightforest:weathered_deadrock",
-		"when": "onjoin",
-		"result" : "deny"
-	},
-	{
-		"mob" : "weeping_angels:weeping_angel",
-		"dimension" : "twilightforest:twilight_forest",
-		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
-		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
-		"seesky" : false,
-		"maxlight_full": 3,
-		"when": "onjoin",
-		"result": "allow"
-	},
-	{
-		"mob": "observed:observer",
-		"dimension" : "twilightforest:twilight_forest",
-		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
-		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
-		"seesky" : false,
-		"maxlight_full": 8,
-		"when": "onjoin",
-		"result" : "allow"
-	},
-	{
-		"mob": "eyesinthedarkness:eyes",
-		"dimension" : "twilightforest:twilight_forest",
-		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
-		"when": "onjoin",
-		"result" : "allow"
-	},
-	{
-		"mob": "distantfriends:friend",
-		"dimension" : "twilightforest:twilight_forest",
-		"biome" : ["twilightforest:final_plateau", "twilightforest:thornlands"],
-		"block": ["twilightforest:castle_brick", "twilightforest:cracked_castle_brick", "twilightforest:worn_castle_brick", "minecraft:quartz_stairs", "twilightforest:deadrock"],
-		"when": "onjoin",
-		"result" : "allow"
-	},
-	{
 		"mob": "babyfat:ranchu",
 		"dimension" : "twilightforest:twilight_forest",
-		"biome": "twilight_forest:stream",
+		"biome": "twilightforest:stream",
 		"block": "minecraft:water",
 		"when": "onjoin",
 		"result" : "allow"
@@ -61,26 +16,24 @@
 		"result" : "allow"
 	},
 	{
-		"mob": "crittersandcompanions:shima_enaga",
+		"mob": [ "crittersandcompanions:koi_fish", "babyfat:ranchu" ],
 		"dimension" : "twilightforest:twilight_forest",
-		"biome": ["twilightforest:snowy_forest", "twilightforest:mountains"],
-		"block": ["minecraft:snow_block", "minecraft:snow", "minecraft:spruce_leaves", "minecraft:stone", "minecraft:ice", "quark:blue_blossom_leaves"],
-		"when": "onjoin",
-		"result" : "allow"
+		"result": "deny"
 	},
 	{
-		"mod": "babyfat",
+		"mod": "endermanoverhaul",
+		"dimension" : "twilightforest:twilight_forest",
+		"minlight_full": 3,
+		"result": "deny"
+	},
+	{
+		"mob": [ "quark:toretoise", "quark:stoneling" ],
+		"dimension" : [ "twilightforest:twilight_forest", "aether:the_aether", "minecraft:the_end", "minecraft:the_nether" ],
+		"result": "deny"
+	},
+	{
+		"mob": ["friendsandfoes:moobloom", "friendsandfoes:mauler", "babyfat:ranchu", "crittersandcompanions:koi_fish", "crittersandcompanions:shima_enaga"],
 		"dimension": "minecraft:overworld",
-		"result": "deny"
-	},
-	{
-		"mod": ["cataclysm", "observed", "weeping_angels", "eyesinthedarkness", "distantfriends"],
-		"when": "onjoin",
-		"result": "deny"
-	},
-	{
-		"mob": [ "crittersandcompanions:shima_enaga", "crittersandcompanions:koi_fish" ],
-		"when": "onjoin",
 		"result": "deny"
 	}
 ]

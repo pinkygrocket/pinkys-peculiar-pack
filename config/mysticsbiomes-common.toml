@@ -4,13 +4,14 @@
 ["World Gen"]
 	#The higher the number, the more common the biomes will be.
 	#Default: 4
-	"Biome Region Weight" = 4
+	"Biome Region Weight" = 3
 	#Determines if each biome will generate or not.
 	"Strawberry Fields" = true
 	"Lavender Meadow" = true
 	"Bamboo Blossom Forest" = true
 	"Autumnal Grove" = true
 	"Lush Oasis" = true
+	Lagoon = true
 
 ["Animal Spawns"]
 	#Biomes an animal can spawn in.

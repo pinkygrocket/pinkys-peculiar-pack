@@ -7,14 +7,20 @@ import crafttweaker.api.block.Block;
 import crafttweaker.api.block.BlockState;
 import crafttweaker.api.world.biome.Biome;
 import crafttweaker.api.resource.ResourceLocation;
+import crafttweaker.api.entity.EntityType;
+import crafttweaker.api.fluid.Fluid;
+import crafttweaker.api.fluid.IFluidStack;
 
 import crafttweaker.api.item.ItemDefinition;
 import stdlib.List;
 
 val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
-	<tag:items:farmersdelight:serving_containers>: [<item:ecologics:coconut_husk>],
-	<tag:items:crafttweaker:maps> : [ <item:minecraft:map>, <item:minecraft:filled_map>],
+	<tag:items:farmersdelight:serving_containers> : [ <item:ecologics:coconut_husk> ],
+	# Quark - Prevent certain Xtra Arrows from being affected by multishot to prevent weird behavior, glitches or exploits
+	<tag:items:quark:ignore_multishot> : [ <item:xtraarrows:flint_ender_arrow>, <item:xtraarrows:flint_tracking_arrow>, <item:xtraarrows:golden_apple_arrow>, <item:xtraarrows:notch_apple_arrow>, <item:xtraarrows:leashing_arrow>, <item:xtraarrows:flint_magnetic_arrow>],
+	<tag:items:twilightforest:kobold_pacification_breads> : [ <item:delightful:cantaloupe_bread>, <item:upgrade_aquatic:mulberry_bread> ],
+	<tag:items:crafttweaker:maps> : [ <item:minecraft:map>, <item:minecraft:filled_map> ],
 	<tag:items:crafttweaker:adhesives> : [<item:minecraft:slime_ball>, <item:minecraft:honey_bottle>, <item:aether:swet_ball>],
 	<tag:items:crafttweaker:cyan_eggs> : [ <item:mysticsbiomes:cyan_egg>, <item:quark:egg_parrot_yellow_blue> ],
 	<tag:items:crafttweaker:green_eggs> : [ <item:quark:egg_parrot_green> ],
@@ -33,29 +39,143 @@ val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 };
 
 val blockTagEntries as Block[][KnownTag<Block>] = {
+	# Create Dreams and Desires - Set up custom catalysts for bulk processing
+	<tag:blocks:create_dd:fan_processing_catalysts/seething> : [ <block:deep_aether:chromatic_aercloud> ],
+	<tag:blocks:create_dd:fan_processing_catalysts/freezing> : [ <block:aether:blue_aercloud> ],
+	<tag:blocks:create_dd:fan_processing_catalysts/sanding> : [ <block:minecraft:sand>, <block:minecraft:red_sand>, <block:mysticsbiomes:lush_sand> ],
 	<tag:blocks:crafttweaker:clouds> : [ <block:aether:cold_aercloud>, <block:aether:blue_aercloud>, <block:aether:golden_aercloud>, <block:twilightforest:wispy_cloud>, <block:twilightforest:fluffy_cloud>, <block:twilightforest:rainy_cloud>, <block:twilightforest:snowy_cloud>, <block:deep_aether:sterling_aercloud>, <block:deep_aether:chromatic_aercloud>],
 	<tag:blocks:crafttweaker:mushrooms> : [ <block:minecraft:brown_mushroom_block>, <block:minecraft:red_mushroom_block>, <block:minecraft:mushroom_stem> ],
 	<tag:blocks:farmersdelight:mineable/knife> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ],
 	<tag:blocks:minecraft:occludes_vibration_signals> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ],
-	<tag:blocks:minecraft:dampens_vibrations> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ],
-	<tag:blocks:weeping_angels:no_breaking> : [<block:twilightforest:deadrock>, <block:twilightforest:thick_castle_brick>, <block:twilightforest:cracked_deadrock>, <block:twilightforest:blue_castle_rune_brick>, <block:twilightforest:castle_brick>,<block:twilightforest:cracked_castle_brick>, <block:twilightforest:brown_thorns>, <block:twilightforest:green_thorns>, <block:twilightforest:yellow_castle_rune_brick>, <block:twilightforest:bold_castle_brick_pillar>, <block:twilightforest:yellow_castle_door>, <block:twilightforest:weathered_deadrock>, <block:twilightforest:blue_castle_door>, <block:twilightforest:blue_force_field>, <block:twilightforest:castle_roof_tile>, <block:twilightforest:violet_castle_door>, <block:twilightforest:violet_castle_rune_brick>, <block:minecraft:oak_fence>, <block:twilightforest:pink_castle_door>, <block:twilightforest:pink_force_field>, <block:minecraft:quartz_stairs>, <block:twilightforest:pink_castle_rune_brick>, <block:twilightforest:green_force_field>, <block:minecraft:chiseled_quartz_block>]
+	<tag:blocks:minecraft:dampens_vibrations> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ]
 };
 
+val fluidTagEntries as IFluidStack[][KnownTag<Fluid>] = {
+	<tag:fluids:aether:allowed_bucket_pickup> : [],
+	<tag:fluids:twilightforest:fire_jet_fuel> : [ <fluid:kubejs:fiery_blood> ],
+	<tag:fluids:create:bottomless/deny>: [ <fluid:kubejs:fiery_blood> ]
+};
+
+/* val entityTypesEntries as EntityType[][KnownTag<EntityType>] = {
+	# Aether
+	###	Enable the Wither Storm to ignore Aether invisiblity
+	### Prevent Skyroot tools from affecting boss drops
+	### Make sure Farmlife entities are treated as Aether entities
+	<tag:entity_types:aether:ignore_invisibility> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
+	<tag:entity_types:aether:whirlwind_unaffected> : [],
+	<tag:entity_types:aether:no_skyroot_double_drops> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
+	<tag:entity_types:aether:treated_as_aether_entity> : [],
+	
+	# Delightful
+	<tag:entity_types:delightful:fatty_animals> : [],
+	<tag:entity_types:delightful:drops_acorn> : [],
+	
+	# Ecologics
+	<tag:entity_types:ecologics:penguin_hunt_targets> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
+	
+	# Enderman Overhaul - Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
+	<tag:entity_types:endermanoverhaul:cant_be_teleported> : [ <entitytype:witherstormmod:wither_storm> ],
+	
+	# Friends and Foes
+	<tag:entity_types:friendsandfoes:mauler_prey> : [],
+	
+	# Forge
+	### Register Wither Storm as a boss
+	<tag:entity_types:forge:bosses> : [ <entitytype:witherstormmod:wither_storm> ],
+	### Register Baby Fat and Critters and Companions mobs as fish
+	<tag:entity_types:forge:fishes> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
+	
+	# Minecraft
+	<tag:entity_types:minecraft:axolotl_hunt_targets> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
+	<tag:entity_types:minecraft:freeze_immune_entity_types> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
+	<tag:entity_types:minecraft:powder_snow_walkable_mobs> : [],
+	
+	# Nullscape - Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
+	<tag:entity_types:nullscape:not_teleportable> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:twilightforest:alpha_yeti>, <entitytype:twilightforest:hydra>, <entitytype:twilightforest:knight_phantom>, <entitytype:twilightforest:lich>, <entitytype:twilightforest:minoshroom>, <entitytype:twilightforest:naga>, <entitytype:twilightforest:plateau_boss>, <entitytype:twilightforest:snow_queen>, <entitytype:twilightforest:ur_ghast>, <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment>, <entitytype:aether:sun_spirit>, <entitytype:aether:valkyrie_queen>, <entitytype:aether:slider> ],
+	
+	# Sully's Mod - Make tortises scared of bosses from Aether, Twilight Forest and Wither Storm
+	<tag:entity_types:sullysmod:attacks_baby_tortoises> : [],
+	<tag:entity_types:sullysmod:scares_tortoises> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
+	
+	# Twilight Forest - Make cats and wolves sortable per Chested Companions
+	<tag:entity_types:twilightforest:sortable_entities>: [],
+	
+	# Wither Storm Mod - Prevent Wither Sickness from affecting boss mobs from Aether and Twilight Forest and some non-mob entities
+	<tag:entity_types:witherstormmod:wither_sickness_immune> : [ <entitytype:twilightforest:alpha_yeti>, <entitytype:twilightforest:hydra>, <entitytype:twilightforest:knight_phantom>, <entitytype:twilightforest:lich>, <entitytype:twilightforest:minoshroom>, <entitytype:twilightforest:naga>, <entitytype:twilightforest:plateau_boss>, <entitytype:twilightforest:snow_queen>, <entitytype:twilightforest:ur_ghast>, <entitytype:dummmmmmy:target_dummy>, <entitytype:xercapaint:easel>, <entitytype:supplementaries:hat_stand>  ],
+	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : [],	
+}; */
+
 val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
-	<tag:worldgen/biome:yungsbridges:has_structure/bridge> : [ <resource:twilightforest:stream> ],
+	# Aether - Add support for Mystic's Biomes
+	<tag:worldgen/biome:aether:has_ruined_portal_standard> : [  <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:lavender_meadow> ],
+	
+	# Creeper Overhaul - Add Twilight Forest support
+	<tag:worldgen/biome:creeperoverhaul:is_mushroom> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:creeperoverhaul:where_creepers_spawn> : [],
+	
+	# Enderman Overhaul - Add Mystic's Biomes support
+	# Don't add Twilight Forest support - due to the Twilight Forest's low light level, they spawn en masse
+	<tag:worldgen/biome:endermanoverhaul:dark_oak_spawns> : [ <resource:twilightforest:dark_forest>, <resource:twilightforest:dark_forest_center> ],
+	<tag:worldgen/biome:endermanoverhaul:flower_fields_spawns> : [ <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:bamboo_blossom_forest> ],
+	<tag:worldgen/biome:endermanoverhaul:savanna_spawns> : [ <resource:twilightforest:oak_savannah> ],
+	<tag:worldgen/biome:endermanoverhaul:snowy_spawns> : [ <resource:twilightforest:mountains>, <resource:twilightforest:snowy_forest> ],
+	<tag:worldgen/biome:endermanoverhaul:swamp_spawns> : [ <resource:twilightforest:swamp>, <resource:twilightforest:fire_swamp> ],
+	
+	# Dracovita Farmlife - Add Aether support
+	<tag:worldgen/biome:farmlife:has_structure/tribull_ranch> : [ <resource:aether:skyroot_meadow>, <resource:deep_aether:aerlavender_fields> ],
+	<tag:worldgen/biome:farmlife:has_structure/greenhouse> : [ <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:deep_aether:aerglow_forest>, <resource:deep_aether:blue_aerglow_forest> ],
+	
+	# Fishermen's Trap - Add Twilight Forest support
+	<tag:worldgen/biome:fishermens_trap:can_fishtrap_fish> : [ <resource:twilightforest:swamp>, <resource:twilightforest:fire_swamp> ],
+	
+	# Friends and Foes - Add Twilight Forest support
+	<tag:worldgen/biome:friendsandfoes:has_moobloom/any> : [ <resource:twilightforest:enchanted_forest> ],
+	<tag:worldgen/biome:friendsandfoes:has_moobloom/buttercup> : [ <resource:twilightforest:enchanted_forest> ],
+	<tag:worldgen/biome:friendsandfoes:has_savanna_mauler> : [ <resource:twilightforest:oak_savannah> ],
+	<tag:worldgen/biome:minecraft:spawns_warm_variant_frogs> : [],
+	
+	# When Dungeons Arise - Add Aether and Twilight Forest support
+	<tag:worldgen/biome:dungeons_arise:has_structure/lighthouse_biomes> : [ <resource:minecraft:beach>, <resource:minecraft:snowy_beach> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/giant_mushroom_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_house_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_mines_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_village_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_challenger_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_conqueror_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_rider_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/small_blimp_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mechanical_nest_biomes> : [ <resource:twilightforest:final_plateau> ],
+	
+	# Observed - Add Twilight Forest support
+	<tag:worldgen/biome:observed:land_spawnable> : [ <resource:twilightforest:final_plateau> ],
+	
+	# Quark - Allow decorations to generate in the Twilight Forest
+	<tag:worldgen/biome:quark:has_fallen_spruce> : [ <resource:twilightforest:snowy_forest>, <resource:twilightforest:mountains> ],
+	
+	# Ribbits - Allow Ribbit Villages to generate in the Twilight Forest
+	<tag:worldgen/biome:ribbits:has_structure/ribbit_village> : [ <resource:twilightforest:swamp> ],
+	
+	# Towers of the Wild - Add support for Nullscape & Mystic's Biomes
 	<tag:worldgen/biome:totw_modded:has_structure/end_tower> : [ <resource:nullscape:shadowlands>, <resource:nullscape:void_barrens>, <resource:nullscape:crystal_peaks>],
-	<tag:worldgen/biome:supplementaries:has_wild_flax> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:strawberry_fields> ],
-	<tag:worldgen/biome:supplementaries:has_way_signs> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields>],
-	<tag:worldgen/biome:supplementaries:has_cave_urns> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
-	<tag:worldgen/biome:paraglider:has_structure/underground_horned_statue> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
-	<tag:worldgen/biome:paraglider:has_structure/tarrey_town_goddess_statue> : [ <resource:mysticsbiomes:lavender_meadow> ],
 	<tag:worldgen/biome:totw_modded:has_structure/derelict_grass_tower> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:totw_modded:has_structure/derelict_tower> : [ <resource:mysticsbiomes:lavender_meadow> ],
 	<tag:worldgen/biome:totw_modded:has_structure/desert_tower> : [ <resource:mysticsbiomes:lush_oasis> ],
 	<tag:worldgen/biome:totw_modded:has_structure/regular_tower> :  [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:strawberry_fields> ],
+	<tag:worldgen/biome:totw_modded:has_structure/ice_tower> : [ <resource:twilightforest:snowy_forest> ],
+	
+	# Supplementaries - Add support for Mystic's Biomes
+	<tag:worldgen/biome:supplementaries:has_wild_flax> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:strawberry_fields> ],
+	<tag:worldgen/biome:supplementaries:has_way_signs> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields>],
+	<tag:worldgen/biome:supplementaries:has_cave_urns> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
+	
+	# Paraglider - Add support for Mystic's Biomes
+	<tag:worldgen/biome:paraglider:has_structure/underground_horned_statue> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
+	<tag:worldgen/biome:paraglider:has_structure/tarrey_town_goddess_statue> : [ <resource:mysticsbiomes:lavender_meadow> ],
+	
+	# Waystones - Add support for Mystic's Biomes
 	<tag:worldgen/biome:waystones:is_desert> : [ <resource:mysticsbiomes:lush_oasis> ],
-	<tag:worldgen/biome:yungsextras:has_structure/desert_decorations> : [ <resource:mysticsbiomes:lush_oasis> ],
-	<tag:worldgen/biome:yungsextras:has_structure/vanilla_desert_well> : [ <resource:mysticsbiomes:lush_oasis> ],
+	
+	# Repurposed Structures - Add support for Mystic's Biomes
 	<tag:worldgen/biome:repurposed_structures:collections/deserts> : [ <resource:mysticsbiomes:lush_oasis> ],
 	<tag:worldgen/biome:repurposed_structures:collections/bamboos> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:repurposed_structures:collections/any_forests> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest> ],
@@ -68,30 +188,100 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	<tag:worldgen/biome:repurposed_structures:has_structure/wells/forest> : [ <resource:mysticsbiomes:autumnal_grove> ],
 	<tag:worldgen/biome:repurposed_structures:has_structure/wells/cherry> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:repurposed_structures:has_structure/pyramids/flower_forest> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
-	<tag:worldgen/biome:minecraft:has_structure/ruined_portal_desert> : [ <resource:mysticsbiomes:lush_oasis> ],
-	<tag:worldgen/biome:minecraft:has_structure/pillager_outpost> : [ <resource:mysticsbiomes:lush_oasis> ],
-	<tag:worldgen/biome:minecraft:has_structure/mineshaft> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:repurposed_structures:has_structure/villages/cherry> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:repurposed_structures:has_structure/wells/mossy_stone> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:repurposed_structures:has_structure/villages/bamboo> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
+	
+	# Minecraft
+	### Prevent certain Overworld events in the Aether
+	<tag:worldgen/biome:minecraft:without_wandering_trader_spawns> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:minecraft:without_zombie_sieges> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	<tag:worldgen/biome:minecraft:without_patrol_spawns> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
+	### Add worldgen support for Mystic's Biomes
+	<tag:worldgen/biome:minecraft:has_structure/ruined_portal_desert> : [ <resource:mysticsbiomes:lush_oasis> ],
+	<tag:worldgen/biome:minecraft:has_structure/pillager_outpost> : [ <resource:mysticsbiomes:lush_oasis> ],
+	<tag:worldgen/biome:minecraft:has_structure/mineshaft> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:minecraft:is_overworld> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:minecraft:is_forest> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest> ],
 	<tag:worldgen/biome:minecraft:has_structure/stronghold> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
-	<tag:worldgen/biome:twilightforest:in_twilight_forest> : [ <resource:twilightforest:mountains> ]
+	### Add mob support to the custom Mountains biome for Twilight Forest
+	<tag:worldgen/biome:minecraft:spawns_cold_variant_frogs> : [ <resource:twilightforest:mountains> ],
+	<tag:worldgen/biome:minecraft:spawns_snow_foxes> : [ <resource:twilightforest:mountains> ],
+	
+	# Twilight Forest - Add custom Mountains biome
+	<tag:worldgen/biome:twilightforest:in_twilight_forest> : [ <resource:twilightforest:mountains> ],
+	
+	# YUNG's Bridges - Allow YUNG's Bridges to generate in the Twilight Forest
+	<tag:worldgen/biome:yungsbridges:has_structure/bridge> : [ <resource:twilightforest:stream> ],
+	
+	# YUNG's Extras - Add support for Mystic's Biomes
+	<tag:worldgen/biome:yungsextras:has_structure/desert_decorations> : [ <resource:mysticsbiomes:lush_oasis> ],
+	<tag:worldgen/biome:yungsextras:has_structure/vanilla_desert_well> : [ <resource:mysticsbiomes:lush_oasis> ]
 };
 
 val tagsToClear as KnownTag<Worldgen>[] = [
-	<tag:worldgen/biome:weeping_angels:has_structure/catacombs>,
-	<tag:worldgen/biome:weeping_angels:spawns/weeping_angels>,
-	<tag:worldgen/biome:cataclysm:required_sunken_city_surrounding>,
-	<tag:worldgen/biome:cataclysm:has_structure/sunken_city_biomes>,
-	<tag:worldgen/biome:cataclysm:has_structure/soul_black_smith_biomes>,
-	<tag:worldgen/biome:cataclysm:has_structure/ruined_citadel_biomes>,
-	<tag:worldgen/biome:cataclysm:has_structure/cursed_pyramid_biomes>,
-	<tag:worldgen/biome:cataclysm:has_structure/burning_arena_biomes>,
-	<tag:worldgen/biome:cataclysm:has_structure/ancient_factory_biomes>,
-	<tag:worldgen/biome:observed:land_spawnable>
+	# Farmlife - Ensure Farmlife structures and mobs only spawn in the Aether
+	<tag:worldgen/biome:farmlife:has_structure/tribull_ranch>,
+	<tag:worldgen/biome:farmlife:has_structure/greenhouse>,
+	
+	# Friends and Foes - Ensure Maulers and Mooblooms only spawn in the Twilight Forest
+	<tag:worldgen/biome:friendsandfoes:has_moobloom/any>,
+	<tag:worldgen/biome:friendsandfoes:has_moobloom/buttercup>,
+	<tag:worldgen/biome:friendsandfoes:has_desert_mauler>,
+	<tag:worldgen/biome:friendsandfoes:has_savanna_mauler>,
+	
+	# Create Dreams and Desires - Ensure only specified blocks can perform seething, freezing and sanding
+	<tag:blocks:create_dd:fan_processing_catalysts/seething>,
+	<tag:blocks:create_dd:fan_processing_catalysts/freezing>,
+	<tag:blocks:create_dd:fan_processing_catalysts/sanding>,
+	
+	# Wither Storm - Remove Wither Storm platform/structure from natural generation so that we can set up custom summoning later
+	<tag:worldgen/biome:witherstormmod:has_structure/storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/snowy_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/savanna_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/ruins_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/order_temple_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/jungle_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/forest_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/desert_storm_spawn_platform>,
+	<tag:worldgen/biome:witherstormmod:has_structure/taiga_storm_spawn_platform>,
+	
+	# Ribbits - Ensure Ribbit Villages only spawn in biomes set in the script (i.e. Twilight Forest's Swamp)
+	<tag:worldgen/biome:ribbits:has_structure/ribbit_village>,
+	
+	# Observed - Ensure Observers only spawn in biomes set in the script (i.e. Twilight Forest's Final Plateau)
+	<tag:worldgen/biome:observed:land_spawnable>,
+	
+	# When Dungeons Arise - Control where structures spawn
+	<tag:worldgen/biome:dungeons_arise:has_structure/bandit_towers_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/bathhouse_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/coliseum_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/aviary_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/giant_mushroom_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/greenwood_pub_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_challenger_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_conqueror_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_rider_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/illager_windmill_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/infested_temple_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/keep_kayra_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/lighthouse_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/monastery_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_mines_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_house_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_village_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/plague_asylum_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/shiraz_palace_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/small_blimp_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/thornborn_towers_biomes>,
+	<tag:worldgen/biome:dungeons_arise:has_structure/mechanical_nest_biomes>
 ];
+
+for tagEntry in tagsToClear {
+
+	tagEntry.clear();
+	
+}
 
 for tagEntry, itemList in itemTagEntries {
 	
@@ -112,11 +302,5 @@ for tagEntry, biomeList in worldgenTagEntries {
 		tagEntry.addId(biome);
 		
 	}
-	
-}
-
-for tagEntry in tagsToClear {
-
-	tagEntry.clear();
 	
 }

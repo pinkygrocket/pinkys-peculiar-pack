@@ -7,7 +7,7 @@
 	amethyst_knife = false
 	black_opal_knife = true
 	blazing_knife = true
-	bone_knife = false
+	bone_knife = true
 	brass_knife = true
 	bronze_knife = true
 	certus_quartz_knife = true
@@ -49,6 +49,7 @@
 	onyx_knife = true
 	osmium_knife = true
 	pendorite_knife = true
+	phoenix_knife = true
 	refined_glowstone_knife = true
 	refined_obsidian_knife = true
 	rose_gold_knife = true
@@ -96,6 +97,7 @@
 	cactus_steak = true
 	cantaloupe = true
 	cantaloupe_bread = true
+	cantaloupe_gummy = true
 	cantaloupe_popsicle = true
 	cantaloupe_seeds = true
 	cantaloupe_slice = true
@@ -104,7 +106,7 @@
 	chunk_nugget = true
 	chunkwich = true
 	coconut_curry = true
-	cooked_goat = false
+	cooked_goat = true
 	cooked_marshmallow_stick = true
 	cooked_venison_chops = true
 	crab_rangoon = true
@@ -122,6 +124,7 @@
 	lavender_tea = true
 	marshmallow_stick = true
 	matcha = true
+	matcha_gummy = true
 	matcha_ice_cream = true
 	matcha_ice_cream_block = true
 	matcha_latte = true
@@ -131,9 +134,11 @@
 	nightshade_berry_sack = true
 	nut_butter_and_jelly_sandwich = true
 	nut_butter_bottle = true
+	nut_dough = true
 	prickly_pear_juice = true
 	quartz_cabinet = true
-	raw_goat = false
+	raw_goat = true
+	roasted_acorn = true
 	rock_candy = true
 	salmonberries = true
 	salmonberry_gummy = true
