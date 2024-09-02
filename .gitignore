@@ -13,6 +13,7 @@ hs_err_pid3128.log
 # Mod files
 
 *.jar
+*.zip
 
 .mixin.out/
 coremods/
