@@ -6,6 +6,9 @@
 crash-reports/
 ct_dumps/
 log/
+logs/
+replay_pid3128.log
+hs_err_pid3128.log
 
 # Mod files
 
@@ -17,6 +20,8 @@ mods/
 
 # User data
 
+aes/
+att-debug/
 ESM/
 exposures/
 fancymenu_data/
@@ -27,6 +32,7 @@ resourcepacks/
 server-resource-packs/
 shaderpacks/
 screenshots/
+schematics/
 simplebackups/
 saves/
 
@@ -44,7 +50,6 @@ options.txt
 
 # Readme files, example files
 
-README.md
 README.txt
 scripts/examples/
 example.js
