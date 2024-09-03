@@ -1,8 +1,0 @@
-{
-	"paraglider.jei.hint.paraglider" : "A leather parachute that allows the user to slowly glide when held in the main hand. Other items cannot be used while gliding, but the player inventory and other menus can be accessed. Can be decorated via crafting to look like a giant leaf.",
-	"paraglider.jei.hint.deku_leaf" : "A giant leaf that allows the user to slowly glide when held in the main hand. Other items cannot be used while gliding, but the player inventory and other menus can be accessed.",
-	"paraglider.jei.hint.spirit_orb" : "A magic orb that can be offered to Goddess Statues in exchange for Heart Containers. Spirit Orbs drop from Monster Spawners and can be found as dungeon loot.",
-	"paraglider.jei.hint.goddess_statue" : "A statue that allows players to exchange Spirit Orbs with a goddess for Heart Containers. Goddess Statues are found in village shrines and can be exchanged with by using the use key [INPUT]. They can also be decorated via crafting.",
-	"paraglider.jei.hint.heart_container" : "A vessel of power that grants an additional heart of maximum health when consumed. Heart Containers can be obtained by defeating major bosses and Illager raids, and exchanging Spirit Orbs with Goddess Statues.",
-	"paraglider.jei.hint.horned_statue" : ""
-}

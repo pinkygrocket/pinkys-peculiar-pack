@@ -35,6 +35,7 @@ val RANCHU_VARIENT_MAX = 303;
 val ENTITIES_TO_SCALE as float[EntityType<Entity>] = {
 	<entitytype:crittersandcompanions:leaf_insect> : 0.6,
 	<entitytype:crittersandcompanions:jumping_spider> : 0.35,
+	<entitytype:autumnity:snail> : 0.35,
 	<entitytype:mysticsbiomes:butterfly> : 0.4,
 	<entitytype:crittersandcompanions:dragonfly> : 0.4
 };

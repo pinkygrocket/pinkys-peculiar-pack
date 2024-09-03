@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:swamp_huts",
+    "minecraft:villages",
+	"twilightforest:labyrinth",
+	"totw_modded:tw_mangrove"
+  ]
+}

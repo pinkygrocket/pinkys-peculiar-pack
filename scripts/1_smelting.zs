@@ -18,7 +18,6 @@ val standardSmeltingRecipes as IItemStack[IItemStack] = {
 	<item:minecraft:mossy_stone_brick_slab> : <item:minecraft:stone_brick_slab>,
 	<item:minecraft:mossy_stone_brick_wall> : <item:minecraft:stone_brick_wall>,
 	<item:minecraft:infested_mossy_stone_bricks> : <item:minecraft:infested_stone_bricks>,
-	<item:waystones:mossy_waystone> : <item:waystones:waystone>,
 	<item:quark:mossy_stone_brick_vertical_slab> : <item:quark:stone_brick_vertical_slab>,
 	<item:twilightforest:mossy_underbrick> : <item:twilightforest:underbrick>,
 	<item:twilightforest:mossy_castle_brick> : <item:twilightforest:castle_brick>,

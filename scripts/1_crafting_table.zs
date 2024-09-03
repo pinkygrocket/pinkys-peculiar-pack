@@ -182,62 +182,6 @@ public class craftingRecipePatterned {
 				
 				this.finalInputShaped = [[this.inputSingle, this.inputSingle, this.inputSingle],[this.inputSingle, <tag:items:forge:ender_pearls>, this.inputSingle], [this.inputSingle, this.inputSingle, this.inputSingle]];
 				
-			} else if (this.pattern == "LANTERN_FLOWER") {
-				 
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:minecraft:flowers>, <tag:items:crafttweaker:torches>, <tag:items:minecraft:flowers>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_WITCH") {
-							
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<item:minecraft:glass_bottle>, <tag:items:crafttweaker:torches>, <tag:items:forge:crops/wheat>], [<tag:items:forge:rods/wooden>, this.inputSingle, <tag:items:forge:rods/wooden>]];
-				
-			} else if (this.pattern == "LANTERN_SPIDER") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_SNOWFLAKE") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_HEART") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_MOON") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_STAR") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_FAIRY") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_SKULL") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_GHOST") {
-						
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_FAIRY") {
-			
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_METEOR") {
-				
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:crafttweaker:torches>], [<item:minecraft:air>, this.inputSingle, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_OIL") {
-				
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:minecraft:flowers>, this.inputSingle, <tag:items:minecraft:flowers>], [<item:minecraft:air>, <tag:items:minecraft:flowers>, <item:minecraft:air>]];
-				
-			} else if (this.pattern == "LANTERN_CANDLE") {
-							
-				this.finalInputShaped = [[<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>], [<tag:items:forge:nuggets/gold>, this.inputSingle, <tag:items:forge:nuggets/gold>], [<item:minecraft:air>, <tag:items:forge:nuggets/gold>, <item:minecraft:air>]];
-				
 			} else if (this.pattern == "") {
 			
 			}
@@ -292,29 +236,19 @@ val standardPackRecipes as craftingRecipeExtended[] = [
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:slime_ball>, false, [ <tag:items:forge:dough>, <tag:items:forge:dyes/lime>]),
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:glowstone_dust> * 4, false, [ <item:minecraft:glowstone> ]),
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:amethyst_shard> * 4, false, [ <item:minecraft:amethyst_block> ]),
-	new craftingRecipeExtended("SHAPED", <item:fairylights:candle_lantern>, true, [[<item:minecraft:air>, <item:minecraft:iron_ingot>, <item:minecraft:air>],[<tag:items:forge:nuggets/gold>, <tag:items:crafttweaker:torches>, <tag:items:forge:nuggets/gold>],[<item:minecraft:iron_ingot>, <tag:items:forge:nuggets/gold>, <item:minecraft:iron_ingot>]]),
 	new craftingRecipeExtended("SHAPED", <item:ecologics:flowering_azalea_chest_boat>, false, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<item:ecologics:flowering_azalea_planks>, <tag:items:forge:chests/wooden>, <item:ecologics:flowering_azalea_planks>], [<item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>]]),
 	new craftingRecipeExtended("SHAPED", <item:minecraft:lantern>, true, [[<tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>], [<tag:items:forge:nuggets/iron>, <tag:items:crafttweaker:torches>, <tag:items:forge:nuggets/iron>], [<tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>]]),
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:jack_o_lantern>, true, [<tag:items:crafttweaker:torches>, <item:minecraft:carved_pumpkin>]),
 	new craftingRecipeExtended("SHAPED", <item:torchmaster:megatorch>, true, [[<tag:items:crafttweaker:torches>, <tag:items:crafttweaker:torches>, <tag:items:crafttweaker:torches>], [<tag:items:forge:gems/diamond>, <tag:items:minecraft:logs>, <tag:items:forge:gems/diamond>], [<item:minecraft:gold_block>, <tag:items:minecraft:logs>, <item:minecraft:gold_block>]]),
-	new craftingRecipeExtended("SHAPED", <item:fairylights:incandescent_light>, true, [[<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>], [<tag:items:forge:ingots/iron>, <tag:items:crafttweaker:torches>, <tag:items:forge:ingots/iron>], [<item:minecraft:air>, <tag:items:forge:glass_panes/colorless>, <item:minecraft:air>]]),
 	new craftingRecipeExtended("SHAPED", <item:quark:stone_lamp>, true, [[<item:minecraft:stone>, <item:minecraft:stone>, <item:minecraft:stone>], [<item:minecraft:stone>, <tag:items:crafttweaker:torches>, <item:minecraft:stone>], [<item:minecraft:stone>, <item:minecraft:stone>, <item:minecraft:stone>]]),
 	new craftingRecipeExtended("SHAPED", <item:ascended_quark:skyroot_chest>, true, [[<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:minecraft:air>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>]]),
 	new craftingRecipeExtended("SHAPED", <item:quark:stone_brick_lamp>, true, [[<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>], [<item:minecraft:stone_bricks>, <tag:items:crafttweaker:torches>, <item:minecraft:stone_bricks>], [<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>]]),
 	new craftingRecipeExtended("SHAPED", <item:supplementaries:sconce>, true, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<tag:items:forge:nuggets/iron>, <tag:items:crafttweaker:torches>, <tag:items:forge:nuggets/iron>], [<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>]]),
-	new craftingRecipeExtended("SHAPED", <item:fairylights:oil_lantern>, true, [[<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>], [<tag:items:forge:rods/wooden>, <tag:items:crafttweaker:torches>, <tag:items:forge:rods/wooden>], [<tag:items:forge:ingots/iron>, <tag:items:forge:glass_panes/colorless>, <tag:items:forge:ingots/iron>]]),
-	new craftingRecipeExtended("SHAPED", <item:fairylights:oil_lantern>, true, [[<item:minecraft:air>, <item:minecraft:air>, <tag:items:forge:gems/zanite>], [<item:minecraft:air>, <tag:items:forge:rods/wooden>, <item:minecraft:air>], [<item:minecraft:air>, <item:minecraft:air>, <tag:items:forge:rods/wooden>]]),
 	new craftingRecipeExtended("MIRRORED_ALL", <item:woodenshears:wshears_oak>, true,[[<item:minecraft:air>, <item:minecraft:flint>, <item:minecraft:air>],[<item:minecraft:flint>, <tag:items:forge:rods/wooden>, <item:minecraft:air>],[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]])
 ];
 
 val patternedPackRecipes as craftingRecipePatterned[] = [
-	new craftingRecipePatterned("CAKE", <item:minecraft:cake>, true, <tag:items:crafttweaker:colorless_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:pink_frosted_cake> , true, <tag:items:crafttweaker:pink_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:orange_frosted_cake>, true, <tag:items:crafttweaker:orange_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:yellow_frosted_cake>, true, <tag:items:crafttweaker:yellow_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:lime_frosted_cake>, true, <tag:items:crafttweaker:lime_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:cyan_frosted_cake>, true, <tag:items:crafttweaker:cyan_eggs>),
-	new craftingRecipePatterned("CAKE", <item:mysticsbiomes:purple_frosted_cake>, true, <tag:items:crafttweaker:purple_eggs>),
+	new craftingRecipePatterned("CAKE", <item:minecraft:cake>, true, <tag:items:forge:eggs>),
 	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:maple_chest_boat>, true, [<item:mysticsbiomes:maple_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:jacaranda_chest_boat>, true, [<item:mysticsbiomes:jacaranda_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:strawberry_chest_boat>, true, [<item:mysticsbiomes:strawberry_planks>]),
@@ -362,47 +296,8 @@ val patternedPackRecipes as craftingRecipePatterned[] = [
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_brown>, true, <item:minecraft:brown_wool>),
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_green>, true, <item:minecraft:green_wool>),
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_red>, true, <item:minecraft:red_wool>),
-	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_black>, true, <item:minecraft:black_wool>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 16383998}), true, <tag:items:forge:dyes/white>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 16351261}), true, <tag:items:forge:dyes/orange>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 13061821}), true, <tag:items:forge:dyes/magenta>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 3847130}), true, <tag:items:forge:dyes/light_blue>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 16701501}), true, <tag:items:forge:dyes/yellow>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 8439583}), true, <tag:items:forge:dyes/lime>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 15961002}), true, <tag:items:forge:dyes/pink>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 6316128}), true, <tag:items:forge:dyes/gray>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 10329495}), true, <tag:items:forge:dyes/light_gray>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 1481884}), true, <tag:items:forge:dyes/cyan>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 8991416}), true, <tag:items:forge:dyes/purple>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 3949738}), true, <tag:items:forge:dyes/blue>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 8606770}), true, <tag:items:forge:dyes/brown>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 6192150}), true, <tag:items:forge:dyes/green>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 11546150}), true, <tag:items:forge:dyes/red>),
-	new craftingRecipePatterned("LANTERN_FLOWER", <item:fairylights:flower_light>.withTag({color: 3289650}), true, <tag:items:forge:dyes/black>)
+	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_black>, true, <item:minecraft:black_wool>)
 ];
-
-/* val fairyLightsWithNames as IItemStack[string] = {
-	<item:fairylights:triangle_pennant>,
-	<item:fairylights:spearhead_pennant>,
-	<item:fairylights:swallowtail_pennant>,
-	<item:fairylights:square_pennant>,
-	<item:fairylights:fairy_light>,
-	<item:fairylights:paper_lantern>,
-	<item:fairylights:orb_lantern>,
-	<item:fairylights:flower_light>,
-	<item:fairylights:candle_lantern_light>,
-	<item:fairylights:jack_o_lantern>,
-	<item:fairylights:skull_light>,
-	<item:fairylights:ghost_light>,
-	<item:fairylights:spider_light>,
-	<item:fairylights:witch_light>,
-	<item:fairylights:snowflake_light>,
-	<item:fairylights:heart_light>,
-	<item:fairylights:moon_light>,
-	<item:fairylights:star_light>,
-	<item:fairylights:icicle_lights>,
-	<item:fairylights:meteor_light>
-}; */
 
 val metalSheets as IItemStack[IItemStack] = {
 
@@ -743,7 +638,25 @@ val completeItemRemoval as IItemStack[] = [
 	<item:xtraarrows:diamond_life_steal_arrow>,
 	<item:xtraarrows:iron_gravity_arrow>,
 	<item:xtraarrows:diamond_gravity_arrow>,
-	<item:xtraarrows:flint_lantern_arrow>
+	<item:xtraarrows:flint_lantern_arrow>,
+	<item:mysticsbiomes:strawberry_cow_spawn_egg>,
+	<item:mysticsbiomes:rainbow_chicken_spawn_egg>,
+	<item:mysticsbiomes:red_panda_spawn_egg>,
+	<item:mysticsbiomes:sea_otter_spawn_egg>,
+	<item:mysticsbiomes:pink_frosted_cake>,
+	<item:mysticsbiomes:purple_frosted_cake>,
+	<item:mysticsbiomes:orange_frosted_cake>,
+	<item:mysticsbiomes:yellow_frosted_cake>,
+	<item:mysticsbiomes:lime_frosted_cake>,
+	<item:mysticsbiomes:cyan_frosted_cake>,
+	<item:mysticsbiomes:purple_frosted_cake>,
+	<item:mysticsbiomes:pink_egg>,
+	<item:mysticsbiomes:orange_egg>,
+	<item:mysticsbiomes:yellow_egg>,
+	<item:mysticsbiomes:lime_egg>,
+	<item:mysticsbiomes:cyan_egg>,
+	<item:mysticsbiomes:purple_egg>,
+	<item:mysticsbiomes:strawberry_milk_bucket>
 ];
 
 val recipeRemovalByName as string[] = [
@@ -760,7 +673,6 @@ val recipeRemovalByName as string[] = [
 	"comforts:sleeping_bag_magenta",
 	"comforts:sleeping_bag_lime",
 	"comforts:sleeping_bag_pink",
-	"fairylights:flower_light",
 	"comforts:sleeping_bag_gray",
 	"comforts:sleeping_bag_light_gray",
 	"comforts:sleeping_bag_purple",
@@ -797,18 +709,6 @@ for recipe in standardPackRecipes {
 for recipe in patternedPackRecipes {
 	
 	recipe.registerRecipe();
-	
-}
-
-for colorName, colorEntry in colors {
-	
-	for selectedItem in <tag:items:fairylights:dyeable> {
-		
-		var outputItem as IItemStack = selectedItem.defaultInstance.withTag({color: colorEntry.fairyLightsColorCode});
-		var inputItems as IIngredient = selectedItem.defaultInstance.withTag({color: colors["white"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["black"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["light_gray"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["gray"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["brown"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["red"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["orange"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["yellow"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["lime"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["green"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["cyan"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["light_blue"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["blue"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["purple"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["magenta"].fairyLightsColorCode}) | selectedItem.defaultInstance.withTag({color: colors["pink"].fairyLightsColorCode});
-		craftingTable.addShapeless(makeSafeRecipeName(outputItem.hoverName) + "_dye" , outputItem, [inputItems, colorEntry.dye]);
-		
-	}
 	
 }
 

@@ -15,6 +15,7 @@ import crafttweaker.api.item.ItemDefinition;
 import stdlib.List;
 
 val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
+	<tag:items:minecraft:trim_materials> : [<item:create:zinc_ingot>, <item:twilightforest:fiery_ingot>, <item:twilightforest:ironwood_ingot>, <item:twilightforest:knightmetal_ingot>, <item:minecraft:netherite_ingot>, <item:minecraft:gold_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:diamond>, <item:create:brass_ingot>, <item:deep_aether:stratus_ingot>, <item:minecraft:emerald>, <item:minecraft:amethyst_shard>, <item:minecraft:lapis_lazuli>, <item:minecraft:quartz>, <item:minecraft:redstone>, <item:twilightforest:carminite>, <item:aether:ambrosium_shard>, <item:aether:regeneration_stone>, <item:aether:golden_amber>, <item:aether:zanite_gemstone>, <item:minecraft:glowstone_dust>, <item:minecraft:echo_shard>, <item:minecraft:nether_star>, <item:minecraft:ender_pearl>, <item:sullysmod:polished_jade>, <item:aether:enchanted_gravitite> ],
 	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
 	<tag:items:farmersdelight:serving_containers> : [ <item:ecologics:coconut_husk> ],
 	# Quark - Prevent certain Xtra Arrows from being affected by multishot to prevent weird behavior, glitches or exploits
@@ -22,18 +23,9 @@ val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	<tag:items:twilightforest:kobold_pacification_breads> : [ <item:delightful:cantaloupe_bread>, <item:upgrade_aquatic:mulberry_bread> ],
 	<tag:items:crafttweaker:maps> : [ <item:minecraft:map>, <item:minecraft:filled_map> ],
 	<tag:items:crafttweaker:adhesives> : [<item:minecraft:slime_ball>, <item:minecraft:honey_bottle>, <item:aether:swet_ball>],
-	<tag:items:crafttweaker:cyan_eggs> : [ <item:mysticsbiomes:cyan_egg>, <item:quark:egg_parrot_yellow_blue> ],
-	<tag:items:crafttweaker:green_eggs> : [ <item:quark:egg_parrot_green> ],
-	<tag:items:crafttweaker:lime_eggs> : [ <item:mysticsbiomes:lime_egg> ],
-	<tag:items:crafttweaker:yellow_eggs> : [ <item:mysticsbiomes:yellow_egg> ],
-	<tag:items:crafttweaker:orange_eggs> : [ <item:mysticsbiomes:orange_egg> ],
-	<tag:items:crafttweaker:red_eggs> : [ <item:quark:egg_parrot_red_blue> ],
-	<tag:items:crafttweaker:pink_eggs> : [ <item:mysticsbiomes:pink_egg> ],
-	<tag:items:crafttweaker:purple_eggs> : [ <item:mysticsbiomes:purple_egg> ],
 	<tag:items:crafttweaker:clouds> : [ <item:aether:cold_aercloud>, <item:aether:blue_aercloud>, <item:aether:golden_aercloud>, <item:twilightforest:wispy_cloud>, <item:twilightforest:fluffy_cloud>, <item:twilightforest:rainy_cloud>, <item:twilightforest:snowy_cloud>, <item:deep_aether:sterling_aercloud>, <item:deep_aether:chromatic_aercloud>],
 	<tag:items:crafttweaker:azalea_planks> : [ <item:quark:azalea_planks>, <item:ecologics:azalea_planks> ],
 	<tag:items:crafttweaker:torches> : [ <item:minecraft:torch>, <item:bambooeverything:dry_bamboo_torch>, <item:bambooeverything:bamboo_torch>, <item:bonetorch:bonetorch> ],
-	<tag:items:crafttweaker:colorless_eggs> : [ <item:minecraft:turtle_egg>, <item:minecraft:egg>, <item:aether:white_moa_egg>, <item:aether:black_moa_egg> ],
 	<tag:items:crafttweaker:hammers> : [ <item:easy_hammers:wooden_hammer>, <item:easy_hammers:stone_hammer>, <item:easy_hammers:golden_hammer>, <item:easy_hammers:iron_hammer>, <item:easy_hammers:diamond_hammer>, <item:easy_hammers:netherite_hammaer>, <item:aether:hammer_of_kingbdogz> ],
 	<tag:items:minecraft:dampens_vibrations> : [<item:absentbydesign:stairs_wool_purple>, <item:absentbydesign:stairs_wool_red>, <item:absentbydesign:stairs_wool_silver>, <item:absentbydesign:stairs_wool_white>, <item:absentbydesign:stairs_wool_yellow>, <item:absentbydesign:slab_wool_black>, <item:absentbydesign:slab_wool_blue>, <item:absentbydesign:slab_wool_brown>, <item:absentbydesign:slab_wool_gray>, <item:absentbydesign:slab_wool_cyan>, <item:absentbydesign:slab_wool_green>, <item:absentbydesign:slab_wool_light_blue>, <item:absentbydesign:slab_wool_lime>, <item:absentbydesign:slab_wool_magenta>, <item:absentbydesign:stairs_wool_blue>, <item:absentbydesign:stairs_wool_black>, <item:absentbydesign:slab_wool_yellow>, <item:absentbydesign:slab_wool_white>, <item:absentbydesign:slab_wool_silver>, <item:absentbydesign:slab_wool_red>, <item:absentbydesign:slab_wool_purple>, <item:absentbydesign:slab_wool_pink>, <item:absentbydesign:slab_wool_orange>, <item:absentbydesign:stairs_wool_brown>, <item:absentbydesign:stairs_wool_cyan>, <item:absentbydesign:stairs_wool_gray>, <item:absentbydesign:stairs_wool_green>, <item:absentbydesign:stairs_wool_light_blue>, <item:absentbydesign:stairs_wool_lime>, <item:absentbydesign:stairs_wool_magenta>, <item:absentbydesign:stairs_wool_orange>, <item:absentbydesign:stairs_wool_pink> ],
 };
@@ -173,9 +165,6 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	<tag:worldgen/biome:paraglider:has_structure/underground_horned_statue> : [ <resource:mysticsbiomes:autumnal_grove>, <resource:mysticsbiomes:bamboo_blossom_forest>, <resource:mysticsbiomes:lavender_meadow>, <resource:mysticsbiomes:lush_oasis>, <resource:mysticsbiomes:strawberry_fields> ],
 	<tag:worldgen/biome:paraglider:has_structure/tarrey_town_goddess_statue> : [ <resource:mysticsbiomes:lavender_meadow> ],
 	
-	# Waystones - Add support for Mystic's Biomes
-	<tag:worldgen/biome:waystones:is_desert> : [ <resource:mysticsbiomes:lush_oasis> ],
-	
 	# Repurposed Structures - Add support for Mystic's Biomes
 	<tag:worldgen/biome:repurposed_structures:collections/deserts> : [ <resource:mysticsbiomes:lush_oasis> ],
 	<tag:worldgen/biome:repurposed_structures:collections/bamboos> : [ <resource:mysticsbiomes:bamboo_blossom_forest> ],
@@ -221,6 +210,9 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 };
 
 val tagsToClear as KnownTag<Worldgen>[] = [
+
+	<tag:items:minecraft:trim_materials>,
+	
 	# Farmlife - Ensure Farmlife structures and mobs only spawn in the Aether
 	<tag:worldgen/biome:farmlife:has_structure/tribull_ranch>,
 	<tag:worldgen/biome:farmlife:has_structure/greenhouse>,

@@ -32,8 +32,13 @@
 		"result": "deny"
 	},
 	{
-		"mob": ["friendsandfoes:moobloom", "friendsandfoes:mauler", "babyfat:ranchu", "crittersandcompanions:koi_fish", "crittersandcompanions:shima_enaga"],
+		"mob": ["friendsandfoes:moobloom", "friendsandfoes:mauler", "babyfat:ranchu", "crittersandcompanions:koi_fish", "snuffles:snuffle"],
 		"dimension": "minecraft:overworld",
+		"result": "deny"
+	}
+	{
+		"mob": [ "mysticsbiomes:rainbow_chicken", "mysticsbiomes:strawberry_cow", "mysticsbiomes:sea_otter", "mysticsbiomes:red_panda" ],
+		"when": "onjoin",
 		"result": "deny"
 	}
 ]

@@ -421,6 +421,14 @@
 			cut_dolomite_brick = true
 			small_dolomite_brick = true
 
+		[types.cut_block_type.snifferplus]
+			stone_pine = true
+
+		[types.cut_block_type.autumnity]
+			snail_shell_brick = true
+			snail_shell_tile = true
+			maple = true
+
 	[types.cake]
 
 		[types.cake.mysticsbiomes]
@@ -486,6 +494,15 @@
 		[types.leaves_type.twilightdelight]
 			ironwood = true
 
+		[types.leaves_type.snifferplus]
+			stone_pine = true
+
+		[types.leaves_type.autumnity]
+			maple = true
+			yellow_maple = true
+			orange_maple = true
+			red_maple = true
+
 	[types.wood_type]
 
 		[types.wood_type.ecologics]
@@ -533,6 +550,12 @@
 		[types.wood_type.upgrade_aquatic]
 			driftwood = true
 			river = true
+
+		[types.wood_type.snifferplus]
+			stone_pine = true
+
+		[types.wood_type.autumnity]
+			maple = true
 
 #Disables specific entries
 [entries]

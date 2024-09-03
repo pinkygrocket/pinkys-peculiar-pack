@@ -1,0 +1,6 @@
+{
+  "loadOrder": [
+	"mod:astrological",
+	"mod:nullscape"
+ ]
+}
