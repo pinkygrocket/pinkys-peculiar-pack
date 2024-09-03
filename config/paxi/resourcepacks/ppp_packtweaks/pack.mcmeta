@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "Pack tweaks for Pinky's Peculiar Pack",
+    "pack_format": 15,
+    "supported_formats": [15]
+  }
+}

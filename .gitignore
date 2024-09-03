@@ -14,6 +14,7 @@ hs_err_pid3128.log
 
 *.jar
 *.zip
+*.disabled
 
 .mixin.out/
 coremods/
@@ -29,7 +30,6 @@ fancymenu_data/
 local/
 map_atlases/
 modernfix/
-resourcepacks/
 server-resource-packs/
 shaderpacks/
 screenshots/
