@@ -10,12 +10,15 @@ import crafttweaker.api.resource.ResourceLocation;
 import crafttweaker.api.entity.EntityType;
 import crafttweaker.api.fluid.Fluid;
 import crafttweaker.api.fluid.IFluidStack;
+import crafttweaker.api.tag.type.UnknownTag;
 
 import crafttweaker.api.item.ItemDefinition;
 import stdlib.List;
 
+/* Variables */
+
 val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
-	<tag:items:minecraft:trim_materials> : [<item:create:zinc_ingot>, <item:twilightforest:fiery_ingot>, <item:twilightforest:ironwood_ingot>, <item:twilightforest:knightmetal_ingot>, <item:minecraft:netherite_ingot>, <item:minecraft:gold_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:diamond>, <item:create:brass_ingot>, <item:deep_aether:stratus_ingot>, <item:minecraft:emerald>, <item:minecraft:amethyst_shard>, <item:minecraft:lapis_lazuli>, <item:minecraft:quartz>, <item:minecraft:redstone>, <item:twilightforest:carminite>, <item:aether:ambrosium_shard>, <item:aether:regeneration_stone>, <item:aether:golden_amber>, <item:aether:zanite_gemstone>, <item:minecraft:glowstone_dust>, <item:minecraft:echo_shard>, <item:minecraft:nether_star>, <item:minecraft:ender_pearl>, <item:sullysmod:polished_jade>, <item:aether:enchanted_gravitite> ],
+	/* <tag:items:minecraft:trim_materials> : [<item:create:zinc_ingot>, <item:twilightforest:fiery_ingot>, <item:twilightforest:ironwood_ingot>, <item:twilightforest:knightmetal_ingot>, <item:minecraft:netherite_ingot>, <item:minecraft:gold_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:diamond>, <item:create:brass_ingot>, <item:deep_aether:stratus_ingot>, <item:minecraft:emerald>, <item:minecraft:amethyst_shard>, <item:minecraft:lapis_lazuli>, <item:minecraft:quartz>, <item:minecraft:redstone>, <item:twilightforest:carminite>, <item:aether:ambrosium_shard>, <item:aether:regeneration_stone>, <item:aether:golden_amber>, <item:aether:zanite_gemstone>, <item:minecraft:glowstone_dust>, <item:minecraft:echo_shard>, <item:minecraft:nether_star>, <item:minecraft:ender_pearl>, <item:sullysmod:polished_jade>, <item:aether:enchanted_gravitite> ], */
 	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
 	<tag:items:farmersdelight:serving_containers> : [ <item:ecologics:coconut_husk> ],
 	# Quark - Prevent certain Xtra Arrows from being affected by multishot to prevent weird behavior, glitches or exploits
@@ -26,7 +29,7 @@ val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	<tag:items:crafttweaker:clouds> : [ <item:aether:cold_aercloud>, <item:aether:blue_aercloud>, <item:aether:golden_aercloud>, <item:twilightforest:wispy_cloud>, <item:twilightforest:fluffy_cloud>, <item:twilightforest:rainy_cloud>, <item:twilightforest:snowy_cloud>, <item:deep_aether:sterling_aercloud>, <item:deep_aether:chromatic_aercloud>],
 	<tag:items:crafttweaker:azalea_planks> : [ <item:quark:azalea_planks>, <item:ecologics:azalea_planks> ],
 	<tag:items:crafttweaker:torches> : [ <item:minecraft:torch>, <item:bambooeverything:dry_bamboo_torch>, <item:bambooeverything:bamboo_torch>, <item:bonetorch:bonetorch> ],
-	<tag:items:crafttweaker:hammers> : [ <item:easy_hammers:wooden_hammer>, <item:easy_hammers:stone_hammer>, <item:easy_hammers:golden_hammer>, <item:easy_hammers:iron_hammer>, <item:easy_hammers:diamond_hammer>, <item:easy_hammers:netherite_hammaer>, <item:aether:hammer_of_kingbdogz> ],
+	<tag:items:crafttweaker:hammers> : [ <item:justhammers:iron_impact_hammer>, <item:aether:hammer_of_kingbdogz> ],
 	<tag:items:minecraft:dampens_vibrations> : [<item:absentbydesign:stairs_wool_purple>, <item:absentbydesign:stairs_wool_red>, <item:absentbydesign:stairs_wool_silver>, <item:absentbydesign:stairs_wool_white>, <item:absentbydesign:stairs_wool_yellow>, <item:absentbydesign:slab_wool_black>, <item:absentbydesign:slab_wool_blue>, <item:absentbydesign:slab_wool_brown>, <item:absentbydesign:slab_wool_gray>, <item:absentbydesign:slab_wool_cyan>, <item:absentbydesign:slab_wool_green>, <item:absentbydesign:slab_wool_light_blue>, <item:absentbydesign:slab_wool_lime>, <item:absentbydesign:slab_wool_magenta>, <item:absentbydesign:stairs_wool_blue>, <item:absentbydesign:stairs_wool_black>, <item:absentbydesign:slab_wool_yellow>, <item:absentbydesign:slab_wool_white>, <item:absentbydesign:slab_wool_silver>, <item:absentbydesign:slab_wool_red>, <item:absentbydesign:slab_wool_purple>, <item:absentbydesign:slab_wool_pink>, <item:absentbydesign:slab_wool_orange>, <item:absentbydesign:stairs_wool_brown>, <item:absentbydesign:stairs_wool_cyan>, <item:absentbydesign:stairs_wool_gray>, <item:absentbydesign:stairs_wool_green>, <item:absentbydesign:stairs_wool_light_blue>, <item:absentbydesign:stairs_wool_lime>, <item:absentbydesign:stairs_wool_magenta>, <item:absentbydesign:stairs_wool_orange>, <item:absentbydesign:stairs_wool_pink> ],
 };
 
@@ -46,6 +49,13 @@ val fluidTagEntries as IFluidStack[][KnownTag<Fluid>] = {
 	<tag:fluids:aether:allowed_bucket_pickup> : [],
 	<tag:fluids:twilightforest:fire_jet_fuel> : [ <fluid:kubejs:fiery_blood> ],
 	<tag:fluids:create:bottomless/deny>: [ <fluid:kubejs:fiery_blood> ]
+};
+
+// Currently this doesn't do anything, but I'm keeping this for the future in case F&F adds support for other beehives.
+
+val professionTagEntries as ResourceLocation[][UnknownTag] = {
+	<tag:point_of_interest_type:minecraft:acquirable_job_site> : [ <resource:everycomp:faf_beehive>, <resource:betterbeekeeping:mod_beehive> ],
+	<tag:point_of_interest_type:minecraft:village> : [ <resource:everycomp:faf_beehive>, <resource:betterbeekeeping:mod_beehive> ]
 };
 
 /* val entityTypesEntries as EntityType[][KnownTag<EntityType>] = {
@@ -209,9 +219,9 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	<tag:worldgen/biome:yungsextras:has_structure/vanilla_desert_well> : [ <resource:mysticsbiomes:lush_oasis> ]
 };
 
-val tagsToClear as KnownTag<Worldgen>[] = [
+val worldgenTagsToClear as KnownTag<Worldgen>[] = [
 
-	<tag:items:minecraft:trim_materials>,
+	/* <tag:items:minecraft:trim_materials>, */
 	
 	# Farmlife - Ensure Farmlife structures and mobs only spawn in the Aether
 	<tag:worldgen/biome:farmlife:has_structure/tribull_ranch>,
@@ -222,11 +232,6 @@ val tagsToClear as KnownTag<Worldgen>[] = [
 	<tag:worldgen/biome:friendsandfoes:has_moobloom/buttercup>,
 	<tag:worldgen/biome:friendsandfoes:has_desert_mauler>,
 	<tag:worldgen/biome:friendsandfoes:has_savanna_mauler>,
-	
-	# Create Dreams and Desires - Ensure only specified blocks can perform seething, freezing and sanding
-	<tag:blocks:create_dd:fan_processing_catalysts/seething>,
-	<tag:blocks:create_dd:fan_processing_catalysts/freezing>,
-	<tag:blocks:create_dd:fan_processing_catalysts/sanding>,
 	
 	# Wither Storm - Remove Wither Storm platform/structure from natural generation so that we can set up custom summoning later
 	<tag:worldgen/biome:witherstormmod:has_structure/storm_spawn_platform>,
@@ -270,7 +275,22 @@ val tagsToClear as KnownTag<Worldgen>[] = [
 	<tag:worldgen/biome:dungeons_arise:has_structure/mechanical_nest_biomes>
 ];
 
-for tagEntry in tagsToClear {
+val blockTagsToClear as KnownTag<Block>[] = [
+	
+	# Create Dreams and Desires - Ensure only specified blocks can perform seething, freezing and sanding
+	<tag:blocks:create_dd:fan_processing_catalysts/seething>,
+	<tag:blocks:create_dd:fan_processing_catalysts/freezing>,
+	<tag:blocks:create_dd:fan_processing_catalysts/sanding>
+	
+];
+
+for tagEntry in blockTagsToClear {
+
+	tagEntry.clear();
+	
+}
+
+for tagEntry in worldgenTagsToClear {
 
 	tagEntry.clear();
 	
@@ -285,6 +305,12 @@ for tagEntry, itemList in itemTagEntries {
 for tagEntry, blockList in blockTagEntries {
 	
 	tagEntry.add(blockList);
+	
+}
+
+for tagEntry, poiList in professionTagEntries {
+	
+	tagEntry.addId(poiList);
 	
 }
 

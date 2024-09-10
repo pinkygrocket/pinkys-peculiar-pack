@@ -45,6 +45,8 @@ val standardSmeltingRecipes as IItemStack[IItemStack] = {
 	<item:create:controller_rail> : <item:minecraft:gold_nugget>
 };
 
+/* Main script */
+
 for input, output in standardSmeltingRecipes {
 	
 	furnace.addRecipe("crafttweaker_" + input.registryName.namespace + "_" + input.registryName.path + "_furnace", output, input, 0.1, 200);

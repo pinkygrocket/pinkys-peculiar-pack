@@ -54,6 +54,12 @@ val SPOUT_ITEMS as spoutRecipeExtended[] = [
 	new spoutRecipeExtended(<item:aether:skyroot_bucket>, <fluid:deep_aether:poison_fluid> * 1000, <item:aether:skyroot_poison_bucket>)
 ];
 
+val SPOUT_ITEMS_TO_REMOVE as IItemStack[] = [
+
+];
+
+/* Main script */
+
 for recipe in SPOUT_ITEMS {
 	recipe.registerRecipe();
 }

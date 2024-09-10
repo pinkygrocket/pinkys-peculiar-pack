@@ -31,8 +31,7 @@ val itemsWithHints as MutableComponent[IItemStack] = {
 	<item:aether:regeneration_stone> : Component.translatable("aether.jei.hint.regeneration_stone"),
 	<item:aether:iron_bubble> : Component.translatable("aether.jei.hint.iron_bubble"),
 	<item:babyfat:ranchu_bucket> : Component.translatable("babyfat.jei.hint.ranchu"),
-	<item:babyfat:ranchu_spawn_egg> : Component.translatable("babyfat.jei.hint.ranchu"),
-	<item:crafting_on_a_stick:crafting_table> : Component.translatable("crafting_on_a_stick.jei.hint.crafting_table", [Component.keybind("key.use"), Component.keybind("crafting_on_a_stick.key.open_curios")] as Component[])
+	<item:babyfat:ranchu_spawn_egg> : Component.translatable("babyfat.jei.hint.ranchu")
 };
 
 for hintItem, hintText in itemsWithHints {

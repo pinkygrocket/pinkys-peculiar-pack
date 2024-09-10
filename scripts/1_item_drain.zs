@@ -17,6 +17,8 @@ val AETHER_BUCKETS as IFluidStack[IItemStack] = {
 	<item:aether:skyroot_poison_bucket> : <fluid:deep_aether:poison_fluid>
 };
 
+/* Main script*/
+
 for filledBucketItem, outputFluid in AETHER_BUCKETS {
 	<recipetype:create:emptying>.removeByInput(filledBucketItem);
 	<recipetype:create:emptying>.addRecipe("extract_" + outputFluid.registryName.path + "_skyroot", <item:aether:skyroot_bucket>, outputFluid * 1000, filledBucketItem);

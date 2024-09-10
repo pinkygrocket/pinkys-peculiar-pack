@@ -8,6 +8,8 @@ import crafttweaker.api.entity.Entity;
 import crafttweaker.api.entity.EntityType;
 import crafttweaker.api.data.IData;
 
+/* Objects */
+
 public class transformationRecipeExtended {
 	
 	public var name as string : get, set;
@@ -38,8 +40,16 @@ public class transformationRecipeExtended {
 	
 }
 
-val transformationRecipes as transformationRecipeExtended[] = [
+/* Variables */
+
+val TRANSFORMATION_RECIPES as transformationRecipeExtended[] = [
+
+	// Intergration - Ecologics Penguin is the Overworld penguin, TF Penguin is exclusive to TF
+	
 	new transformationRecipeExtended(<entitytype:ecologics:penguin>, <entitytype:twilightforest:penguin>, true),
+	
+	// Intergration - Horses and Moas are rough dimensional equivalants
+	
 	new transformationRecipeExtended(<entitytype:minecraft:horse>, <entitytype:aether:moa>, true),
 	new transformationRecipeExtended(<entitytype:minecraft:cod>, <entitytype:deep_aether:aerglow_fish>, true),
 	new transformationRecipeExtended(<entitytype:sculkybits:sculk_crawler>, <entitytype:twilightforest:pinch_beetle>, true),
@@ -51,6 +61,6 @@ val transformationRecipes as transformationRecipeExtended[] = [
 	new transformationRecipeExtended(<entitytype:minecraft:piglin_brute>, <entitytype:twilightforest:minotaur>, true)
 ];
 
-for recipe in transformationRecipes	 {
+for recipe in TRANSFORMATION_RECIPES {
 	recipe.registerRecipe();
 }

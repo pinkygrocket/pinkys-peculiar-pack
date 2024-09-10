@@ -7,5 +7,5 @@ enableHints = true
 #Not recommended, but this will allow you to use the keybinds for deleting items even if the trash slot itself is hidden.
 allowDeletionWhileTrashSlotIsInvisible = false
 #List of items that cannot be deleted, in comma-separated format of "modid:name".
-deletionDenyList = []
+deletionDenyList = ["witherstormmod:formidibomb"]
 

@@ -6,7 +6,8 @@
       "block": [
         "minecraft:diamond_ore",
         "minecraft:deepslate_diamond_ore",
-        "minecraft:diamond_block"
+        "minecraft:diamond_block",
+		"items_displayed:diamond"
       ],
       "particle": {
         "type": "visuality:sparkle",
@@ -21,7 +22,8 @@
       "block": [
         "minecraft:emerald_ore",
         "minecraft:deepslate_emerald_ore",
-        "minecraft:emerald_block"
+        "minecraft:emerald_block",
+		"items_displayed:emerald"
       ],
       "particle": {
         "type": "visuality:sparkle",
@@ -66,9 +68,10 @@
 			"quark:raw_gold_bricks_stairs",
 			"quark:raw_gold_bricks_slab",
 			"quark:raw_gold_bricks_wall",
-			"quark:golden_carrot_crate",
 			"quark:gold_bars",
 			"cratedelight:golden_apple_crate",
+			"cratedelight:golden_carrot_crate",
+			"items_displayed:gold_ingot",
 			"minecraft:gold_block",
 			"minecraft:gilded_blackstone",
 			"minecraft:bell",

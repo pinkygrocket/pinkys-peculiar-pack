@@ -138,6 +138,16 @@
 			ochre_froglight = true
 			pearlescent_froglight = true
 			verdant_froglight = true
+			deepslate = true
+			rooted_dirt = true
+			muddy_mangrove_roots = true
+			cracked_polished_blackstone_bricks = true
+			shroomlight = true
+			gilded_blackstone = true
+			soul_sand = true
+			soul_soil = true
+			packed_ice = true
+			blue_ice = true
 
 		[types.cut_block_type.twilightforest]
 			twilight_oak = true
@@ -282,6 +292,8 @@
 			kelpy_stone_brick = true
 			driftwood = true
 			river = true
+			kelpy_cobblestone_brick = true
+			kelpy_cobblestone_tile = true
 
 		[types.cut_block_type.quark]
 			ancient_planks = true
@@ -421,24 +433,30 @@
 			cut_dolomite_brick = true
 			small_dolomite_brick = true
 
-		[types.cut_block_type.snifferplus]
-			stone_pine = true
-
 		[types.cut_block_type.autumnity]
 			snail_shell_brick = true
 			snail_shell_tile = true
 			maple = true
 
+		[types.cut_block_type.swampier_swamps]
+			mud = true
+
+		[types.cut_block_type.snifferplus]
+			stone_pine = true
+
+		[types.cut_block_type.goated]
+			thatch = true
+
 	[types.cake]
 
 		[types.cake.mysticsbiomes]
 			strawberry_cake = true
-			pink_frosted_cake = true
-			orange_frosted_cake = true
-			yellow_frosted_cake = true
-			lime_frosted_cake = true
-			cyan_frosted_cake = true
-			purple_frosted_cake = true
+			pink_frosted_cake = false
+			orange_frosted_cake = false
+			yellow_frosted_cake = false
+			lime_frosted_cake = false
+			cyan_frosted_cake = false
+			purple_frosted_cake = false
 
 	[types.leaves_type]
 
@@ -494,14 +512,14 @@
 		[types.leaves_type.twilightdelight]
 			ironwood = true
 
-		[types.leaves_type.snifferplus]
-			stone_pine = true
-
 		[types.leaves_type.autumnity]
 			maple = true
 			yellow_maple = true
 			orange_maple = true
 			red_maple = true
+
+		[types.leaves_type.snifferplus]
+			stone_pine = true
 
 	[types.wood_type]
 
@@ -518,9 +536,9 @@
 
 		[types.wood_type.mysticsbiomes]
 			strawberry = true
-			cherry = true
+			cherry = false
 			peach = true
-			maple = true
+			maple = false
 			sea_foam = true
 			jacaranda = true
 
@@ -551,11 +569,11 @@
 			driftwood = true
 			river = true
 
-		[types.wood_type.snifferplus]
-			stone_pine = true
-
 		[types.wood_type.autumnity]
 			maple = true
+
+		[types.wood_type.snifferplus]
+			stone_pine = true
 
 #Disables specific entries
 [entries]
@@ -603,4 +621,10 @@
 		[entries.wood_type.boatload]
 			large_boat = true
 			furnace_boat = true
+
+		[entries.wood_type.absentbydesign]
+			wall_stripped_log = true
+			wall_log = true
+			wall_planks = true
+			fence_log = true
 

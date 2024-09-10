@@ -9,16 +9,16 @@
 	"Strawberry Fields" = true
 	"Lavender Meadow" = true
 	"Bamboo Blossom Forest" = true
-	"Autumnal Grove" = true
+	"Autumnal Grove" = false
 	"Lush Oasis" = true
 	Lagoon = true
 
 ["Animal Spawns"]
 	#Biomes an animal can spawn in.
 	#Values can include modded biomes and biome tags. example: "mysticsbiomes:strawberry_fields"
-	"Rainbow Chickens" = ["minecraft:plains", "minecraft:forest", "minecraft:flower_forest"]
+	"Rainbow Chickens" = []
 	#The chance an animal will spawn.
 	#The higher the number, the more common an animal will spawn.
 	#Default: 6
-	"Rainbow Chicken Spawn Chance" = 6
+	"Rainbow Chicken Spawn Chance" = 0
 

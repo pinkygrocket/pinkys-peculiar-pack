@@ -19,6 +19,7 @@
     "crop_progress": true,
     "command_block": true,
     "mob_growth": true,
+    "waxed": true,
     "harvest_tool.new_line": false,
     "entity_health.max_for_render": 40,
     "entity_health.show_fractions": false,
@@ -62,7 +63,8 @@
   },
   "delightful": {
     "crop_progress": true,
-    "pie_icons": true
+    "pie_icons": true,
+    "mushroom_colony": true
   },
   "twilightforest": {
     "quest_ram_wool": true
@@ -88,9 +90,6 @@
     "crafting_blueprint": true,
     "goggles.detailed": false,
     "placard": true
-  },
-  "waystones": {
-    "waystone": true
   },
   "gravestone": {
     "grave": true

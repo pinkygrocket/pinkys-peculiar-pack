@@ -4,7 +4,6 @@
 		"dimension" : "twilightforest:twilight_forest",
 		"biome": "twilightforest:stream",
 		"block": "minecraft:water",
-		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
@@ -12,7 +11,6 @@
 		"dimension" : "twilightforest:twilight_forest",
 		"biome": "twilight_forest:lake",
 		"block": "minecraft:water",
-		"when": "onjoin",
 		"result" : "allow"
 	},
 	{
@@ -35,10 +33,9 @@
 		"mob": ["friendsandfoes:moobloom", "friendsandfoes:mauler", "babyfat:ranchu", "crittersandcompanions:koi_fish", "snuffles:snuffle"],
 		"dimension": "minecraft:overworld",
 		"result": "deny"
-	}
+	},
 	{
 		"mob": [ "mysticsbiomes:rainbow_chicken", "mysticsbiomes:strawberry_cow", "mysticsbiomes:sea_otter", "mysticsbiomes:red_panda" ],
-		"when": "onjoin",
 		"result": "deny"
 	}
 ]

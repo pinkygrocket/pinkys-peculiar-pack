@@ -82,11 +82,11 @@ val freezingRecipes as freezingRecipeExtended[] = [
 	new freezingRecipeExtended(<item:aether:ice_pendant>, <tag:items:aether:freezable_pendants>, 800, 1.0, true)
 ];
 
+/* Main script */
+
 for recipe in freezingRecipes {
 
 	recipe.registerRecipe();
 	
 }
-
-/* Main script */
 

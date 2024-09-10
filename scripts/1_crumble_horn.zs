@@ -8,6 +8,8 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.data.IData;
 
+/* Objects */
+
 public class crumbleHornRecipeExtended {
 	
 	public var name as string : get, set;
@@ -35,6 +37,8 @@ public class crumbleHornRecipeExtended {
 	
 }
 
+/* Variables */
+
 val crumbleHornRecipes as crumbleHornRecipeExtended[] = [
 	new crumbleHornRecipeExtended(<item:tflostblocks:cracked_underbrick_wall>, <item:tflostblocks:cracked_underbrick_wall>),
 	new crumbleHornRecipeExtended(<item:tflostblocks:cracked_deadrock_stairs>, <item:tflostblocks:weathered_deadrock_stairs>),
@@ -61,35 +65,37 @@ val crumbleHornRecipes as crumbleHornRecipeExtended[] = [
 	new crumbleHornRecipeExtended(<item:aether:aether_dirt>, <item:deep_aether:golden_heights_grass_block>),
 	new crumbleHornRecipeExtended(<item:aether:aether_dirt>, <item:aether:enchanted_aether_grass_block>),
 	new crumbleHornRecipeExtended(<item:minecraft:dirt>, <item:decorative_blocks:rocky_dirt>)
-	/* <item:absentbydesign:wall_stonebrick_cracked>
-		<item:absentbydesign:wall_cracked_nether_bricks>
-		<item:absentbydesign:slab_bricks_cracked>
-		<item:absentbydesign:slab_cracked_deepslate_bricks>
-		<item:absentbydesign:slab_cracked_deepslate_tiles>
-		<item:absentbydesign:stairs_bricks_cracked>
-		<item:absentbydesign:stairs_cracked_nether_bricks>
-		<item:absentbydesign:stairs_cracked_deepslate_bricks>
-		<item:absentbydesign:stairs_cracked_deepslate_tiles>
-		<item:absentbydesign:wall_cracked_deepslate_bricks>
-		<item:absentbydesign:wall_cracked_deepslate_tiles>
-		<item:twilightforest:cracked_nagastone_stairs_left>
-		<item:twilightforest:cracked_nagastone_stairs_right>
-		<item:absentbydesign:wall_cracked_deepslate_tiles>
-		<item:absentbydesign:wall_cracked_deepslate_bricks>
-		<item:minecraft:exposed_cut_copper_stairs>
-		<item:minecraft:exposed_cut_copper_slab>
-		<item:create:exposed_copper_shingles>
-		<item:create:exposed_copper_shingle_stairs>
-		<item:create:exposed_copper_shingle_slab>
-		<item:create:exposed_copper_tiles>
-		<item:create:exposed_copper_tile_slab>
-		<item:create:exposed_copper_tile_stairs>
-		<item:friendsandfoes:exposed_lightning_rod>
-		<item:modernminecarts:exposed_copper_rail>
-		<item:quark:exposed_cut_copper_vertical_slab>
-		<item:v_slab_compat:create/exposed_copper_tile_vertical_slab>
-		<item:v_slab_compat:create/exposed_copper_shingle_vertical_slab> */
+	/* new crumbleHornRecipeExtended(<item:absentbydesign:wall_stonebrick_cracked>
+		new crumbleHornRecipeExtended(<item:absentbydesign:wall_cracked_nether_bricks>
+		new crumbleHornRecipeExtended(<item:absentbydesign:slab_bricks_cracked>
+		new crumbleHornRecipeExtended(<item:absentbydesign:slab_cracked_deepslate_bricks>
+		new crumbleHornRecipeExtended(<item:absentbydesign:slab_cracked_deepslate_tiles>
+		new crumbleHornRecipeExtended(<item:absentbydesign:stairs_bricks_cracked>
+		new crumbleHornRecipeExtended(<item:absentbydesign:stairs_cracked_nether_bricks>
+		new crumbleHornRecipeExtended(<item:absentbydesign:stairs_cracked_deepslate_bricks>
+		new crumbleHornRecipeExtended(<item:absentbydesign:stairs_cracked_deepslate_tiles>
+		new crumbleHornRecipeExtended(<item:absentbydesign:wall_cracked_deepslate_bricks>
+		new crumbleHornRecipeExtended(<item:absentbydesign:wall_cracked_deepslate_tiles>
+		new crumbleHornRecipeExtended(<item:twilightforest:cracked_nagastone_stairs_left>
+		new crumbleHornRecipeExtended(<item:twilightforest:cracked_nagastone_stairs_right>
+		new crumbleHornRecipeExtended(<item:absentbydesign:wall_cracked_deepslate_tiles>
+		new crumbleHornRecipeExtended(<item:absentbydesign:wall_cracked_deepslate_bricks>
+		new crumbleHornRecipeExtended(<item:minecraft:exposed_cut_copper_stairs>
+		new crumbleHornRecipeExtended(<item:minecraft:exposed_cut_copper_slab>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_shingles>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_shingle_stairs>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_shingle_slab>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_tiles>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_tile_slab>
+		new crumbleHornRecipeExtended(<item:create:exposed_copper_tile_stairs>
+		new crumbleHornRecipeExtended(	<item:friendsandfoes:exposed_lightning_rod>
+		new crumbleHornRecipeExtended(<item:modernminecarts:exposed_copper_rail>
+		new crumbleHornRecipeExtended(<item:quark:exposed_cut_copper_vertical_slab>
+		new crumbleHornRecipeExtended(<item:v_slab_compat:create/exposed_copper_tile_vertical_slab>
+		new crumbleHornRecipeExtended(<item:v_slab_compat:create/exposed_copper_shingle_vertical_slab> */
 ];
+
+/* Main script */
 
 for recipe in crumbleHornRecipes {
 

@@ -4,51 +4,14 @@
   "entries": [
     {
       "armor": [
-        "minecraft:golden_helmet",
-        "minecraft:golden_chestplate",
-        "minecraft:golden_leggings",
-        "minecraft:golden_boots",
-		"minecraft:golden_horse_armor",
-		"aether:golden_gloves",
-		"aether:golden_ring",
-		"aether:golden_pendant",
-		"leatheredboots:leathered_gold_boots"
+        "twilightforest:fiery_helmet",
+        "twilightforest:fiery_chestplate",
+        "twilightforest:fiery_leggings",
+        "twilightforest:fiery_boots",
+        "umbral_skies:fiery_gloves"
       ],
       "particle": {
-        "type": "visuality:sparkle",
-        "value": [
-          0.99607843,
-          1.0,
-          0.7411765
-        ]
-      }
-    },
-	{
-		"armor" : [
-			"twilightforest:fiery_helmet",
-			"twilightforest:fiery_chestplate",
-			"twilightforest:fiery_leggings",
-			"twilightforest:fiery_boots",
-			"umbral_skies:fiery_gloves"
-		],
-		"particle": {
-			"type": "minecraft:flame"
-		}
-	},
-    {
-      "armor": [
-        "minecraft:diamond_helmet",
-        "minecraft:diamond_chestplate",
-        "minecraft:diamond_leggings",
-        "minecraft:diamond_boots"
-      ],
-      "particle": {
-        "type": "visuality:sparkle",
-        "value": [
-          0.7058824,
-          0.99215686,
-          0.93333334
-        ]
+        "type": "minecraft:flame"
       }
     }
   ]

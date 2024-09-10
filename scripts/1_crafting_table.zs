@@ -168,9 +168,12 @@ public class craftingRecipePatterned {
 	
 		} else if (this.pattern == "CHEST_BOAT") {
 			
-			/* When registering a CHEST_BOAT recipe, in the inputs, the normal boat goes first, and the planks go second.*/
+			craftingTable.addShaped(this.name + "_shaped", this.output, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [this.inputMultiple[0], <tag:items:forge:chests/wooden>, this.inputMultiple[0]], [this.inputMultiple[0], this.inputMultiple[0], this.inputMultiple[0]]]);
+			craftingTable.addShapeless(this.name + "_shapeless", this.output, [<tag:items:forge:chests/wooden>, this.inputMultiple[1]]);
 			
 		} else if (this.pattern == "LANTERN_OIL") {
+		
+			
 		
 		} else {
 			
@@ -221,41 +224,91 @@ public class color {
 /* Variables */
 
 val standardPackRecipes as craftingRecipeExtended[] = [
+
+	// Intergration - Make Supplementaries's Cog Block be crafted with Create cogs
+	
 	new craftingRecipeExtended("SHAPED", <item:supplementaries:cog_block>, true, [[<tag:items:forge:ingots/copper>, <item:create:cogwheel>, <tag:items:forge:ingots/copper>], [<item:create:cogwheel>, <tag:items:forge:storage_blocks/redstone>, <item:create:cogwheel>], [<tag:items:forge:ingots/copper>, <item:create:cogwheel>, <tag:items:forge:ingots/copper>]]),
+	
+	// Progression - Make the Explorer's Compass a midgame item that requires some exploration to get, as a tradeoff for it's power
+	
 	new craftingRecipeExtended("SHAPED", <item:explorerscompass:explorerscompass>, true, [[<item:twilightforest:ironwood_ingot>, <tag:items:minecraft:stone_bricks>, <item:minecraft:netherite_ingot>], [<tag:items:minecraft:stone_bricks>, <item:minecraft:compass>, <tag:items:minecraft:stone_bricks>], [<item:deep_aether:stratus_ingot>, <tag:items:minecraft:stone_bricks>, <item:quark:diamond_heart>]]),
-	new craftingRecipeExtended("SHAPED", <item:supplementaries:wrench>, true, [[<item:minecraft:air>, <tag:items:forge:ingots/copper>, <item:minecraft:air>], [<item:minecraft:air>, <tag:items:forge:rods>, <tag:items:forge:ingots/copper>], [<tag:items:forge:rods>, <item:minecraft:air>, <item:minecraft:air>]]),
+	
+	// Progression - Cooking For Blockhead's Crafting Book requiring diamonds is a bit silly
+	
 	new craftingRecipeExtended("SHAPED", <item:cookingforblockheads:crafting_book>, true, [[<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>], [<item:minecraft:crafting_table>, <item:cookingforblockheads:recipe_book>, <item:minecraft:crafting_table>], [<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>]]),
+	
+	// Intergration - Make the Carved Bamboo Chimes require dried bamboo from Bamboo Everything
+	
 	new craftingRecipeExtended("SHAPED", <item:chimes:carved_bamboo_chimes>, true, [[<item:minecraft:air>, <item:minecraft:oak_slab>, <item:minecraft:air>], [<item:minecraft:air>, <tag:items:forge:string>, <item:minecraft:air>], [<item:minecraft:air>, <item:bambooeverything:dry_bamboo>, <item:minecraft:air>]]),
-	new craftingRecipeExtended("SHAPED", <item:xercapaint:item_easel>, true, [[<item:minecraft:air>, <tag:items:forge:rods/wooden>, <item:minecraft:air>], [<tag:items:forge:rods/wooden>, <item:minecraft:air>, <tag:items:forge:rods/wooden>], [<tag:items:forge:rods/wooden>, <item:minecraft:air>, <tag:items:forge:rods/wooden>]]),
-	new craftingRecipeExtended("SHAPELESS", <item:map_atlases:atlas>, false, [ <item:minecraft:book>, <tag:items:crafttweaker:maps>, <item:minecraft:compass>, <tag:items:crafttweaker:adhesives> ]),
+	
+	// Intergration/Progression - Make Create's sheets possible to be crafted with a hammer, for easier progression
+	
 	new craftingRecipeExtended("SHAPELESS", <item:create:copper_sheet>, false, [ <item:minecraft:copper_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage() ]),
 	new craftingRecipeExtended("SHAPELESS", <item:create:brass_sheet>, false, [ <item:create:brass_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage() ]),
 	new craftingRecipeExtended("SHAPELESS", <item:create:iron_sheet>, false, [ <item:minecraft:iron_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage() ]),
 	new craftingRecipeExtended("SHAPELESS", <item:create:golden_sheet>, false, [ <item:minecraft:gold_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage() ]),
+	new craftingRecipeExtended("SHAPELESS", <item:cogsofcarminite:ironwood_sheet>, false, [ <tag:items:forge:ingots/fiery>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage()]),
+	new craftingRecipeExtended("SHAPELESS", <item:cogsofcarminite:knightmetal_sheet>, false, [ <item:twilightforest:knightmetal_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage()]),
+	new craftingRecipeExtended("SHAPELESS", <item:cogsofcarminite:fiery_sheet>, false, [ <item:twilightforest:fiery_ingot>, <tag:items:crafttweaker:hammers>.asIIngredient().anyDamage().transformDamage()]),
+	
+	// Progression - Needing iron and redstone to craft a map is a little silly
+	
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:map>, true, [ <item:minecraft:ink_sac>, <tag:items:forge:paper>]),
+	
+	// Intergration - Make Create's dough --> slime ball recipe accept any lime dye
+	
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:slime_ball>, false, [ <tag:items:forge:dough>, <tag:items:forge:dyes/lime>]),
-	new craftingRecipeExtended("SHAPELESS", <item:minecraft:glowstone_dust> * 4, false, [ <item:minecraft:glowstone> ]),
-	new craftingRecipeExtended("SHAPELESS", <item:minecraft:amethyst_shard> * 4, false, [ <item:minecraft:amethyst_block> ]),
-	new craftingRecipeExtended("SHAPED", <item:ecologics:flowering_azalea_chest_boat>, false, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<item:ecologics:flowering_azalea_planks>, <tag:items:forge:chests/wooden>, <item:ecologics:flowering_azalea_planks>], [<item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>]]),
+	
+	// Intergration - Make the hammer a copper item and use rope to make item
+	
+	new craftingRecipeExtended("SHAPED", <item:justhammers:iron_impact_hammer>, true, [[<item:minecraft:air>, <item:minecraft:copper_block>, <tag:items:forge:ropes>], [<item:minecraft:air>, <tag:items:forge:rods/wooden>, <item:minecraft:copper_block>], [<tag:items:forge:rods/wooden>, <item:minecraft:air>, <item:minecraft:air>]]),
+	
+	// Progression - Wooden stairs/slabs/etc. are being moved to the Sawmill, so it needs to be obtainable without them
+	
+	new craftingRecipeExtended("SHAPED", <item:sawmill:sawmill>, true, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>], [<tag:items:minecraft:planks>, <tag:items:minecraft:planks>, <tag:items:minecraft:planks>]]),
+	
+	// Intergration - Accept any torch to craft various items that only accepted vanilla torches
+	
 	new craftingRecipeExtended("SHAPED", <item:minecraft:lantern>, true, [[<tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>], [<tag:items:forge:nuggets/iron>, <tag:items:crafttweaker:torches>, <tag:items:forge:nuggets/iron>], [<tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>, <tag:items:forge:nuggets/iron>]]),
 	new craftingRecipeExtended("SHAPELESS", <item:minecraft:jack_o_lantern>, true, [<tag:items:crafttweaker:torches>, <item:minecraft:carved_pumpkin>]),
 	new craftingRecipeExtended("SHAPED", <item:torchmaster:megatorch>, true, [[<tag:items:crafttweaker:torches>, <tag:items:crafttweaker:torches>, <tag:items:crafttweaker:torches>], [<tag:items:forge:gems/diamond>, <tag:items:minecraft:logs>, <tag:items:forge:gems/diamond>], [<item:minecraft:gold_block>, <tag:items:minecraft:logs>, <item:minecraft:gold_block>]]),
 	new craftingRecipeExtended("SHAPED", <item:quark:stone_lamp>, true, [[<item:minecraft:stone>, <item:minecraft:stone>, <item:minecraft:stone>], [<item:minecraft:stone>, <tag:items:crafttweaker:torches>, <item:minecraft:stone>], [<item:minecraft:stone>, <item:minecraft:stone>, <item:minecraft:stone>]]),
-	new craftingRecipeExtended("SHAPED", <item:ascended_quark:skyroot_chest>, true, [[<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:minecraft:air>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>]]),
 	new craftingRecipeExtended("SHAPED", <item:quark:stone_brick_lamp>, true, [[<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>], [<item:minecraft:stone_bricks>, <tag:items:crafttweaker:torches>, <item:minecraft:stone_bricks>], [<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>]]),
 	new craftingRecipeExtended("SHAPED", <item:supplementaries:sconce>, true, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<tag:items:forge:nuggets/iron>, <tag:items:crafttweaker:torches>, <tag:items:forge:nuggets/iron>], [<item:minecraft:air>, <tag:items:forge:nuggets/iron>, <item:minecraft:air>]]),
-	new craftingRecipeExtended("MIRRORED_ALL", <item:woodenshears:wshears_oak>, true,[[<item:minecraft:air>, <item:minecraft:flint>, <item:minecraft:air>],[<item:minecraft:flint>, <tag:items:forge:rods/wooden>, <item:minecraft:air>],[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]])
+	
+	// Progression/Gamefeel - Make Wooden Shears require flint
+	
+	new craftingRecipeExtended("MIRRORED_ALL", <item:woodenshears:wshears_oak>, true,[[<item:minecraft:air>, <item:minecraft:flint>, <item:minecraft:air>],[<item:minecraft:flint>, <tag:items:forge:rods/wooden>, <item:minecraft:air>],[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]]),
+	
+	// Intergration - Make Twilight Forest's Final Castle bricks craftable with Moon Shards
+	// Misc that I still need to figure WTF I was thinking
+	
+	new craftingRecipeExtended("SHAPED", <item:ascended_quark:skyroot_chest>, true, [[<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:minecraft:air>, <item:aether:skyroot_planks>], [<item:aether:skyroot_planks>, <item:aether:skyroot_planks>, <item:aether:skyroot_planks>]]),
+	new craftingRecipeExtended("SHAPED", <item:supplementaries:wrench>, true, [[<item:minecraft:air>, <tag:items:forge:ingots/copper>, <item:minecraft:air>], [<item:minecraft:air>, <tag:items:forge:rods>, <tag:items:forge:ingots/copper>], [<tag:items:forge:rods>, <item:minecraft:air>, <item:minecraft:air>]]),
+	new craftingRecipeExtended("SHAPELESS", <item:minecraft:glowstone_dust> * 4, false, [ <item:minecraft:glowstone> ]),
+	new craftingRecipeExtended("SHAPELESS", <item:minecraft:amethyst_shard> * 4, false, [ <item:minecraft:amethyst_block> ]),
+	new craftingRecipeExtended("SHAPED", <item:xercapaint:item_easel>, true, [[<item:minecraft:air>, <tag:items:forge:rods/wooden>, <item:minecraft:air>], [<tag:items:forge:rods/wooden>, <item:minecraft:air>, <tag:items:forge:rods/wooden>], [<tag:items:forge:rods/wooden>, <item:minecraft:air>, <tag:items:forge:rods/wooden>]]),
+	new craftingRecipeExtended("SHAPELESS", <item:map_atlases:atlas>, false, [ <item:minecraft:book>, <tag:items:crafttweaker:maps>, <item:minecraft:compass>, <tag:items:crafttweaker:adhesives> ]),
+	new craftingRecipeExtended("SHAPED", <item:ecologics:flowering_azalea_chest_boat>, false, [[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], [<item:ecologics:flowering_azalea_planks>, <tag:items:forge:chests/wooden>, <item:ecologics:flowering_azalea_planks>], [<item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>, <item:ecologics:flowering_azalea_planks>]])
 ];
 
 val patternedPackRecipes as craftingRecipePatterned[] = [
+
+	// Intergration - Make the Minecraft Cake take any valid egg
+	
 	new craftingRecipePatterned("CAKE", <item:minecraft:cake>, true, <tag:items:forge:eggs>),
-	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:maple_chest_boat>, true, [<item:mysticsbiomes:maple_planks>]),
+	/* new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:maple_chest_boat>, true, [<item:mysticsbiomes:maple_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:jacaranda_chest_boat>, true, [<item:mysticsbiomes:jacaranda_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:strawberry_chest_boat>, true, [<item:mysticsbiomes:strawberry_planks>]),
+	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:strawberry_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:peach_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:mysticsbiomes:sea_foam_chest_boat>, true, []),
+
 	new craftingRecipePatterned("CHEST_BOAT", <item:ecologics:flowering_azalea_chest_boat>, true, [<item:ecologics:flowering_azalea_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:ecologics:azalea_chest_boat>, true, [<tag:items:crafttweaker:azalea_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:ecologics:walnut_chest_boat>, true, [<item:ecologics:walnut_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:ecologics:coconut_chest_boat>, true, [<item:ecologics:coconut_planks>]),
+	
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:sorting_chest_boat>, true, [<item:twilightforest:sorting_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:mining_chest_boat>, true, [<item:twilightforest:mining_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:transformation_chest_boat>, true, [<item:twilightforest:transformation_planks>]),
@@ -263,8 +316,31 @@ val patternedPackRecipes as craftingRecipePatterned[] = [
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:dark_chest_boat>, true, [<item:twilightforest:dark_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:mangrove_chest_boat>, true, [<item:minecraft:mangrove_planks>]),
 	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:canopy_chest_boat>, true, [<item:twilightforest:canopy_planks>]),
-	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:twilight_oak_chest_boat>, true, [<item:twilightforest:twilight_oak_planks>]),
-	new craftingRecipePatterned("CHEST_BOAT", <item:aether:skyroot_chest_boat>, true, [<item:aether:skyroot_planks>]),
+	new craftingRecipePatterned("CHEST_BOAT", <item:twilightforest:twilight_oak_chest_boat>, true, [<item:twilightforest:twilight_oak_planks>]), 
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:deep_aether:roseroot_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:deep_aether:yagroot_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:deep_aether:cruderoot_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:deep_aether:conberry_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:deep_aether:sunroot_chest_boat>, true, []),
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:aether:skyroot_chest_boat>, true, []),
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:upgrade_aquatic:driftwood_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:upgrade_aquatic:river_chest_boat>, true, []),
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:boatload:crimson_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:boatload:warped_chest_boat>, true, []),
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:fireproofboats:crimson_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:fireproofboats:warped_chest_boat>, true, []),
+	
+	new craftingRecipePatterned("CHEST_BOAT", <item:snifferplus:stone_pine_chest_boat>, true, []),
+	new craftingRecipePatterned("CHEST_BOAT", <item:autumnity:maple_chest_boat>, true, []),
+	*/
+	
+	// Intergration - Make Comfort's Sleeping Bags take any valid dye item
+	
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_white>, false, <item:minecraft:white_wool>),
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_orange>, false, <item:minecraft:orange_wool>),
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_magenta>, false, <item:minecraft:magenta_wool>),
@@ -281,6 +357,9 @@ val patternedPackRecipes as craftingRecipePatterned[] = [
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_green>, false, <item:minecraft:green_wool>),
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_red>, false, <item:minecraft:red_wool>),
 	new craftingRecipePatterned("SLEEPING_BAG", <item:comforts:sleeping_bag_black>, false, <item:minecraft:black_wool>),
+	
+	// Intergration - Make Elevator Mod's Elevators take any valid dye item
+	
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_white>, true, <item:minecraft:white_wool>),
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_orange>, true, <item:minecraft:orange_wool>),
 	new craftingRecipePatterned("ELEVATOR", <item:elevatorid:elevator_magenta>, true, <item:minecraft:magenta_wool>),
@@ -322,43 +401,27 @@ val colors as color[string] = {
 	"pink" : new color("pink", <tag:items:forge:dyes/pink>, 15961002)
 };
 
-val completeItemRemoval as IItemStack[] = [
-	<item:bellsandwhistles:andesite_pilot>,
-	<item:bellsandwhistles:metal_pilot>,
-	<item:bellsandwhistles:brass_pilot>,
-	<item:bellsandwhistles:copper_pilot>,
-	<item:bellsandwhistles:metal_pilot>,
-	<item:bellsandwhistles:polished_andesite_pilot>,
-	<item:bellsandwhistles:polished_granite_pilot>,
-	<item:bellsandwhistles:polished_diorite_pilot>,
-	<item:bellsandwhistles:polished_deepslate_pilot>,
-	<item:bellsandwhistles:polished_dripstone_pilot>,
-	<item:bellsandwhistles:polished_tuff_pilot>,
-	<item:bellsandwhistles:polished_calcite_pilot>,
-	<item:bellsandwhistles:polished_limestone_pilot>,
-	<item:bellsandwhistles:polished_scoria_pilot>,
-	<item:bellsandwhistles:polished_scorchia_pilot>,
-	<item:bellsandwhistles:polished_crimsite_pilot>,
-	<item:bellsandwhistles:polished_ochrum_pilot>,
-	<item:bellsandwhistles:polished_veridium_pilot>,
-	<item:bellsandwhistles:polished_asurine_pilot>,
+// Items that are being completely removed from the pack/game
+
+val completeItemRemovalByItem as IItemStack[] = [
+
 	<item:absentbydesign:wall_tuff>,
-	<item:quark:carrot_crate>,
-	<item:quark:potato_crate>,
-	<item:quark:beetroot_crate>,
-	<item:quark:berry_sack>,
-	<item:quark:apple_crate>,
-	<item:quark:golden_apple_crate>,
-	<item:quark:golden_carrot_crate>,
-	<item:supplementaries:sugar_cube>,
-	<item:quark:glowberry_sack>,
-	<item:quark:cocoa_beans_sack>,
-	<item:quark:gunpowder_sack>,
+	
+	// Absent by Design - Some overlap with other compat mods
+	
 	<item:absentbydesign:slab_calcite>,
 	<item:absentbydesign:wall_calcite>,
 	<item:absentbydesign:stairs_calcite>,
 	<item:absentbydesign:stairs_tuff>,
 	<item:absentbydesign:gate_nether_bricks>,
+	
+	// Supplementaries - Redundancy with Farmer's Delight and Monobank
+	
+	<item:supplementaries:rope>,
+	<item:supplementaries:safe>,
+	
+	// Wooden Shears - Content bloat, one universal wooden shear is good enough
+	
 	<item:woodenshears:wshears_acacia>,
 	<item:woodenshears:wshears_birch>,
 	<item:woodenshears:wshears_jungle>,
@@ -370,53 +433,39 @@ val completeItemRemoval as IItemStack[] = [
 	<item:woodenshears:wshears_mangrove>,
 	<item:woodenshears:wshears_bamboo>,
 	<item:woodenshears:wshears_cherry>,
+	
+	// Arifacts - Don't like the concept of infinite food
+	
 	<item:artifacts:everlasting_beef>,
+	
+	// Vertical Slab Compat - Some overlap with other compat mods
+	
 	<item:v_slab_compat:aether/aerogel_vertical_slab>,
-	<item:berry_good:sweet_berry_basket>,
-	<item:berry_good:glow_berry_basket>,
 	<item:v_slab_compat:aether/mossy_holystone_vertical_slab>,
-	<item:everycomp:tf/aether/skyroot_banister>,
 	<item:v_slab_compat:aether/holystone_vertical_slab>,
-	<item:everycomp:q/aether/vertical_skyroot_planks>,
 	<item:v_slab_compat:aether/skyroot_vertical_slab>,
-	<item:everycomp:q/aether/skyroot_chest>,
-	<item:everycomp:q/aether/skyroot_trapped_chest>,
 	<item:v_slab_compat:aether/holystone_brick_vertical_slab>,
 	<item:v_slab_compat:aether/icestone_vertical_slab>,
-	<item:supplementaries:stone_tile>,
-	<item:supplementaries:rope>,
-	<item:berry_good:music_disc_fox>,
-	<item:create_connected:music_disc_interlude>,
-	<item:create_connected:music_disc_elevator>,
+	
+	// Berry Good - Some overlap with other compat mods
+	
+	<item:berry_good:sweet_berry_basket>,
+	<item:berry_good:glow_berry_basket>,
+	
 	<item:cookingforblockheads:heating_unit>,
+	
+	// Baby Fat - Ranchu don't spawn in the Overworld so this is useless
+	
 	<item:babyfat:water_lettuce>,
-	<item:create_mechanical_spawner:spawn_fluid_random_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_blaze_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_creeper_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_enderman_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_magma_cube_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_skeleton_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_slime_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_spider_bucket>,
-	<item:create_mechanical_spawner:spawn_fluid_zombie_bucket>,
+	
+	// Create DD - Most of Create DD is random undocumented things that I don't want and doesn't fit this pack/game
+	
 	<item:create_dd:hazard_block>,
 	<item:create_dd:industrial_fan>,
 	<item:create_dd:item_stockpile>,
 	<item:create_dd:fluid_reservoir>,
-	<item:create_dd:raw_rubber_block>,
-	<item:create_dd:gilded_rose_sword>,
-	<item:create_dd:gilded_rose_pickaxe>,
-	<item:create_dd:gilded_rose_axe>,
-	<item:create_dd:gilded_rose_shovel>,
-	<item:create_dd:gilded_rose_hoe>,
 	<item:create_dd:deforester_saw>,
 	<item:create_dd:music_disc_waltz_of_the_flowers>,
-	<item:create_dd:haunting_sail>,
-	<item:create_dd:smoking_sail>,
-	<item:create_dd:blasting_sail>,
-	<item:create_dd:seething_sail>,
-	<item:create_dd:freezing_sail>,
-	<item:create_dd:sanding_sail>,
 	<item:create_dd:furnace_engine>,
 	<item:create_dd:kinetic_motor>,
 	<item:create_dd:inverse_box>,
@@ -425,238 +474,86 @@ val completeItemRemoval as IItemStack[] = [
 	<item:create_dd:multimeter>,
 	<item:create_dd:redstone_divider>,
 	<item:create_dd:giant_gear>,
-	<item:create_dd:abstruse_mechanism>,
-	<item:create_dd:sealed_mechanism>,
-	<item:create_dd:integrated_mechanism>,
-	<item:create_dd:calculation_mechanism>,
-	<item:create_dd:infernal_mechanism>,
 	<item:create_dd:integrated_circuit>,
-	<item:create_dd:blue_padded_tiled_rubber>,
-	<item:create_dd:blue_padded_rubber_stairs>,
-	<item:create_dd:blue_padded_rubber>,
-	<item:create_dd:blue_padded_rubber_slab>,
-	<item:create_dd:blue_padded_mosaic_rubber>,
-	<item:create_dd:light_blue_padded_tiled_rubber>,
-	<item:create_dd:light_blue_padded_rubber>,
-	<item:create_dd:light_blue_padded_rubber_stairs>,
-	<item:create_dd:light_blue_padded_rubber_slab>,
 	<item:create_dd:cog_crank>,
-	<item:create_dd:rubber_block>,
-	<item:create_dd:splashing_sail>,
-	<item:create_dd:kinetic_mechanism>,
-	<item:create_dd:raw_rubber>,
-	<item:create_dd:rubber>,
 	<item:create_dd:magnet>,
-	<item:create_dd:padded_rubber>,
-	<item:create_dd:padded_tiled_rubber>,
-	<item:create_dd:padded_mosaic_rubber>,
-	<item:create_dd:padded_rubber_slab>,
-	<item:create_dd:padded_rubber_stairs>,
-	<item:create_dd:raw_padded_rubber>,
-	<item:create_dd:raw_padded_tiled_rubber>,
-	<item:create_dd:raw_padded_mosaic_rubber>,
-	<item:create_dd:raw_padded_rubber_slab>,
-	<item:create_dd:raw_padded_rubber_stairs>,
-	<item:create_dd:black_padded_tiled_rubber>,
-	<item:create_dd:black_padded_rubber>,
-	<item:create_dd:black_padded_rubber_stairs>,
-	<item:create_dd:black_padded_rubber_slab>,
-	<item:create_dd:black_padded_mosaic_rubber>,
-	<item:create_dd:white_padded_tiled_rubber>,
-	<item:create_dd:white_padded_rubber>,
-	<item:create_dd:white_padded_rubber_stairs>,
-	<item:create_dd:white_padded_rubber_slab>,
-	<item:create_dd:white_padded_mosaic_rubber>,
-	<item:create_dd:yellow_padded_rubber>,
-	<item:create_dd:yellow_padded_rubber_slab>,
-	<item:create_dd:yellow_padded_rubber_stairs>,
-	<item:create_dd:yellow_padded_mosaic_rubber>,
-	<item:create_dd:gray_padded_tiled_rubber>,
-	<item:create_dd:gray_padded_rubber>,
-	<item:create_dd:gray_padded_rubber_stairs>,
-	<item:create_dd:gray_padded_rubber_slab>,
-	<item:create_dd:gray_padded_mosaic_rubber>,
-	<item:create_dd:light_blue_padded_mosaic_rubber>,
-	<item:create_dd:red_padded_tiled_rubber>,
-	<item:create_dd:red_padded_rubber>,
-	<item:create_dd:red_padded_rubber_stairs>,
-	<item:create_dd:red_padded_rubber_slab>,
-	<item:create_dd:red_padded_mosaic_rubber>,
-	<item:create_dd:green_padded_tiled_rubber>,
-	<item:create_dd:green_padded_rubber>,
-	<item:create_dd:green_padded_rubber_stairs>,
-	<item:create_dd:green_padded_rubber_slab>,
-	<item:create_dd:green_padded_mosaic_rubber>,
-	<item:create_dd:lime_padded_tiled_rubber>,
-	<item:create_dd:lime_padded_rubber>,
-	<item:create_dd:lime_padded_rubber_stairs>,
-	<item:create_dd:lime_padded_rubber_slab>,
-	<item:create_dd:lime_padded_mosaic_rubber>,
-	<item:create_dd:pink_padded_tiled_rubber>,
-	<item:create_dd:pink_padded_rubber>,
-	<item:create_dd:pink_padded_rubber_stairs>,
-	<item:create_dd:pink_padded_rubber_slab>,
-	<item:create_dd:pink_padded_mosaic_rubber>,
-	<item:create_dd:magenta_padded_tiled_rubber>,
-	<item:create_dd:magenta_padded_rubber_stairs>,
-	<item:create_dd:magenta_padded_rubber>,
-	<item:create_dd:magenta_padded_rubber_slab>,
-	<item:create_dd:magenta_padded_mosaic_rubber>,
-	<item:create_dd:yellow_padded_tiled_rubber>,
-	<item:create_dd:light_gray_padded_tiled_rubber>,
-	<item:create_dd:light_gray_padded_rubber>,
-	<item:create_dd:light_gray_padded_rubber_stairs>,
-	<item:create_dd:light_gray_padded_rubber_slab>,
-	<item:create_dd:light_gray_padded_mosaic_rubber>,
-	<item:create_dd:brown_padded_tiled_rubber>,
-	<item:create_dd:brown_padded_rubber>,
-	<item:create_dd:brown_padded_rubber_stairs>,
-	<item:create_dd:brown_padded_rubber_slab>,
-	<item:create_dd:brown_padded_mosaic_rubber>,
-	<item:create_dd:cyan_padded_tiled_rubber>,
-	<item:create_dd:cyan_padded_rubber>,
-	<item:create_dd:cyan_padded_rubber_stairs>,
-	<item:create_dd:cyan_padded_rubber_slab>,
-	<item:create_dd:cyan_padded_mosaic_rubber>,
-	<item:create_dd:purple_padded_tiled_rubber>,
-	<item:create_dd:purple_padded_rubber>,
-	<item:create_dd:purple_padded_rubber_stairs>,
-	<item:create_dd:purple_padded_rubber_slab>,
-	<item:create_dd:purple_padded_mosaic_rubber>,
-	<item:create_dd:orange_padded_rubber>,
-	<item:create_dd:orange_padded_tiled_rubber>,
-	<item:create_dd:orange_padded_rubber_stairs>,
-	<item:create_dd:orange_padded_rubber_slab>,
-	<item:create_dd:orange_padded_mosaic_rubber>,
-	<item:v_slab_compat:create_dd/cut_dolomite_vertical_slab>,
-	<item:v_slab_compat:create_dd/cut_dolomite_brick_vertical_slab>,
-	<item:v_slab_compat:create_dd/polished_cut_dolomite_vertical_slab>,
-	<item:create_dd:cut_dolomite>,
-	<item:create_dd:polished_cut_dolomite>,
-	<item:create_dd:cut_dolomite_bricks>,
-	<item:create_dd:small_dolomite_bricks>,
-	<item:create_dd:layered_dolomite>,
-	<item:create_dd:dolomite_pillar>,
-	<item:create_dd:black_asphalt_block>,
-	<item:create_dd:white_asphalt_block>,
-	<item:create_dd:blue_asphalt_block>,
-	<item:create_dd:light_blue_asphalt_block>,
-	<item:create_dd:red_asphalt_block>,
-	<item:create_dd:green_asphalt_block>,
-	<item:create_dd:lime_asphalt_block>,
-	<item:create_dd:pink_asphalt_block>,
-	<item:create_dd:magenta_asphalt_block>,
-	<item:create_dd:yellow_asphalt_block>,
-	<item:create_dd:gray_asphalt_block>,
-	<item:create_dd:light_gray_asphalt_block>,
-	<item:create_dd:brown_asphalt_block>,
-	<item:create_dd:cyan_asphalt_block>,
-	<item:create_dd:purple_asphalt_block>,
-	<item:create_dd:orange_asphalt_block>,
-	<item:v_slab_compat:create_dd/cut_gabbro_brick_vertical_slab>,
-	<item:v_slab_compat:create_dd/polished_cut_gabbro_vertical_slab>,
-	<item:v_slab_compat:create_dd/small_gabbro_brick_vertical_slab>,
-	<item:v_slab_compat:create_dd/cut_gabbro_vertical_slab>,
-	<item:create_dd:cut_gabbro>,
-	<item:create_dd:polished_cut_gabbro>,
-	<item:create_dd:cut_gabbro_bricks>,
-	<item:create_dd:small_gabbro_bricks>,
-	<item:create_dd:layered_gabbro>,
-	<item:create_dd:gabbro_pillar>,
-	<item:xtraarrows:netherite_redstone_torch_arrow>,
-	<item:xtraarrows:netherite_soul_torch_arrow>,
-	<item:xtraarrows:netherite_freezing_arrow>,
-	<item:xtraarrows:netherite_life_steal_arrow>,
-	<item:xtraarrows:netherite_gravity_arrow>,
-	<item:xtraarrows:netherite_gravity_arrow>,
-	<item:xtraarrows:netherite_lantern_arrow>,
-	<item:xtraarrows:netherite_soul_lantern_arrow>,
-	<item:xtraarrows:netherite_magnetic_arrow>,
-	<item:xtraarrows:golden_arrow>,
-	<item:xtraarrows:golden_atlantean_arrow>,
-	<item:xtraarrows:golden_ender_arrow>,
-	<item:xtraarrows:golden_explosive_arrow>,
-	<item:xtraarrows:golden_slime_arrow>,
-	<item:xtraarrows:golden_lightning_arrow>,
-	<item:xtraarrows:golden_vexing_arrow>,
-	<item:xtraarrows:golden_tracking_arrow>,
-	<item:xtraarrows:golden_torch_arrow>,
-	<item:xtraarrows:golden_redstone_torch_arrow>,
-	<item:xtraarrows:golden_soul_torch_arrow>,
-	<item:xtraarrows:golden_freezing_arrow>,
-	<item:xtraarrows:golden_life_steal_arrow>,
-	<item:xtraarrows:golden_gravity_arrow>,
-	<item:xtraarrows:golden_lantern_arrow>,
-	<item:xtraarrows:golden_soul_lantern_arrow>,
-	<item:xtraarrows:golden_soul_lantern_arrow>,
-	<item:xtraarrows:golden_magnetic_arrow>,
-	<item:xtraarrows:netherite_arrow>,
-	<item:xtraarrows:netherite_atlantean_arrow>,
-	<item:xtraarrows:netherite_ender_arrow>,
-	<item:xtraarrows:netherite_explosive_arrow>,
-	<item:xtraarrows:netherite_slime_arrow>,
-	<item:xtraarrows:netherite_lightning_arrow>,
-	<item:xtraarrows:netherite_vexing_arrow>,
-	<item:xtraarrows:netherite_tracking_arrow>,
-	<item:xtraarrows:netherite_torch_arrow>,
-	<item:xtraarrows:iron_redstone_torch_arrow>,
-	<item:xtraarrows:diamond_redstone_torch_arrow>,
-	<item:xtraarrows:flint_soul_torch_arrow>,
-	<item:xtraarrows:iron_soul_torch_arrow>,
-	<item:xtraarrows:diamond_soul_torch_arrow>,
-	<item:xtraarrows:iron_freezing_arrow>,
-	<item:xtraarrows:diamond_freezing_arrow>,
-	<item:xtraarrows:flint_life_steal_arrow>,
-	<item:xtraarrows:iron_life_steal_arrow>,
-	<item:xtraarrows:diamond_magnetic_arrow>,
-	<item:xtraarrows:iron_magnetic_arrow>,
-	<item:xtraarrows:iron_lantern_arrow>,
-	<item:xtraarrows:diamond_lantern_arrow>,
-	<item:xtraarrows:flint_soul_lantern_arrow>,
-	<item:xtraarrows:iron_soul_lantern_arrow>,
-	<item:xtraarrows:diamond_soul_lantern_arrow>,
-	<item:xtraarrows:iron_arrow>,
-	<item:xtraarrows:diamond_arrow>,
-	<item:xtraarrows:iron_atlantean_arrow>,
-	<item:xtraarrows:diamond_atlantean_arrow>,
-	<item:xtraarrows:iron_ender_arrow>,
-	<item:xtraarrows:diamond_ender_arrow>,
-	<item:xtraarrows:iron_explosive_arrow>,
-	<item:xtraarrows:diamond_explosive_arrow>,
-	<item:xtraarrows:iron_slime_arrow>,
-	<item:xtraarrows:diamond_slime_arrow>,
-	<item:xtraarrows:iron_lightning_arrow>,
-	<item:xtraarrows:diamond_lightning_arrow>,
-	<item:xtraarrows:iron_vexing_arrow>,
-	<item:xtraarrows:diamond_vexing_arrow>,
-	<item:xtraarrows:iron_tracking_arrow>,
-	<item:xtraarrows:diamond_tracking_arrow>,
-	<item:xtraarrows:flint_torch_arrow>,
-	<item:xtraarrows:iron_torch_arrow>,
-	<item:xtraarrows:diamond_torch_arrow>,
-	<item:xtraarrows:flint_redstone_torch_arrow>,
-	<item:xtraarrows:diamond_life_steal_arrow>,
-	<item:xtraarrows:iron_gravity_arrow>,
-	<item:xtraarrows:diamond_gravity_arrow>,
-	<item:xtraarrows:flint_lantern_arrow>,
+	<item:create_dd:bury_blend>,
+	<item:create_dd:coal_piece>,
+	<item:create_dd:diamond_shard>,
+	<item:create_dd:lapis_lazuli_shard>,
+	
+	// Mystic's Biomes - Duplication between other mods and some content bloat
+	
 	<item:mysticsbiomes:strawberry_cow_spawn_egg>,
 	<item:mysticsbiomes:rainbow_chicken_spawn_egg>,
 	<item:mysticsbiomes:red_panda_spawn_egg>,
 	<item:mysticsbiomes:sea_otter_spawn_egg>,
-	<item:mysticsbiomes:pink_frosted_cake>,
-	<item:mysticsbiomes:purple_frosted_cake>,
-	<item:mysticsbiomes:orange_frosted_cake>,
-	<item:mysticsbiomes:yellow_frosted_cake>,
-	<item:mysticsbiomes:lime_frosted_cake>,
-	<item:mysticsbiomes:cyan_frosted_cake>,
-	<item:mysticsbiomes:purple_frosted_cake>,
 	<item:mysticsbiomes:pink_egg>,
 	<item:mysticsbiomes:orange_egg>,
 	<item:mysticsbiomes:yellow_egg>,
 	<item:mysticsbiomes:lime_egg>,
 	<item:mysticsbiomes:cyan_egg>,
 	<item:mysticsbiomes:purple_egg>,
-	<item:mysticsbiomes:strawberry_milk_bucket>
+	<item:mysticsbiomes:strawberry_milk_bucket>,
+	
+	// Just Hammers - I don't want to make hammers for every tool class but still want the functionality
+	
+	<item:justhammers:iron_hammer>,
+	
+	// Every Compat - Some overlap with other crosscompat mods
+	
+	<item:everycomp:q/aether/skyroot_chest>,
+	<item:everycomp:q/aether/skyroot_trapped_chest>,
+	<item:everycomp:q/aether/vertical_skyroot_planks>,
+	<item:everycomp:tf/aether/skyroot_banister>,
+	
+	// Mystic's Biomes - Overlap with vanilla (why) and Autumnity
+	
+	<item:supplementaries:mysticsbiomes/sign_post_cherry>,
+	<item:supplementaries:mysticsbiomes/sign_post_maple>,
+	
+	// Minecraft - Better Beekeeping as an Oak Hive that replaces the vanilla one
+	
+	<item:minecraft:beehive>
+
+];
+
+val completeItemRemovalByRegex as string[] = [
+
+	// Create Bells and Whistles - Don't like the look of the pilots, may bring them back later
+	"bellsandwhistles:.*_pilot",
+	
+	// Mystic's Biomes - Overlap with vanilla (why) and Autumnity
+	"mysticsbiomes:.*(cherry|maple|frosted)_.*",
+	
+	// Wither Storm Mod - Having command block versions of every tool in every class is bloat
+	"witherstormmod:(wooden|stone|iron|gold)_command.*",
+	
+	// Xtra Arrows - Has a lot of bloat, we only want the base level of Arrows
+	"xtraarrows:(flint|diamond|iron|golden|netherite)_.*",
+	
+	// Create Mechanical Spawner - We are only using the mechanical spawner for the Wither Storm
+	"create_mechanical_spawner:.*_bucket",
+	
+	// Friends and Foes - Overlap with Better Beekeeping
+	"friendsandfoes:.*_beehive",
+	
+	// Every Compat - Some overlap with other crosscompat mods
+	"everycomp:fd/twilightforest/.*_cabinet",
+	
+	// Just Hammers - I don't want to make hammers for every tool class but still want the functionality
+	"justhammers:.*_core",
+	
+	// Create DD - Most of Create DD is random undocumented things that I don't want and doesn't fit this pack/game
+	"create_dd:.*(gilded_rose|sail|asphalt|mechanism|rubber|dolomite|gabbro).*",
+	"v_slab_compat:create_dd/.*(dolomite|gabbro).*",
+	
+	// Just Hammers - I don't want to make hammers for every tool class but still want the functionality
+	"justhammers:(stone|gold|diamond|netherite).*",
+	"justhammers:(reinforced|destructor).*",
+	
+	// Create Connected - Just don't want the discs
+	"create_connected:music_disc.*"
 ];
 
 val recipeRemovalByName as string[] = [
@@ -666,22 +563,6 @@ val recipeRemovalByName as string[] = [
 	"absentbydesign:stripped_jungle_wood",
 	"absentbydesign:stripped_acacia_wood",
 	"absentbydesign:stripped_dark_oak_wood",
-	"comforts:sleeping_bag_cyan",
-	"comforts:sleeping_bag_yellow",
-	"comforts:sleeping_bag_white",
-	"comforts:sleeping_bag_orange",
-	"comforts:sleeping_bag_magenta",
-	"comforts:sleeping_bag_lime",
-	"comforts:sleeping_bag_pink",
-	"comforts:sleeping_bag_gray",
-	"comforts:sleeping_bag_light_gray",
-	"comforts:sleeping_bag_purple",
-	"comforts:sleeping_bag_blue",
-	"comforts:sleeping_bag_brown",
-	"comforts:sleeping_bag_red",
-	"comforts:sleeping_bag_green",
-	"comforts:sleeping_bag_black",
-	"comforts:sleeping_bag_light_blue",
 	"create:crafting/appliances/slime_ball",
 	"quark:tweaks/crafting/utility/misc/easy_sticks",
 	"deep_aether:pumpkin_pie",
@@ -689,27 +570,38 @@ val recipeRemovalByName as string[] = [
 	"aether:skyroot_crafting_table"
 ];
 
+val recipeRemovalByRegex as string[] = [
+	"comforts:sleeping_bag_.*"
+];
+
 /* Main script */
 
-for input in completeItemRemoval {
+for input in completeItemRemovalByItem {
 	craftingTable.remove(input);
 	Jei.hideIngredient(input);
 }
 
-for recipeName in recipeRemovalByName {
-	craftingTable.removeByName(recipeName);
+for regex in completeItemRemovalByRegex {
+	
+	craftingTable.removeByRegex(regex);
+	Jei.hideIngredientsByRegex(regex);
+	
+}
+
+for recipe in recipeRemovalByName {
+	craftingTable.removeByName(recipe);
+}
+
+for recipe in recipeRemovalByRegex {
+	craftingTable.removeByRegex(recipe);
 }
 
 for recipe in standardPackRecipes {
-	
 	recipe.registerRecipe();
-	
 }
 
 for recipe in patternedPackRecipes {
-	
 	recipe.registerRecipe();
-	
 }
 
 /* Functions */

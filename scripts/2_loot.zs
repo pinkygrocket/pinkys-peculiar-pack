@@ -95,6 +95,6 @@ for minibossEntity in MINIBOSS_ENTITIES {
 
 // Make the Questing Ram drop a Heart Container upon quest completion
 
-loot.modifiers.register("inject:entities/tf/questing_ram/spirit_orb", LootConditions.allOf(LootTableIdLootCondition.create(<resource:twilightforest:entities/questing_ram_rewards>)), CommonLootModifiers.add(<item:paraglider:heart_container>));
+loot.modifiers.register("inject/tf/entities/questing_ram/spirit_orb", LootConditions.allOf(LootTableIdLootCondition.create(<resource:twilightforest:entities/questing_ram_rewards>)), CommonLootModifiers.add(<item:paraglider:heart_container>));
 
 //

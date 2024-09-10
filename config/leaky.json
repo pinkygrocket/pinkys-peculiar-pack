@@ -5,7 +5,7 @@
   },
   "highlightitems": {
     "desc:": "Choose if nearby reported stacked item entities should be glowing, default: true",
-    "highlightitems": true
+    "highlightitems": false
   },
   "reportThreshold": {
     "desc:": "Set the min amount of stacked items being reported, default: 100",
