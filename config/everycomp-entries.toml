@@ -447,6 +447,26 @@
 		[types.cut_block_type.goated]
 			thatch = true
 
+		[types.cut_block_type.packedup]
+			book_bundle = true
+			white_book_bundle = true
+			light_gray_book_bundle = true
+			gray_book_bundle = true
+			black_book_bundle = true
+			brown_book_bundle = true
+			red_book_bundle = true
+			orange_book_bundle = true
+			yellow_book_bundle = true
+			lime_book_bundle = true
+			green_book_bundle = true
+			cyan_book_bundle = true
+			light_blue_book_bundle = true
+			blue_book_bundle = true
+			purple_book_bundle = true
+			magenta_book_bundle = true
+			pink_book_bundle = true
+			grass_thatch = true
+
 	[types.cake]
 
 		[types.cake.mysticsbiomes]
@@ -627,4 +647,7 @@
 			wall_log = true
 			wall_planks = true
 			fence_log = true
+
+		[entries.wood_type.mighty_mail]
+			mail_box = true
 

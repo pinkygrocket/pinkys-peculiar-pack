@@ -27,8 +27,8 @@
 [mobs_damage_numbers]
 	#Show damage taken form
 	#Allowed Values: ALL_ENTITIES, ALL_PLAYERS, LOCAL_PLAYER, NONE
-	damage_mode = "ALL_ENTITIES"
+	damage_mode = "NONE"
 	#Show healing taken for
 	#Allowed Values: ALL_ENTITIES, ALL_PLAYERS, LOCAL_PLAYER, NONE
-	healing_mode = "ALL_ENTITIES"
+	healing_mode = "NONE"
 

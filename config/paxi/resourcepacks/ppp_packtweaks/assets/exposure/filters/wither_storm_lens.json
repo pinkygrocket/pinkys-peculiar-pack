@@ -1,0 +1,7 @@
+{
+  "item": {
+    "item": "witherstormmod:tainted_glass_pane"
+  },
+  "attachment_texture": "exposure:textures/gui/filter/wither_storm_lens.png",
+  "shader": "ppp_packtweaks:shaders/post/wither_storm_camera.json"
+}

@@ -42,15 +42,15 @@ public class spoutRecipeExtended {
 
 val SPOUT_ITEMS as spoutRecipeExtended[] = [
 	new spoutRecipeExtended(<item:aether:golden_dart>, <fluid:deep_aether:poison_fluid> * 125, <item:aether:poison_dart>),
-	new spoutRecipeExtended(<item:minecraft:iron_ingot>, <fluid:kubejs:fiery_blood> * 100, <item:twilightforest:fiery_ingot>),
-	new spoutRecipeExtended(<item:minecraft:iron_block>, <fluid:kubejs:fiery_blood> * 900, <item:twilightforest:fiery_block>),
-	new spoutRecipeExtended(<item:minecraft:iron_helmet>, <fluid:kubejs:fiery_blood> * 500, <item:twilightforest:fiery_helmet>),
-	new spoutRecipeExtended(<item:minecraft:iron_chestplate>, <fluid:kubejs:fiery_blood> * 800, <item:twilightforest:fiery_chestplate>),
-	new spoutRecipeExtended(<item:minecraft:iron_leggings>, <fluid:kubejs:fiery_blood> * 700, <item:twilightforest:fiery_leggings>),
-	new spoutRecipeExtended(<item:minecraft:iron_boots>, <fluid:kubejs:fiery_blood> * 400, <item:twilightforest:fiery_boots>),
-	new spoutRecipeExtended(<item:create:iron_sheet>, <fluid:kubejs:fiery_blood> * 100, <item:cogsofcarminite:fiery_sheet>),
-	new spoutRecipeExtended(<item:farmersdelight:iron_knife>, <fluid:kubejs:fiery_blood> * 100,  <item:delightful:fiery_knife>),
-	new spoutRecipeExtended(<item:aether:iron_gloves>, <fluid:kubejs:fiery_blood> * 200, <item:umbral_skies:fiery_gloves>),
+	new spoutRecipeExtended(<item:minecraft:iron_ingot>, <fluid:ppp_packtweaks:fiery_blood> * 100, <item:twilightforest:fiery_ingot>),
+	new spoutRecipeExtended(<item:minecraft:iron_block>, <fluid:ppp_packtweaks:fiery_blood> * 900, <item:twilightforest:fiery_block>),
+	new spoutRecipeExtended(<item:minecraft:iron_helmet>, <fluid:ppp_packtweaks:fiery_blood> * 500, <item:twilightforest:fiery_helmet>),
+	new spoutRecipeExtended(<item:minecraft:iron_chestplate>, <fluid:ppp_packtweaks:fiery_blood> * 800, <item:twilightforest:fiery_chestplate>),
+	new spoutRecipeExtended(<item:minecraft:iron_leggings>, <fluid:ppp_packtweaks:fiery_blood> * 700, <item:twilightforest:fiery_leggings>),
+	new spoutRecipeExtended(<item:minecraft:iron_boots>, <fluid:ppp_packtweaks:fiery_blood> * 400, <item:twilightforest:fiery_boots>),
+	new spoutRecipeExtended(<item:create:iron_sheet>, <fluid:ppp_packtweaks:fiery_blood> * 100, <item:cogsofcarminite:fiery_sheet>),
+	new spoutRecipeExtended(<item:farmersdelight:iron_knife>, <fluid:ppp_packtweaks:fiery_blood> * 100,  <item:delightful:fiery_knife>),
+	new spoutRecipeExtended(<item:aether:iron_gloves>, <fluid:ppp_packtweaks:fiery_blood> * 200, <item:umbral_skies:fiery_gloves>),
 	new spoutRecipeExtended(<item:aether:skyroot_bucket>, <fluid:deep_aether:poison_fluid> * 1000, <item:aether:skyroot_poison_bucket>)
 ];
 

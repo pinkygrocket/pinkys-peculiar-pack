@@ -7,11 +7,26 @@
         "twilightforest:fiery_helmet",
         "twilightforest:fiery_chestplate",
         "twilightforest:fiery_leggings",
-        "twilightforest:fiery_boots",
-        "umbral_skies:fiery_gloves"
+        "twilightforest:fiery_boots"
       ],
       "particle": {
         "type": "minecraft:flame"
+      }
+    },
+    {
+      "armor": [
+        "minecraft:diamond_helmet",
+        "minecraft:diamond_chestplate",
+        "minecraft:diamond_leggings",
+        "minecraft:diamond_boots"
+      ],
+      "particle": {
+        "type": "visuality:sparkle",
+        "value": [
+          0.7058824,
+          0.99215686,
+          0.93333334
+        ]
       }
     }
   ]

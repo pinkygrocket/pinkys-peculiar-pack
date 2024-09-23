@@ -1,0 +1,15 @@
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": true,
+  "bookData": {
+    "patchouli:ppp_packguide": {
+      "viewedEntries": [
+        "patchouli:getting_started_twilightforest",
+        "patchouli:getting_started_aether",
+        "patchouli:getting_started_create"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
+}

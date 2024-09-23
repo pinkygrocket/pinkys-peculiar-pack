@@ -34,6 +34,8 @@ val itemsWithHints as MutableComponent[IItemStack] = {
 	<item:babyfat:ranchu_spawn_egg> : Component.translatable("babyfat.jei.hint.ranchu")
 };
 
+/* Main script */
+
 for hintItem, hintText in itemsWithHints {
 	
 	Jei.addIngredientInformation(hintItem, hintText);

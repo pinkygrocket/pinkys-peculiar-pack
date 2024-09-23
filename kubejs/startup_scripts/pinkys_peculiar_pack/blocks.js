@@ -2,13 +2,13 @@ StartupEvents.registry('block', (event) => {
 	
 	// Add Rose Quartz Tile Stairs and Slabs for a build
 	
-	event.create('rose_quartz_tile_stairs', 'stairs')
+	event.create('ppp_packtweaks:rose_quartz_tile_stairs', 'stairs')
 		.displayName('Rose Quartz Tile Stairs')
 		.stoneSoundType()
 		.tagBlock('mineable/pickaxe')
 		.tagBlock("artifacts:mineable/digging_claws")
 		.textureAll('create:block/palettes/rose_quartz_tiles')
-	event.create('rose_quartz_tile_slab', 'slab')
+	event.create('ppp_packtweaks:rose_quartz_tile_slab', 'slab')
 		.displayName('Rose Quartz Tile Slab')
 		.stoneSoundType()
 		.tagBlock('mineable/pickaxe')
@@ -24,9 +24,14 @@ StartupEvents.registry('block', (event) => {
 		'enchanted_fruit'
 	];
 	
+	let storageBlockNames = [
+		'moonstone',
+		'echo_crystal'
+	];
+	
 	crateNames.forEach((crateName) => {
 		
-		event.create(`${crateName}_crate`, 'basic')
+		event.create(`ppp_packtweaks:${crateName}_crate`, 'basic')
 			.woodSoundType()
 			.texture('up', `kubejs:block/${crateName}_crate_up`)
 			.texture('north', `kubejs:block/${crateName}_crate_side`)
@@ -37,14 +42,20 @@ StartupEvents.registry('block', (event) => {
 			.tagBlock('artifacts:mineable/digging_claws')
 			.tagBlock('forge:storage_blocks')
 			.tagBlock('minecraft:mineable/axe')
+			.fullBlock(true)
 	});
 	
-	event.create('goldenleaf_berry_sack', 'basic')
-		.displayName('Goldenleaf Berry Sack')
+	storageBlockNames.forEach((blockName) => {
+		
+		event.create(`ppp_packtweaks:${blockName}_block`, 'basic')
+			.fullBlock(true)
+			
+	});
+	
+	event.create('ppp_packtweaks:goldenleaf_berry_sack', 'basic')
 		.soundType('wool')
 		
-	event.create('moon_shard_ore', 'basic')
-		.displayName('Moon Shard Ore')
+	event.create('ppp_packtweaks:moon_shard_ore', 'basic')
 		.soundType('stone')
 		.tagBlock('forge:ores')
 		.tagBlock('minecraft:mineable/pickaxe')
@@ -59,5 +70,9 @@ StartupEvents.registry('block', (event) => {
 		.tagItem('forge:ores_in_ground/stone')
 		.fullBlock(true)
 		.requiresTool(true)
+		
+	event.create('ppp_packtweaks:ziggurat_gate', 'basic')
+		.soundType('stone')
+		.unbreakable()
 		
 })

@@ -5,35 +5,56 @@ StartupEvents.registry('item', (event) => {
 		acting as a 'recycling' mechanic */
 	
 	let scrapNames = [
-		'oak_scraps',
-		'spruce_scraps',
-		'birch_scraps',
-		'jungle_scraps',
-		'dark_oak_scraps',
-		'acacia_scraps',
-		'mangrove_scraps',
-		'cherry_scraps',
-		'crimson_scraps',
-		'roseroot_scraps',
-		'yagroot_scraps',
-		'cruderoot_scraps',
-		'conberry_scraps',
-		'sunroot_scraps',
-		'coconut_scraps',
-		'walnut_scraps',
-		'azalea_scraps',
-		'flowering_azalea_scraps',
-		'strawberry_scraps'
+		'oak',
+		'spruce',
+		'birch',
+		'jungle',
+		'dark_oak',
+		'acacia',
+		'mangrove',
+		'cherry',
+		'crimson',
+		'roseroot',
+		'yagroot',
+		'cruderoot',
+		'conberry',
+		'sunroot',
+		'coconut',
+		'walnut',
+		'azalea',
+		'flowering_azalea',
+		'strawberry',
+		'bamboo',
+		'warped',
+		'tainted',
+		'peach',
+		'sea_foam',
+		'ashen',
+		'skyroot',
+		'mossy_oak',
+		'twilight_oak',
+		'canopy',
+		'tf_mangrove',
+		'darkwood',
+		'timewood',
+		'transwood',
+		'minewood',
+		'towerwood',
+		'maple',
+		'stone_pine',
+		'river',
+		'driftwood',
+		'thorn'
 	];
 	
 	scrapNames.forEach((itemName) => {
 		
-		event.create(itemName, 'basic')
+		event.create(`ppp_packtweaks:${itemName}_scraps`, 'basic')
 			.maxStackSize(64)
 			
 	});
 	
-	event.create('moon_shard')
+	event.create('ppp_packtweaks:moon_shard')
 		.displayName('Moon Shard')
 		.maxStackSize(64)
 		

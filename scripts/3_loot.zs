@@ -77,7 +77,15 @@ val CHEST_ENTRIES_SPIRIT_ORBS = [
 
 /* Main script */
 
-// Make bosses drop Heart Containers
+// Remove loot modifers before adding new ones to avoid accidental removal
+
+/* for modifier in modifiersToRemove {
+	
+	loot.modifiers.removeByName(modifier);
+	
+} */
+
+// Intergration - Make bosses drop Heart Containers
 
 for bossEntity in BOSS_ENTITIES {
 
@@ -85,7 +93,7 @@ for bossEntity in BOSS_ENTITIES {
 	
 }
 
-// Make minibosses drop Spirit Orbs
+// Intergration - Make minibosses drop Spirit Orbs
 
 for minibossEntity in MINIBOSS_ENTITIES {
 	
@@ -93,8 +101,10 @@ for minibossEntity in MINIBOSS_ENTITIES {
 	
 }
 
-// Make the Questing Ram drop a Heart Container upon quest completion
+// Intergration - Make the Questing Ram drop a Heart Container upon quest completion
 
 loot.modifiers.register("inject/tf/entities/questing_ram/spirit_orb", LootConditions.allOf(LootTableIdLootCondition.create(<resource:twilightforest:entities/questing_ram_rewards>)), CommonLootModifiers.add(<item:paraglider:heart_container>));
 
-//
+// Intergration - Make Hoglins drop their hides and ears upon being killed with any knife 
+
+//loot.modifers.register("inject/minecraft/entities/hoglin", 

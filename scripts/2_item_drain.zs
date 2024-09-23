@@ -24,4 +24,4 @@ for filledBucketItem, outputFluid in AETHER_BUCKETS {
 	<recipetype:create:emptying>.addRecipe("extract_" + outputFluid.registryName.path + "_skyroot", <item:aether:skyroot_bucket>, outputFluid * 1000, filledBucketItem);
 }
 
-<recipetype:create:emptying>.addRecipe("extract_fiery_blood", <item:minecraft:glass_bottle>, <fluid:kubejs:fiery_blood> * 100, <tag:items:twilightforest:fiery_vial>);
+<recipetype:create:emptying>.addRecipe("extract_fiery_blood", <item:minecraft:glass_bottle>, <fluid:ppp_packtweaks:fiery_blood> * 100, <tag:items:twilightforest:fiery_vial>);

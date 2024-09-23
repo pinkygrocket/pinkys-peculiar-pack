@@ -1,0 +1,55 @@
+
+["Block & Item Configuration"]
+	#Should basic items get a cooldown during use after being hit by an enemy?
+	"Basic Cooldown" = false
+	#Should swords have the parry ability?
+	"Sword Parrying" = false
+	#Should vanilla axes be rebalanced?
+	"Rebalanced Axes" = false
+	#Should the shield be prioritized when using it with an axe while right-clicking on copper & logs?
+	"I Wanna Block" = false
+	#Should hoes have the ability to harvest crops?
+	"Hoe Harvesting" = false
+	#How many arrows can be crafted with the Fletching Table?
+	#Range: 4 ~ 64
+	"Arrow Count" = 8
+
+["Player & Entity Configuration"]
+	#Should hotbar & equipment be kept on death?
+	"Death Protection" = false
+	#Should creepers be prideful?
+	"Prideful Creepers" = false
+	#Should updated villager trades be enabled?
+	"Villager Trade Rebalance" = true
+	#Should ocean villagers be enabled?
+	"Pirate Villagers" = true
+	#Should villagers join a player's camel or boat by simply being nearby?
+	"Taxi Camel" = false
+	#Should the player be able to crouch right-click entities off of what they are riding?
+	"Kick Them Off" = false
+	#Should campfires disable enemy spawning if lit?
+	"Campfire Protection" = false
+
+["Enchantment Configuration"]
+	#Should this mod's enchantment rework be in effect?
+	"Enchantments Rework" = false
+	#How many enchantments should be applicable to an item?
+	#Range: 0 ~ 25
+	"Max Enchantments" = 25
+	#What is the chance of a curse being applied while randomly enchanting?
+	#Range: 0 ~ 100
+	"Cursed Enchanting" = 0
+	#Should enchanted equipment be unbreakable?
+	"Unbreaking Protection" = false
+	#Should repairing equipment be better & only costing 1 level?
+	"Better Anvil Repair" = false
+	#Should this mod adjust combining enchanted items on an anvil?
+	"Better Anvil Enchanting" = false
+	#Maximum cost on an anvil when combining?
+	#Range: 0 ~ 45
+	"Max Anvil Cost" = 45
+	#Should renaming always only cost 1 level?
+	"Better Anvil Renaming" = false
+	#Should the grindstone be usable to disenchant items onto an enchanted book?
+	"Grindstone Disenchant" = false
+

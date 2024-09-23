@@ -1,0 +1,11 @@
+{
+    "name": "Starting The Twilight Forest",
+    "icon": "twilightforest:twilight_portal_miniature_structure",
+    "category": "patchouli:getting_started",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a test entry, but it should show up!"
+        }
+    ]
+}

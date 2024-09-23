@@ -21,6 +21,7 @@ val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	/* <tag:items:minecraft:trim_materials> : [<item:create:zinc_ingot>, <item:twilightforest:fiery_ingot>, <item:twilightforest:ironwood_ingot>, <item:twilightforest:knightmetal_ingot>, <item:minecraft:netherite_ingot>, <item:minecraft:gold_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:diamond>, <item:create:brass_ingot>, <item:deep_aether:stratus_ingot>, <item:minecraft:emerald>, <item:minecraft:amethyst_shard>, <item:minecraft:lapis_lazuli>, <item:minecraft:quartz>, <item:minecraft:redstone>, <item:twilightforest:carminite>, <item:aether:ambrosium_shard>, <item:aether:regeneration_stone>, <item:aether:golden_amber>, <item:aether:zanite_gemstone>, <item:minecraft:glowstone_dust>, <item:minecraft:echo_shard>, <item:minecraft:nether_star>, <item:minecraft:ender_pearl>, <item:sullysmod:polished_jade>, <item:aether:enchanted_gravitite> ], */
 	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
 	<tag:items:farmersdelight:serving_containers> : [ <item:ecologics:coconut_husk> ],
+	<tag:items:musicalfoxes:fox_can_play> : [ <item:endertrigon:dragon_horn>, <item:illagerinvasion:horn_of_sight> ],
 	# Quark - Prevent certain Xtra Arrows from being affected by multishot to prevent weird behavior, glitches or exploits
 	<tag:items:quark:ignore_multishot> : [ <item:xtraarrows:flint_ender_arrow>, <item:xtraarrows:flint_tracking_arrow>, <item:xtraarrows:golden_apple_arrow>, <item:xtraarrows:notch_apple_arrow>, <item:xtraarrows:leashing_arrow>, <item:xtraarrows:flint_magnetic_arrow>],
 	<tag:items:twilightforest:kobold_pacification_breads> : [ <item:delightful:cantaloupe_bread>, <item:upgrade_aquatic:mulberry_bread> ],
@@ -31,6 +32,7 @@ val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
 	<tag:items:crafttweaker:torches> : [ <item:minecraft:torch>, <item:bambooeverything:dry_bamboo_torch>, <item:bambooeverything:bamboo_torch>, <item:bonetorch:bonetorch> ],
 	<tag:items:crafttweaker:hammers> : [ <item:justhammers:iron_impact_hammer>, <item:aether:hammer_of_kingbdogz> ],
 	<tag:items:minecraft:dampens_vibrations> : [<item:absentbydesign:stairs_wool_purple>, <item:absentbydesign:stairs_wool_red>, <item:absentbydesign:stairs_wool_silver>, <item:absentbydesign:stairs_wool_white>, <item:absentbydesign:stairs_wool_yellow>, <item:absentbydesign:slab_wool_black>, <item:absentbydesign:slab_wool_blue>, <item:absentbydesign:slab_wool_brown>, <item:absentbydesign:slab_wool_gray>, <item:absentbydesign:slab_wool_cyan>, <item:absentbydesign:slab_wool_green>, <item:absentbydesign:slab_wool_light_blue>, <item:absentbydesign:slab_wool_lime>, <item:absentbydesign:slab_wool_magenta>, <item:absentbydesign:stairs_wool_blue>, <item:absentbydesign:stairs_wool_black>, <item:absentbydesign:slab_wool_yellow>, <item:absentbydesign:slab_wool_white>, <item:absentbydesign:slab_wool_silver>, <item:absentbydesign:slab_wool_red>, <item:absentbydesign:slab_wool_purple>, <item:absentbydesign:slab_wool_pink>, <item:absentbydesign:slab_wool_orange>, <item:absentbydesign:stairs_wool_brown>, <item:absentbydesign:stairs_wool_cyan>, <item:absentbydesign:stairs_wool_gray>, <item:absentbydesign:stairs_wool_green>, <item:absentbydesign:stairs_wool_light_blue>, <item:absentbydesign:stairs_wool_lime>, <item:absentbydesign:stairs_wool_magenta>, <item:absentbydesign:stairs_wool_orange>, <item:absentbydesign:stairs_wool_pink> ],
+	<tag:items:exposure:filters> : [ <item:witherstormmod:tainted_glass_pane> ]
 };
 
 val blockTagEntries as Block[][KnownTag<Block>] = {
@@ -46,9 +48,9 @@ val blockTagEntries as Block[][KnownTag<Block>] = {
 };
 
 val fluidTagEntries as IFluidStack[][KnownTag<Fluid>] = {
-	<tag:fluids:aether:allowed_bucket_pickup> : [],
-	<tag:fluids:twilightforest:fire_jet_fuel> : [ <fluid:kubejs:fiery_blood> ],
-	<tag:fluids:create:bottomless/deny>: [ <fluid:kubejs:fiery_blood> ]
+	# <tag:fluids:aether:allowed_bucket_pickup> : [],
+	<tag:fluids:twilightforest:fire_jet_fuel> : [ <fluid:ppp_packtweaks:fiery_blood> ],
+	<tag:fluids:create:bottomless/deny>: [ <fluid:ppp_packtweaks:fiery_blood> ]
 };
 
 // Currently this doesn't do anything, but I'm keeping this for the future in case F&F adds support for other beehives.
@@ -58,55 +60,70 @@ val professionTagEntries as ResourceLocation[][UnknownTag] = {
 	<tag:point_of_interest_type:minecraft:village> : [ <resource:everycomp:faf_beehive>, <resource:betterbeekeeping:mod_beehive> ]
 };
 
-/* val entityTypesEntries as EntityType[][KnownTag<EntityType>] = {
+val resourcesEntries as ResourceLocation[][KnownTag<EntityType>] = {
 	# Aether
 	###	Enable the Wither Storm to ignore Aether invisiblity
 	### Prevent Skyroot tools from affecting boss drops
 	### Make sure Farmlife entities are treated as Aether entities
-	<tag:entity_types:aether:ignore_invisibility> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
-	<tag:entity_types:aether:whirlwind_unaffected> : [],
-	<tag:entity_types:aether:no_skyroot_double_drops> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
-	<tag:entity_types:aether:treated_as_aether_entity> : [],
+	<tag:entity_types:aether:ignore_invisibility> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
+	
+	//<tag:entity_types:aether:whirlwind_unaffected> : [],
+	<tag:entity_types:aether:no_skyroot_double_drops> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
+	//<tag:entity_types:aether:treated_as_aether_entity> : [],
 	
 	# Delightful
-	<tag:entity_types:delightful:fatty_animals> : [],
-	<tag:entity_types:delightful:drops_acorn> : [],
+	//<tag:entity_types:delightful:fatty_animals> : [],
+	//<tag:entity_types:delightful:drops_acorn> : [],
 	
 	# Ecologics
-	<tag:entity_types:ecologics:penguin_hunt_targets> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
+	<tag:entity_types:ecologics:penguin_hunt_targets> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
 	
-	# Enderman Overhaul - Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
-	<tag:entity_types:endermanoverhaul:cant_be_teleported> : [ <entitytype:witherstormmod:wither_storm> ],
+	# Enderman Overhaul - Prevent teleportation of boss mobs from Aether, Twilight Forest, Wither Storm, and some non-mob entities
+	
+	<tag:entity_types:endermanoverhaul:cant_be_teleported> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king>, <resource:witherstormmod:withered_symbiont>, <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
 	
 	# Friends and Foes
-	<tag:entity_types:friendsandfoes:mauler_prey> : [],
+	//<tag:entity_types:friendsandfoes:mauler_prey> : [],
 	
 	# Forge
+	
 	### Register Wither Storm as a boss
-	<tag:entity_types:forge:bosses> : [ <entitytype:witherstormmod:wither_storm> ],
+	<tag:entity_types:forge:bosses> : [ <resource:witherstormmod:wither_storm> ],
+	
+	
 	### Register Baby Fat and Critters and Companions mobs as fish
-	<tag:entity_types:forge:fishes> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
+	<tag:entity_types:forge:fishes> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
 	
 	# Minecraft
-	<tag:entity_types:minecraft:axolotl_hunt_targets> : [ <entitytype:babyfat:ranchu>, <entitytype:crittersandcompanions:koi_fish> ],
-	<tag:entity_types:minecraft:freeze_immune_entity_types> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
-	<tag:entity_types:minecraft:powder_snow_walkable_mobs> : [],
+	<tag:entity_types:minecraft:axolotl_hunt_targets> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
+	<tag:entity_types:minecraft:freeze_immune_entity_types> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
+	// <tag:entity_types:minecraft:powder_snow_walkable_mobs> : [],
 	
-	# Nullscape - Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
-	<tag:entity_types:nullscape:not_teleportable> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:twilightforest:alpha_yeti>, <entitytype:twilightforest:hydra>, <entitytype:twilightforest:knight_phantom>, <entitytype:twilightforest:lich>, <entitytype:twilightforest:minoshroom>, <entitytype:twilightforest:naga>, <entitytype:twilightforest:plateau_boss>, <entitytype:twilightforest:snow_queen>, <entitytype:twilightforest:ur_ghast>, <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment>, <entitytype:aether:sun_spirit>, <entitytype:aether:valkyrie_queen>, <entitytype:aether:slider> ],
+	# Nullscape
+	
+	### Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
+	<tag:entity_types:nullscape:not_teleportable> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king>, <resource:witherstormmod:withered_symbiont>, <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
 	
 	# Sully's Mod - Make tortises scared of bosses from Aether, Twilight Forest and Wither Storm
-	<tag:entity_types:sullysmod:attacks_baby_tortoises> : [],
-	<tag:entity_types:sullysmod:scares_tortoises> : [ <entitytype:witherstormmod:wither_storm>, <entitytype:witherstormmod:wither_storm_head>, <entitytype:witherstormmod:wither_storm_segment> ],
+	//<tag:entity_types:sullysmod:attacks_baby_tortoises> : [],
+	<tag:entity_types:sullysmod:scares_tortoises> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
 	
-	# Twilight Forest - Make cats and wolves sortable per Chested Companions
-	<tag:entity_types:twilightforest:sortable_entities>: [],
+	# Twilight Forest
 	
-	# Wither Storm Mod - Prevent Wither Sickness from affecting boss mobs from Aether and Twilight Forest and some non-mob entities
-	<tag:entity_types:witherstormmod:wither_sickness_immune> : [ <entitytype:twilightforest:alpha_yeti>, <entitytype:twilightforest:hydra>, <entitytype:twilightforest:knight_phantom>, <entitytype:twilightforest:lich>, <entitytype:twilightforest:minoshroom>, <entitytype:twilightforest:naga>, <entitytype:twilightforest:plateau_boss>, <entitytype:twilightforest:snow_queen>, <entitytype:twilightforest:ur_ghast>, <entitytype:dummmmmmy:target_dummy>, <entitytype:xercapaint:easel>, <entitytype:supplementaries:hat_stand>  ],
-	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : []
+	### Make cats and wolves sortable per Chested Companions
+	<tag:entity_types:twilightforest:sortable_entities>: [ <resource:minecraft:cat>, <resource:minecraft:wolf> ],
 	
-}; */
+	# Wither Storm Mod
+	
+	### Prevent Wither Sickness from affecting bosses from Aether and Twilight Forest, causes issues
+	
+	<tag:entity_types:witherstormmod:wither_sickness_immune> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king> ],
+	
+	### Prevent the Wither Storm from targeting bosses from Aether and Twilight Forest, causes issues
+	
+	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king> ]
+	
+};
 
 val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	# Aether - Add support for Mystic's Biomes
@@ -223,17 +240,86 @@ val worldgenTagsToClear as KnownTag<Worldgen>[] = [
 
 	/* <tag:items:minecraft:trim_materials>, */
 	
+	# Repurposed Structures - Disable some structures
+	
+	<tag:worldgen/biome:repurposed_structures:has_structure/strongholds/nether>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/strongholds/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/desert>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/dark_forest>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/crimson>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/birch>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/icy>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/jungle>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/ocean>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/savanna>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/stone>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/swamp>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/mineshafts/taiga>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/swamp>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/snow>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/ocean>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/mushroom>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/jungle>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/icy>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/desert>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/deep>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/dark_forest>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/badlands>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/nether>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/bastions/underground>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/ancient_cities/ocean>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/ancient_cities/nether>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/ancient_cities/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/fortresses/jungle>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/igloos/grassy>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/igloos/mangrove>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/igloos/mushroom>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/igloos/stone>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/outposts/nether_brick>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/outposts/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/outposts/crimson>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/outposts/warped>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/villages/warped>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/villages/crimson>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/pyramids/end>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/dungeons/deep>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/cities/overworld>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/cities/nether>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/bastions/underground>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/villages/badlands>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/villages/oak>,
+    <tag:worldgen/biome:repurposed_structures:has_structure/villages/ocean>,
+	<tag:worldgen/biome:repurposed_structures:has_structure/villages/swamp>,
+	
+	# Intergrated Structures
+	## Disable some structures
+	
+	<tag:worldgen/biome:integrated_villages:has_structure/airship_village_biomes>,
+	<tag:worldgen/biome:idas:has_structure/ruins_of_the_deep_biomes>,
+	<tag:worldgen/biome:idas:has_structure/bazaar_biomes>,
+	<tag:worldgen/biome:idas:has_structure/archmages_tower_biomes>,
+	<tag:worldgen/biome:idas:has_structure/hauntedhouse_biomes>,
+	<tag:worldgen/biome:idas:has_structure/ancient_portal_biomes>,
+	<tag:worldgen/biome:idas:has_structure/necromancers_spire_biomes>,
+	<tag:worldgen/biome:idas:has_structure/dread_citadel_biomes>,
+	<tag:worldgen/biome:idas:has_structure/winter_wagon_biomes>,
+	
 	# Farmlife - Ensure Farmlife structures and mobs only spawn in the Aether
+	
 	<tag:worldgen/biome:farmlife:has_structure/tribull_ranch>,
 	<tag:worldgen/biome:farmlife:has_structure/greenhouse>,
 	
 	# Friends and Foes - Ensure Maulers and Mooblooms only spawn in the Twilight Forest
+	
 	<tag:worldgen/biome:friendsandfoes:has_moobloom/any>,
 	<tag:worldgen/biome:friendsandfoes:has_moobloom/buttercup>,
 	<tag:worldgen/biome:friendsandfoes:has_desert_mauler>,
 	<tag:worldgen/biome:friendsandfoes:has_savanna_mauler>,
 	
 	# Wither Storm - Remove Wither Storm platform/structure from natural generation so that we can set up custom summoning later
+	
 	<tag:worldgen/biome:witherstormmod:has_structure/storm_spawn_platform>,
 	<tag:worldgen/biome:witherstormmod:has_structure/snowy_storm_spawn_platform>,
 	<tag:worldgen/biome:witherstormmod:has_structure/savanna_storm_spawn_platform>,
@@ -245,12 +331,17 @@ val worldgenTagsToClear as KnownTag<Worldgen>[] = [
 	<tag:worldgen/biome:witherstormmod:has_structure/taiga_storm_spawn_platform>,
 	
 	# Ribbits - Ensure Ribbit Villages only spawn in biomes set in the script (i.e. Twilight Forest's Swamp)
+	
 	<tag:worldgen/biome:ribbits:has_structure/ribbit_village>,
 	
 	# Observed - Ensure Observers only spawn in biomes set in the script (i.e. Twilight Forest's Final Plateau)
+	
 	<tag:worldgen/biome:observed:land_spawnable>,
 	
 	# When Dungeons Arise - Control where structures spawn
+	
+	### Removing some structures
+	
 	<tag:worldgen/biome:dungeons_arise:has_structure/bandit_towers_biomes>,
 	<tag:worldgen/biome:dungeons_arise:has_structure/bathhouse_biomes>,
 	<tag:worldgen/biome:dungeons_arise:has_structure/coliseum_biomes>,
@@ -321,5 +412,11 @@ for tagEntry, biomeList in worldgenTagEntries {
 		tagEntry.addId(biome);
 		
 	}
+	
+}
+
+for tagEntry, entityList in resourcesEntries {
+	
+	tagEntry.addId(entityList);
 	
 }

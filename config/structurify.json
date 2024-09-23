@@ -1,0 +1,344 @@
+{
+  "general": {
+    "disabled_all_structures": false,
+    "enable_global_spacing_and_separation_modifier": true,
+    "global_spacing_and_separation_modifier": 1.0
+  },
+  "structures": [
+    {
+      "name": "minecraft:jungle_pyramid",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:bamboo_jungle",
+        "minecraft:jungle"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "minecraft:mineshaft",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "minecraft:frozen_ocean",
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean",
+        "minecraft:river",
+        "minecraft:frozen_river",
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "minecraft:meadow",
+        "minecraft:frozen_peaks",
+        "minecraft:jagged_peaks",
+        "minecraft:stony_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:cherry_grove",
+        "minecraft:windswept_hills",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:bamboo_jungle",
+        "minecraft:jungle",
+        "minecraft:sparse_jungle",
+        "minecraft:forest",
+        "minecraft:flower_forest",
+        "minecraft:birch_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:grove",
+        "autumnity:maple_forest",
+        "minecraft:stony_shore",
+        "minecraft:mushroom_fields",
+        "minecraft:ice_spikes",
+        "minecraft:windswept_savanna",
+        "minecraft:desert",
+        "minecraft:savanna",
+        "minecraft:snowy_plains",
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp",
+        "minecraft:savanna_plateau",
+        "minecraft:dripstone_caves",
+        "minecraft:lush_caves",
+        "autumnity:pumpkin_fields"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "minecraft:mineshaft_mesa",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "minecraft:village_desert",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:desert"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "minecraft:village_plains",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:meadow"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "minecraft:village_savanna",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:savanna"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "minecraft:village_snowy",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:snowy_plains"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "minecraft:village_taiga",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:taiga"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "dungeons_arise:aviary",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 114
+    },
+    {
+      "name": "idas:iceandfire/dread_citadel",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:snowy_taiga",
+        "minecraft:grove",
+        "minecraft:snowy_plains",
+        "minecraft:ice_spikes",
+        "minecraft:frozen_peaks"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "integrated_villages:airship_village",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 125
+    },
+    {
+      "name": "repurposed_structures:ancient_city_end",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:the_end",
+        "minecraft:end_highlands",
+        "minecraft:end_midlands",
+        "minecraft:small_end_islands",
+        "minecraft:end_barrens",
+        "nullscape:crystal_peaks",
+        "nullscape:shadowlands",
+        "nullscape:void_barrens"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:ancient_city_nether",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:nether_wastes",
+        "minecraft:soul_sand_valley",
+        "minecraft:crimson_forest",
+        "minecraft:warped_forest",
+        "minecraft:basalt_deltas"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:stronghold_end",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:the_end",
+        "minecraft:end_highlands",
+        "minecraft:end_midlands",
+        "minecraft:small_end_islands",
+        "minecraft:end_barrens",
+        "nullscape:crystal_peaks",
+        "nullscape:shadowlands",
+        "nullscape:void_barrens"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:stronghold_nether",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:nether_wastes",
+        "minecraft:soul_sand_valley",
+        "minecraft:crimson_forest",
+        "minecraft:warped_forest",
+        "minecraft:basalt_deltas"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_badlands",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_crimson",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:crimson_forest"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_oak",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:forest"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_ocean",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_swamp",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "repurposed_structures:village_warped",
+      "is_disabled": true,
+      "biomes": [
+        "minecraft:warped_forest"
+      ],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    },
+    {
+      "name": "totw_modded:everbright",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:everdawn",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:glacio",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:mars",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:mercury",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:moon",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:ratlantis",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "totw_modded:venus",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 80
+    },
+    {
+      "name": "witherstormmod:storm_spawn_platform",
+      "is_disabled": true,
+      "biomes": [],
+      "enable_biome_check": false,
+      "biome_check_distance": 0
+    }
+  ],
+  "structure_sets": []
+}

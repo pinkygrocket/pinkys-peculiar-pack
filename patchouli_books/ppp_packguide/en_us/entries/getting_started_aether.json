@@ -1,0 +1,30 @@
+{
+    "name": "Starting The Aether",
+    "icon": "aether:aether_portal_frame",
+    "category": "patchouli:getting_started",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a test entry, but it should show up!"
+        },
+		{
+			"type": "patchouli:multiblock",
+			"multiblock": {
+				"mapping" : {
+					"G": "minecraft:glowstone",
+					"W": "aether:aether_portal[axis=z]",
+					"0": "aether:aether_portal[axis=z]"
+				},
+				"pattern": [
+					["GGGG"],
+					["GWWG"],
+					["G0WG"],
+					["GWWG"],
+					["GGGG"]
+				]
+			},
+			"enable_visualize": true,
+			"text": "How an Aether Portal is built."
+		}
+    ]
+}
