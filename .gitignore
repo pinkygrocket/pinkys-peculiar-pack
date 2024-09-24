@@ -39,6 +39,7 @@ saves/
 config/ichunutil/themes/
 config/jei/world/local/
 config/chunky/tasks/
+config/konkrete/locals/
 
 usercache.json
 usernamecache.json
