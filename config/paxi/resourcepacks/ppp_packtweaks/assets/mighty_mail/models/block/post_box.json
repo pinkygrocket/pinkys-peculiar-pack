@@ -10,16 +10,16 @@
 	"elements": [
 		{
 			"name": "roof",
-			"from": [0, 16.17666, -1.00251],
+			"from": [0, 16.17666, 0.99749],
 			"to": [16, 18.17666, 15.99749],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 17.17666, 7.49749]},
 			"faces": {
-				"north": {"uv": [0, 4.75, 4, 5.25], "texture": "#0"},
-				"east": {"uv": [0, 4.25, 4.25, 4.75], "texture": "#0"},
-				"south": {"uv": [4, 4.75, 8, 5.25], "texture": "#0"},
-				"west": {"uv": [4.25, 4.25, 8.5, 4.75], "texture": "#0"},
-				"up": {"uv": [4, 4.25, 0, 0], "texture": "#0"},
-				"down": {"uv": [8, 0, 4, 4.25], "texture": "#0"}
+				"north": {"uv": [0, 4.5, 4, 5], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 4.5], "texture": "#0"},
+				"south": {"uv": [4, 4.5, 8, 5], "texture": "#0"},
+				"west": {"uv": [4, 4, 8, 4.5], "texture": "#0"},
+				"up": {"uv": [4, 4, 0, 0], "texture": "#0"},
+				"down": {"uv": [8, 0, 4, 4], "texture": "#0"}
 			}
 		},
 		{
@@ -75,12 +75,12 @@
 		{
 			"name": "container extension mid",
 			"from": [2, 16, 2],
-			"to": [14, 18, 9],
+			"to": [14, 18, 8],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17, 10.5]},
 			"faces": {
 				"north": {"uv": [0, 6.25, 3, 6.75], "texture": "#1"},
-				"east": {"uv": [4.25, 4, 6, 4.5], "texture": "#1"},
-				"west": {"uv": [3, 0.25, 4.75, 0.75], "texture": "#1"}
+				"east": {"uv": [4.5, 4, 6, 4.5], "texture": "#1"},
+				"west": {"uv": [3, 0.25, 4.5, 0.75], "texture": "#1"}
 			}
 		},
 		{
