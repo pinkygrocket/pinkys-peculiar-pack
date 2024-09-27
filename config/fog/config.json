@@ -1,0 +1,10 @@
+{
+	"initialFogStart": 0.5,
+	"initialFogEnd": 0.85,
+	"disableRaininessEffect": false,
+	"disableUndergroundFogMultiplier": false,
+	"disableBiomeFogColour": true,
+	"disableCloudWhitening": false,
+	"disableNether": true,
+	"disableMod": false
+}

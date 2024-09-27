@@ -3,46 +3,9 @@ _version = 2
 [client]
 	#
 	# Should Distant Horizon's config button appear in the options screen next to fov slider?
-	optionsButton = false
+	optionsButton = true
 
 	[client.advanced]
-
-		[client.advanced.buffers]
-			#
-			# What method should be used to upload geometry to the GPU? 
-			# 
-			# AUTO: Picks the best option based on the GPU you have. 
-			# 
-			# BUFFER_STORAGE: Default if OpenGL 4.5 is supported. 
-			#     Fast rendering, no stuttering. 
-			# 
-			# SUB_DATA: Backup option for NVIDIA. 
-			#     Fast rendering but may stutter when uploading. 
-			# 
-			# BUFFER_MAPPING: Slow rendering but won't stutter when uploading. 
-			#     Generally the best option for integrated GPUs. 
-			#     Default option for AMD/Intel if OpenGL 4.5 isn't supported. 
-			#     May end up storing buffers in System memory. 
-			#     Fast rendering if in GPU memory, slow if in system memory, 
-			#     but won't stutter when uploading.  
-			# 
-			# DATA: Fast rendering but will stutter when uploading. 
-			#     Backup option for AMD/Intel. 
-			#     Fast rendering but may stutter when uploading. 
-			# 
-			# If you don't see any difference when changing these settings, 
-			# or the world looks corrupted: restart your game.
-			gpuUploadMethod = "AUTO"
-			#
-			# How long should a buffer wait per Megabyte of data uploaded? 
-			# Helpful resource for frame times: https://fpstoms.com 
-			# 
-			# Longer times may reduce stuttering but will make LODs 
-			# transition and load slower. Change this to [0] for no timeout. 
-			# 
-			# NOTE:
-			# Before changing this config, try changing the "GPU Upload method" first.
-			gpuUploadPerMegabyteInMilliseconds = 0
 
 		[client.advanced.lodBuilding]
 			#
@@ -62,19 +25,10 @@ _version = 2
 			# Expected Compression Ratio: 0.7
 			worldCompression = "VISUALLY_EQUAL"
 			#
-			# If false LODs will be lit by Minecraft's lighting engine when possible 
-			# and fall back to the DH lighting engine only when necessary. 
-			# 
-			# If true LODs will only be lit using Distant Horizons' lighting engine. 
-			# 
-			# Generally it is best to leave this disabled and should only be enabled 
-			# if there are lighting issues or for debugging.
-			onlyUseDhLightingEngine = false
-			#
 			# A comma separated list of block resource locations that shouldn't be rendered 
 			# if they are in a 0 sky light underground area. 
 			# Note: air is always included in this list.
-			ignoredRenderCaveBlockCsv = "minecraft:glow_lichen,minecraft:rail,minecraft:water,minecraft:lava,minecraft:bubble_column,supplementaries:gunpowder,minecraft:tripwire,minecraft:powered_rail,minecraft:detector_rail,minecraft:activator_rail,create:controller_rail,modernminecarts:copper_rail,modernminecarts:exposed_copper_rail,modernminecarts:weathered_copper_rail,modernminecarts:oxidized_copper_rail,modernminecarts:waxed_copper_rail,modernminecarts:waxed_exposed_copper_rail,modernminecarts:waxed_weathered_copper_rail,modernminecarts:waxed_oxidized_copper_rail,modernminecarts:rail_crossing,modernminecarts:powered_detector_rail,modernminecarts:sloped_rail"
+			ignoredRenderCaveBlockCsv = "minecraft:glow_lichen,minecraft:rail,minecraft:water,minecraft:lava,minecraft:bubble_column"
 			#
 			# If true LOD generation for pre-existing chunks will attempt to pull the lighting data 
 			# saved in Minecraft's Region files. 
@@ -112,7 +66,7 @@ _version = 2
 			#
 			# A comma separated list of block resource locations that won't be rendered by DH. 
 			# Note: air is always included in this list.
-			ignoredRenderBlockCsv = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire,supplementaries:gunpowder"
+			ignoredRenderBlockCsv = "minecraft:barrier,minecraft:structure_void,minecraft:light,minecraft:tripwire"
 			#
 			# Determines how long must pass between LOD chunk updates before another. 
 			# update can occur
@@ -242,15 +196,15 @@ _version = 2
 			#
 			# If enabled, the mod will log information about the renderer OpenGL process. 
 			# This can be useful for debugging.
-			logRendererGLEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logRendererGLEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log performance about the world generation process. 
 			# This can be useful for debugging.
-			logWorldGenPerformance = "LOG_WARNING_TO_CHAT_AND_FILE"
+			logWorldGenPerformance = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log information about file sub-dimension operations. 
 			# This can be useful for debugging.
-			logFileSubDimEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logFileSubDimEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, a chat message will be displayed if Java doesn't have enough 
 			# memory allocated to run DH well.
@@ -262,11 +216,11 @@ _version = 2
 			#
 			# If enabled, the mod will log information about file read/write operations. 
 			# This can be useful for debugging.
-			logFileReadWriteEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logFileReadWriteEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log information about network operations. 
 			# This can be useful for debugging.
-			logNetworkEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logNetworkEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, a chat message will be displayed when a potentially problematic 
 			# mod is installed alongside DH.
@@ -274,19 +228,19 @@ _version = 2
 			#
 			# If enabled, the mod will log information about the renderer buffer process. 
 			# This can be useful for debugging.
-			logRendererBufferEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logRendererBufferEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log information about the LOD generation process. 
 			# This can be useful for debugging.
-			logLodBuilderEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logLodBuilderEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log information about the world generation process. 
 			# This can be useful for debugging.
-			logWorldGenEvent = "LOG_WARNING_TO_CHAT_AND_INFO_TO_FILE"
+			logWorldGenEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 			#
 			# If enabled, the mod will log information about the world generation process. 
 			# This can be useful for debugging.
-			logWorldGenLoadEvent = "LOG_WARNING_TO_CHAT_AND_FILE"
+			logWorldGenLoadEvent = "LOG_ERROR_TO_CHAT_AND_INFO_TO_FILE"
 
 		[client.advanced.debugging]
 			#
@@ -505,7 +459,7 @@ _version = 2
 				#
 				# At what Y value should cave culling start? 
 				# Lower this value if you get walls for areas with 0 light.
-				caveCullingHeight = 40
+				caveCullingHeight = 60
 				#
 				# How should LODs be shaded? 
 				# 
@@ -622,7 +576,7 @@ _version = 2
 				# 
 				# USE_WORLD_FOG_COLOR: Use the world's fog color. 
 				# USE_SKY_COLOR: Use the sky's color.
-				colorMode = "USE_SKY_COLOR"
+				colorMode = "USE_WORLD_FOG_COLOR"
 				#
 				# Should Minecraft's fog be disabled? 
 				# 
@@ -642,7 +596,7 @@ _version = 2
 					# 0.0: Fog starts at the player's position. 
 					# 1.0: Fog starts at the closest edge of the vanilla render distance. 
 					# 1.414: Fog starts at the corner of the vanilla render distance.
-					farFogStart = "0.1"
+					farFogStart = "0.4"
 					#
 					# What is the minimum fog thickness? 
 					# 
@@ -658,14 +612,14 @@ _version = 2
 					farFogFalloff = "EXPONENTIAL_SQUARED"
 					#
 					# Used in conjunction with the Fog Falloff.
-					farFogDensity = "7.0"
+					farFogDensity = "2.5"
 					#
 					# Where should the far fog end? 
 					# 
 					# 0.0: Fog ends at player's position.
 					# 1.0: Fog ends at the closest edge of the vanilla render distance. 
 					# 1.414: Fog ends at the corner of the vanilla render distance.
-					farFogEnd = "1.414"
+					farFogEnd = "1.0"
 
 					[client.advanced.graphics.fog.advancedFog.heightFog]
 						#

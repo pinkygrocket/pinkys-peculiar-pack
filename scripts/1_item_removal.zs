@@ -15,17 +15,6 @@ import mods.jeitweaker.ingredient.JeiIngredient;
 /* Variables */
 
 val completeItemRemovalByItem as IItemStack[] = [
-	
-	<item:beautify:warped_trellis>,
-	<item:beautify:birch_trellis>,
-	<item:beautify:jungle_trellis>,
-	<item:beautify:acacia_trellis>,
-	<item:beautify:crimson_trellis>,
-	<item:beautify:dark_oak_trellis>,
-	<item:beautify:spruce_trellis>,
-	<item:beautify:oak_trellis>,
-	<item:beautify:mangrove_trellis>,
-	
 
 	// Absent by Design - Some overlap with other compat mods
 	

@@ -119,7 +119,9 @@ events.register<crafttweaker.forge.api.event.entity.EntityJoinLevelEvent>(event 
 		
 		if(isLivingMob) {
 			
-			// Randomize mob scales to make the world feel more alive...
+			// Randomized mob scaling is a cool feature on, but unfort causes horrible lag with the current implementation, so it's been disabled.
+			
+			/* // Randomize mob scales to make the world feel more alive...
 			
 			val skipScaleChanges as bool = false;
 			
@@ -157,7 +159,7 @@ events.register<crafttweaker.forge.api.event.entity.EntityJoinLevelEvent>(event 
 				
 				entity.updateData({"pehkui:scale_data_types": { "pehkui:width": { initial: finalScaleValue, scale: finalScaleValue, target: finalScaleValue }, "pehkui:height": { initial: finalScaleValue, scale: finalScaleValue, target: finalScaleValue } } });
 			
-			}
+			} */
 			
 			// Generate random Ranchu variations
 				
