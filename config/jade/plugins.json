@@ -91,6 +91,11 @@
     "goggles.detailed": false,
     "placard": true
   },
+  "apotheosis": {
+    "adventure": true,
+    "ench": true,
+    "spawner": true
+  },
   "gravestone": {
     "grave": true
   },

@@ -145,7 +145,7 @@ val completeItemRemovalByRegex as string[] = [
 	"witherstormmod:(wooden|stone|iron|gold)_command.*",
 	
 	// Xtra Arrows - Has a lot of bloat, we only want the base level of Arrows
-	"xtraarrows:(flint|diamond|iron|golden|netherite)_.*",
+	"xtraarrows:(diamond|iron|golden|netherite)_.*",
 	
 	// Create Mechanical Spawner - We are only using the mechanical spawner for the Wither Storm
 	"create_mechanical_spawner:.*_bucket",
