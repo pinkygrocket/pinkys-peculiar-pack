@@ -130,7 +130,28 @@ val completeItemRemovalByItem as IItemStack[] = [
 	
 	// Minecraft - Better Beekeeping as an Oak Hive that replaces the vanilla one
 	
-	<item:minecraft:beehive>
+	<item:minecraft:beehive>,
+	
+	// Xtra Arrows - Hide disabled arrow types and some unused ingredients
+	
+	<item:xtraarrows:flint_soul_torch_arrow>,
+	<item:xtraarrows:flint_torch_arrow>,
+	<item:xtraarrows:flint_life_steal_arrow>,
+	<item:xtraarrows:flint_lantern_arrow>,
+	<item:xtraarrows:flint_soul_lantern_arrow>,
+	<item:xtraarrows:flint_gravity_arrow>,
+	<item:xtraarrows:bat_skin>,
+	<item:xtraarrows:compressed_snow>,
+	<item:xtraarrows:arrow_padding>,
+	<item:xtraarrows:cupids_arrow>,
+	<item:xtraarrows:breeding_arrow>,
+	<item:xtraarrows:breeding_ointment>,
+	<item:xtraarrows:gravity_controller>,
+	<item:xtraarrows:empty_ointment_bottle>,
+	<item:xtraarrows:magnet_kit>,
+	<item:xtraarrows:tnt_arrow_lining>,
+	<item:xtraarrows:copper_arrow_lining>,
+	<item:xtraarrows:headless_arrow>
 ];
 
 val completeItemRemovalByRegex as string[] = [

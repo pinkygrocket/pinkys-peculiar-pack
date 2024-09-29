@@ -46,7 +46,7 @@
 	#Range: 0 ~ 1000
 	vexingPhaseAmount = 1
 	#If set to false, tracking arrows will fire as if they were vanilla flint arrows.
-	enableTrackingArrows = true
+	enableTrackingArrows = false
 	#If set to false, atlantean arrows will fire as if they were vanilla flint arrows.
 	enableAtlanteanArrows = true
 	#Defines underwater inertia for atlantean arrows.
@@ -55,7 +55,7 @@
 	#If set to false, freezing arrows will fire as if they were vanilla flint arrows.
 	enableFreezingArrows = true
 	#If set to false, gravity arrows will fire as if they were vanilla flint arrows.
-	enableGravityArrows = true
+	enableGravityArrows = false
 	#If set to false, lantern arrows will fire as if they were vanilla flint arrows.
 	enableLanternArrows = false
 	#If set to false, soul lantern arrows will fire as if they were vanilla flint arrows.
@@ -68,9 +68,9 @@
 	#If set to false, magnetic arrows will fire as if they were vanilla flint arrows.
 	enableMagneticArrows = true
 	#If set to false, breeding arrows will fire as if they were vanilla flint arrows.
-	enableBreedingArrows = true
+	enableBreedingArrows = false
 	#If set to false, Cupid's arrows will fire as if they were vanilla flint arrows.
-	enableCupidsArrows = true
+	enableCupidsArrows = false
 	#If set to false, apple arrows will fire as if they were vanilla flint arrows.
 	enableAppleArrows = true
 	#If set to false, golden apple arrows will fire as if they were vanilla flint arrows.
