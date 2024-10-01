@@ -2,12 +2,17 @@
 
 Repository for Pinky's Peculiar Pack, a personal Minecraft modpack for Forge 1.20.1. This pack is focused on providing a gentle yet engaging modded experience accessible to newcomers and those looking for a lighter modded experience. This is achieved by focusing on a few large "classical" mods (The Aether, Create, and Twilight Forest, with Cracker's Wither Strom Mod as an optional endgame) and rounding out the pack with mods that build upon Minecraft's existing mechanics and gameplay ideas without replacing them entirely. Other pack features include an in-game documentation system, an advancement system that encourages experimentation, and extensive tweaking and cross-mod integration to make the pack a singular cohesive experience, instead of mods being "sectioned off".
 
-# License
+# Attribution/Licenses/Permissions
 
 * Content original to Pinky's Peculiar Pack is licensed under the MIT license. TL;DR: do what you want with my scripts, but they are provided as-is.
 * This pack includes modified assets from [When Dungeons Arise](https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise) by [Aureljz](https://www.curseforge.com/members/aureljz/), who has given permission for such changes.
+    * config/paxi/datapacks/ppp_packtweaks/data/dungeons_arise 
 * This pack includes datapack modifications to [Ribbits](https://github.com/yungnickyoung/Ribbits) by [Yungnickyoung](https://github.com/yungnickyoung/), licensed under the [GNU Lesser General Public License](https://github.com/yungnickyoung/Ribbits).
-* This pack includes datapack modifications and modified assets to [The Twilight Forest](https://github.com/TeamTwilight/twilightforest) by Team Twilight. Datapack modifications are licensed under the [GNU Lesser General Public License](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/LICENSE). Assets modifications are licensed under [CC BY-BC-NA 4.0](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/ASSET_LICENSE).
+   * config/paxi/datapacks/ppp_packtweaks/data/ribbits/
+* This pack includes datapack modifications and modified assets to [The Twilight Forest](https://github.com/TeamTwilight/twilightforest) by Team Twilight. Datapack modifications are licensed under the [GNU Lesser General Public License](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/LICENSE). Assets modifications are licensed under [CC BY-NC-SA 4.0](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/ASSET_LICENSE).
+    * config/paxi/datapacks/ppp_packtweaks/data/twilightforest
+    * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest
 * This pack includes modified assets from [JustHammers](https://github.com/Nanite/JustHammers) by [Nanite](https://github.com/nanite), licesned under [GPL 3.0](https://github.com/Nanite/JustHammers?tab=GPL-3.0-1-ov-file#readme). Modifications are based on [Hammerz](https://github.com/ColinGBos/Hammerz) by ColinGBos, licensed under the MIT License.
+   * config/paxi/resourcepacks/ppp_packtweaks/assets/justhammers/textures/item
 * This pack includes modified assets and datapack modifications to [Exposure](https://github.com/mortuusars/Exposure) by [mortuusars](https://github.com/mortuusars/), licensed under the MIT license.
 * This pack includes assets from [Unused Textures](https://github.com/malcolmriley/unused-textures) by [Malcomriley](https://github.com/malcolmriley), licensed under [CC-BY 4.0](https://github.com/malcolmriley/unused-textures?tab=CC-BY-4.0-1-ov-file#readme).
