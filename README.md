@@ -6,18 +6,19 @@ Repository for Pinky's Peculiar Pack, a personal Minecraft modpack for Forge 1.2
 
 Content original to Pinky's Peculiar Pack is licensed under the MIT license. TL;DR: do what you want with my scripts, but they are provided as-is. 
 
-In addition, this pack includes datapack and asset modifications to and based off various mods. Each source and its respective license(s) are listed below:
+In addition, this pack includes data pack, resource pack, and asset modifications to and based off various mods. Each source and its respective license(s) are listed below:
 
-* [When Dungeons Arise](https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise) by [Aureljz](https://www.curseforge.com/members/aureljz/) (modified assets). When Dungeons Arise is All Rights Reserved; Aureljz has given permission for this pack's changes.
+* [When Dungeons Arise](https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise) by [Aureljz](https://www.curseforge.com/members/aureljz/) (modified data pack, assets). When Dungeons Arise is All Rights Reserved; Aureljz has given permission for this pack's changes.
     * config/paxi/datapacks/ppp_packtweaks/data/dungeons_arise 
-* [Ribbits](https://github.com/yungnickyoung/Ribbits) by [Yungnickyoung](https://github.com/yungnickyoung/) (modified datapack). Ribbits is licensed under the [GNU Lesser General Public License](https://github.com/yungnickyoung/Ribbits).
+* [Ribbits](https://github.com/yungnickyoung/Ribbits) by [Yungnickyoung](https://github.com/yungnickyoung/) (modified data pack). Ribbits is licensed under the [GNU Lesser General Public License](https://github.com/yungnickyoung/Ribbits).
    * config/paxi/datapacks/ppp_packtweaks/data/ribbits/
-* [The Twilight Forest](https://github.com/TeamTwilight/twilightforest) by Team Twilight (modified datapack, modified assets). The Twilight Forest is licensed under the [GNU Lesser General Public License](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/LICENSE) for code/datapacks, and licensed under [CC BY-NC-SA 4.0](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/ASSET_LICENSE) for assets.
+* [The Twilight Forest](https://github.com/TeamTwilight/twilightforest) by Team Twilight (modified data pack, resource pack, assets). The Twilight Forest is licensed under the [GNU Lesser General Public License](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/LICENSE) for code/datapacks, and licensed under [CC BY-NC-SA 4.0](https://github.com/TeamTwilight/twilightforest/blob/1.21.x/ASSET_LICENSE) for assets.
     * config/paxi/datapacks/ppp_packtweaks/data/twilightforest
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest
-* [JustHammers](https://github.com/Nanite/JustHammers) by [Nanite](https://github.com/nanite) (modified assets), licesned under [GPL 3.0](https://github.com/Nanite/JustHammers?tab=GPL-3.0-1-ov-file#readme). Modifications are based on [Hammerz](https://github.com/ColinGBos/Hammerz) by ColinGBos, licensed under the MIT License.
+* [JustHammers](https://github.com/Nanite/JustHammers) by [Nanite](https://github.com/nanite) (modified resource pack, assets), licesned under [GPL 3.0](https://github.com/Nanite/JustHammers?tab=GPL-3.0-1-ov-file#readme). Modifications are based on [Hammerz](https://github.com/ColinGBos/Hammerz) by ColinGBos, licensed under the MIT License.
    * config/paxi/resourcepacks/ppp_packtweaks/assets/justhammers/textures/item
-* [Exposure](https://github.com/mortuusars/Exposure) by [mortuusars](https://github.com/mortuusars/) (modified datapack, modified assets). Exposure is licensed under the MIT license.
+* [Exposure](https://github.com/mortuusars/Exposure) by [mortuusars](https://github.com/mortuusars/) (modified data pack, resource pack). Exposure is licensed under the MIT license.
+* [The Aether](https://github.com/The-Aether-Team/The-Aether) by Aether Team (modified resource pack, no modified assets). The Aether is licensed under [LGPL-3.0](https://github.com/The-Aether-Team/The-Aether/blob/1.20.4-develop/LICENSE.txt).
 
 This pack also includes assets from some non-mod sources. Each source and its respective license(s) are listed below:
 
