@@ -6,7 +6,7 @@ Repository for Pinky's Peculiar Pack, a personal Minecraft modpack for Forge 1.2
 
 Content original to Pinky's Peculiar Pack is licensed under the MIT license. TL;DR: do what you want with my scripts, but they are provided as-is. 
 
-In addition, this pack includes datapack and asset modifications based off various sources. Licenses are listed below:
+In addition, this pack includes datapack and asset modifications to and based off various mods. Each source and its respective license(s) are listed below:
 
 * [When Dungeons Arise](https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise) by [Aureljz](https://www.curseforge.com/members/aureljz/) (modified assets). When Dungeons Arise is All Rights Reserved; Aureljz has given permission for this pack's changes.
     * config/paxi/datapacks/ppp_packtweaks/data/dungeons_arise 
@@ -19,9 +19,10 @@ In addition, this pack includes datapack and asset modifications based off vario
    * config/paxi/resourcepacks/ppp_packtweaks/assets/justhammers/textures/item
 * [Exposure](https://github.com/mortuusars/Exposure) by [mortuusars](https://github.com/mortuusars/) (modified datapack, modified assets). Exposure is licensed under the MIT license.
 
-This pack also includes assts from the following sources:
+This pack also includes assets from some non-mod sources. Each source and its respective license(s) are listed below:
 
 * [Unused Textures](https://github.com/malcolmriley/unused-textures) by [Malcomriley](https://github.com/malcolmriley). Unused Textures is licensed under [CC-BY 4.0](https://github.com/malcolmriley/unused-textures?tab=CC-BY-4.0-1-ov-file#readme).
     * config/paxi/resourcepacks/ppp_packtweaks/assets/ppp_packtweaks/textures/block/moon_shard_ore.png
     * config/paxi/resourcepacks/ppp_packtweaks/assets/ppp_packtweaks/textures/item/moon_shard.png
     * config/paxi/resourcepacks/ppp_packtweaks/assets/ppp_packtweaks/textures/item/oak_scraps.png
+* [Muru](https://generalmumble.bandcamp.com/album/muru) by General Mumble and Koa as Goji. Muru is licensed under All Rights Reserved; General Mumble and Koa have given permission for this pack to include their music.
