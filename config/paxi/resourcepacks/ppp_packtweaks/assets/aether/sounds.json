@@ -934,19 +934,19 @@
   "music.aether": {
     "sounds": [
       {
-        "name": "aether:music/aether1",
+        "name": "aether:music/muru",
         "stream": true
       },
       {
-        "name": "aether:music/aether2",
+        "name": "aether:music/balance",
         "stream": true
       },
       {
-        "name": "aether:music/aether3",
+        "name": "aether:music/lavender_satin",
         "stream": true
       },
       {
-        "name": "aether:music/aether4",
+        "name": "aether:music/sister_moon",
         "stream": true
       }
     ]
