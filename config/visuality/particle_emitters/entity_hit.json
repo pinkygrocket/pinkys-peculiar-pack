@@ -17,6 +17,23 @@
       "particle": {
         "type": "visuality:emerald"
       }
-    }
+    },
+	{
+		"entity": [
+			"minecraft:chicken",
+			"crittersandcompanions:shima_enaga",
+			"witherstormmod:sickened_chicken",
+			"twilightforest:penguin",
+			"twilightforest:raven",
+			"twilightforest:tiny_bird",
+			"aether:moa",
+			"ecologics:penguin",
+			"deep_aether:quail",
+			"aether:cockatrice"
+		],
+		"particle": {
+			"type": "supplementaries:feather"
+      }
+	}
   ]
 }
