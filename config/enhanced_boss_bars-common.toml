@@ -1,7 +1,7 @@
 
 [minecraft]
 	#Show Wither Boss Bar
-	WitherBossBar = true
+	WitherBossBar = false
 	#Show Ender Dragon
 	EnderDragonBossBar = true
 
@@ -45,7 +45,7 @@
 
 [crackerwitherstorm]
 	#Show Wither Storm
-	WitherStormBossBar = true
+	WitherStormBossBar = false
 
 [aether]
 	#Show Slider

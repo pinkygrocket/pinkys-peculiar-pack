@@ -153,7 +153,7 @@ public class craftingRecipePatterned {
 	
 	public registerRecipe() as void {
 		
-		this.name = "ct_" + this.output.registryName.namespace + "_" + this.output.registryName.path;
+		this.name = "crafttweaker_crafting_table_" + this.output.registryName.namespace + "_" + this.output.registryName.path;
 		
 		if(this.replace) {
 			

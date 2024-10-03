@@ -152,6 +152,7 @@ val completeItemRemovalByItem as IItemStack[] = [
 	<item:xtraarrows:tnt_arrow_lining>,
 	<item:xtraarrows:copper_arrow_lining>,
 	<item:xtraarrows:headless_arrow>
+	
 ];
 
 val completeItemRemovalByRegex as string[] = [
@@ -192,7 +193,11 @@ val completeItemRemovalByRegex as string[] = [
 	"create_connected:music_disc.*",
 	
 	// Nether's Delight - Don't like the Machetes because they have no compat
-	"nethersdelight.*_machete"
+	"nethersdelight.*_machete",
+	
+	// Sully's Mod - Some overlap with Friends & Foes
+	"sullysmod:.*copper_button.*"
+	
 ];
 
 for regex in completeItemRemovalByRegex {

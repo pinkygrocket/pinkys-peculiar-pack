@@ -1,0 +1,7 @@
+{
+  "item": {
+    "item": "endermanoverhaul:icy_pearl"
+  },
+  "attachment_texture": "exposure:textures/gui/filter/wither_storm_lens.png",
+  "shader": "quark:shaders/post/cool.json"
+}

@@ -1,0 +1,7 @@
+{
+  "item": {
+    "item": "endermanoverhaul:crimson_pearl"
+  },
+  "attachment_texture": "exposure:textures/gui/filter/wither_storm_lens.png",
+  "shader": "aether:shaders/post/sun_spirit.json"
+}
