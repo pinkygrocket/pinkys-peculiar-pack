@@ -32,4 +32,4 @@ This pack also includes assets from some non-mod sources. Each source and its re
 * [Year of the Dragon](https://generalmumble.bandcamp.com/album/year-of-the-dragon) by General Mumble and Koa as Goji. Year of the Dragon is licensed under All Rights Reserved; General Mumble and Koa have given permission for this pack to include their music.
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/music
 * [Nightingale Bird Sounds](https://archive.org/details/nightingale-bird-sounds/) by various, licensed under CC-0.
-* [Raven Sounds](https://www.freesoundslibrary.com/raven-sounds/) by [Spanac](https://www.freesoundslibrary.com/author/spanac/), licensed under CC-BY 4.0
+* [Birds (Sound Pack)](https://freesound.org/people/Mish7913/packs/41274/) by [Mish7913](https://freesound.org/people/Mish7913/), licensed under CC-0.
