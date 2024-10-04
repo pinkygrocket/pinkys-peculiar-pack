@@ -39,3 +39,7 @@ This pack also includes assets from some non-mod sources. Each source and its re
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/cicada/cicada1.ogg
 * [Animal Cicada Solo Loop](https://freesound.org/people/Nox_Sound/sounds/515053/) by [Nox_Sound](https://freesound.org/people/Nox_Sound/), licensed under CC-0.
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/cicada/cicada2.ogg
+* [synthmosq](https://freesound.org/people/LexArts/sounds/127821/) by LexArts, licensed under CC-0.
+    * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/mosqutio/buzz1.ogg
+* [MOSQUITO](https://freesound.org/people/luchito_97.17/sounds/462408/) by luchito_97.17, licensed under CC-0.
+    * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/mosqutio/buzz2.ogg
