@@ -1,0 +1,5 @@
+{
+	"effect.twilightdelight.aurora_glowing.description": "Marks affected entities with an outline glow with rainbow colors, allowing them to be seen through blocks.",
+	"effect.twilightdelight.temporal_sadness.description": "Reduces movement speed and attack damage.",
+	"effect.twilightdelight.poison_range.description": "Grants immuntity to Poison and causes entites to poison hostile entities around them."
+}

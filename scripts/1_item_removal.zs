@@ -151,7 +151,13 @@ val completeItemRemovalByItem as IItemStack[] = [
 	<item:xtraarrows:magnet_kit>,
 	<item:xtraarrows:tnt_arrow_lining>,
 	<item:xtraarrows:copper_arrow_lining>,
-	<item:xtraarrows:headless_arrow>
+	<item:xtraarrows:headless_arrow>,
+	
+	<item:berry_good:music_disc_fox>,
+	<item:apotheosis:obsidian_arrow>,
+	<item:apotheosis:explosive_arrow>,
+	<item:apotheosis:diamond_mining_arrow>,
+	<item:apotheosis:iron_mining_arrow>
 	
 ];
 

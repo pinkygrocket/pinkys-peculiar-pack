@@ -34,12 +34,25 @@ val itemsWithHints as MutableComponent[IItemStack] = {
 	<item:babyfat:ranchu_spawn_egg> : Component.translatable("babyfat.jei.hint.ranchu")
 };
 
+val hideInJei as IItemStack[] = [
+
+	// ppp_packtweaks - The Incomplete Formidibomb is only used in crafting the Formidibomb
+	
+	<item:ppp_packtweaks:incomplete_formidibomb>
+];
+
 /* Main script */
 
 for hintItem, hintText in itemsWithHints {
 	
 	Jei.addIngredientInformation(hintItem, hintText);
 	
+}
+
+for item in hideInJei {
+
+	Jei.hideIngredient(item);
+
 }
 
 /*

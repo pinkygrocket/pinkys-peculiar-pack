@@ -75,4 +75,13 @@ StartupEvents.registry('block', (event) => {
 		.soundType('stone')
 		.unbreakable()
 		
+	event.create('ppp_packtweaks:incomplete_formidibomb', 'basic')
+		.displayName('Incomplete Formidibomb')
+		.texture('up', 'witherstormmod:block/formidibomb_top')
+		.texture('north', 'witherstormmod:block/formidibomb_front')
+		.texture('west', 'witherstormmod:block/formidibomb_side')
+		.texture('east', 'witherstormmod:block/formidibomb_side')
+		.texture('south', 'witherstormmod:block/formidibomb_side')
+		.texture('down', 'farmersdelight:block/formidibomb_bottom')
+		
 })

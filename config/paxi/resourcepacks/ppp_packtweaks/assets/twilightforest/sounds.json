@@ -1,83 +1,85 @@
 {
-  "music.twilightforest.twilight_forest": {
-	"replace": true,
-    "sounds": [
-      {
-        "name": "twilightforest:music/forever_sail",
-        "stream": true
-      },
-      {
-        "name": "twilightforest:music/palm_in_palm",
-        "stream": true
-      },
-      {
-        "name": "twilightforest:music/pitahaya",
-        "stream": true
-      },
-      {
-        "name": "twilightforest:music/pitaya",
-        "stream": true
-      },
-	  {
-        "name": "twilightforest:music/soothsailor",
-        "stream": true
-      }
-    ]
-  },
-  "entity.twilightforest.tiny_bird.chirp": {
-	"replace": true,
-    "sounds": [
-      "twilightforest:mob/tiny_bird/idle1",
-      "twilightforest:mob/tiny_bird/idle2",
-      "twilightforest:mob/tiny_bird/idle3"
-    ],
-    "subtitle": "subtitles.twilightforest.entity.tiny_bird.chirp"
-  },
-  "entity.twilightforest.tiny_bird.hurt": {
-	"replace": true,
-    "sounds": [
-      "twilightforest:mob/tiny_bird/hurt1",
-      "twilightforest:mob/tiny_bird/hurt2"
-    ],
-    "subtitle": "subtitles.twilightforest.entity.tiny_bird.hurt"
-  },
-  "entity.twilightforest.tiny_bird.song": {
-	"replace": true,
-    "sounds": [
-      "twilightforest:mob/tiny_bird/idle1",
-      "twilightforest:mob/tiny_bird/idle2"
-    ],
-    "subtitle": "subtitles.twilightforest.entity.tiny_bird.song"
-  },
-   "entity.twilightforest.raven.caw": {
-	"replace": true,
-    "sounds": [
-      "twilightforest:mob/raven/caw1",
-      "twilightforest:mob/raven/caw2",
-	  "twilightforest:mob/raven/caw3"
-    ],
-    "subtitle": "subtitles.twilightforest.entity.raven.caw"
-  },
-  "entity.twilightforest.raven.squawk": {
-	"replace": true,
-    "sounds": [
-      "twilightforest:mob/raven/hurt1",
-      "twilightforest:mob/raven/hurt2"
-    ],
-    "subtitle": "subtitles.twilightforest.entity.raven.squawk"
-  },
-  "block.twilightforest.cicada": {
-	"replace": true,
-    "sounds": [
-	  {
-        "name": "twilightforest:mob/cicada/cicada1",
-	    "volume": 0.5
-	  },
-	  {
-        "name": "twilightforest:mob/cicada/cicada2",
-	    "volume": 0.5
-	  }
-    ],
-    "subtitle": "subtitles.twilightforest.block.cicada"
-  }
+    "music.twilightforest.twilight_forest": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "twilightforest:music/forever_sail",
+                "stream": true
+            },
+            {
+                "name": "twilightforest:music/palm_in_palm",
+                "stream": true
+            },
+            {
+                "name": "twilightforest:music/pitahaya",
+                "stream": true
+            },
+            {
+                "name": "twilightforest:music/pitaya",
+                "stream": true
+            },
+            {
+                "name": "twilightforest:music/soothsailor",
+                "stream": true
+            }
+        ]
+    },
+    "entity.twilightforest.tiny_bird.chirp": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/tiny_bird/idle1",
+            "twilightforest:mob/tiny_bird/idle2",
+            "twilightforest:mob/tiny_bird/idle3"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.tiny_bird.chirp"
+    },
+    "entity.twilightforest.tiny_bird.hurt": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/tiny_bird/hurt1",
+            "twilightforest:mob/tiny_bird/hurt2"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.tiny_bird.hurt"
+    },
+    "entity.twilightforest.tiny_bird.song": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/tiny_bird/idle1",
+            "twilightforest:mob/tiny_bird/idle2"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.tiny_bird.song"
+    },
+    "entity.twilightforest.raven.caw": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/raven/caw1",
+            "twilightforest:mob/raven/caw2",
+            "twilightforest:mob/raven/caw3"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.raven.caw"
+    },
+    "entity.twilightforest.raven.squawk": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/raven/hurt1",
+            "twilightforest:mob/raven/hurt2"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.raven.squawk"
+    },
+    "block.twilightforest.cicada": {
+        "replace": true,
+        "sounds": [
+            "twilightforest:mob/cicada/cicada1",
+            "twilightforest:mob/cicada/cicada2"
+        ],
+        "subtitle": "subtitles.twilightforest.block.cicada"
+    },
+    "entity.twilightforest.mosquito.ambient": {
+        "replace": true,
+		"sounds": [
+            "twilightforest:mob/mosquito/buzz1",
+            "twilightforest:mob/mosquito/buzz2"
+        ],
+        "subtitle": "subtitles.twilightforest.entity.mosquito.ambient"
+    }
 }

@@ -224,7 +224,22 @@ public class color {
 /* Variables */
 
 val standardPackRecipes as craftingRecipeExtended[] = [
+	
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:castle_brick>, false, [<item:minecraft:stone_bricks>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:castle_brick_slab>, false, [<item:minecraft:stone_brick_slab>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:castle_brick_stairs>, false, [<item:minecraft:stone_brick_stairs>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:castle_brick_wall>, false, [<item:minecraft:stone_brick_wall>, <item:ppp_packtweaks:moon_shard>]),
 
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:mossy_castle_brick>, false, [<item:minecraft:mossy_stone_bricks>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:mossy_castle_brick_slab>, false, [<item:minecraft:mossy_stone_brick_slab>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:mossy_castle_brick_wall>, false, [<item:minecraft:mossy_stone_brick_wall>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:mossy_castle_brick_stairs>, false, [<item:minecraft:mossy_stone_brick_stairs>, <item:ppp_packtweaks:moon_shard>]),
+
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:cracked_castle_brick_slab>, false, [<item:absentbydesign:slab_bricks_cracked>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:cracked_castle_brick_stairs>, false, [<item:absentbydesign:stairs_bricks_cracked>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:cracked_castle_brick>, false, [<item:minecraft:cracked_stone_bricks>, <item:ppp_packtweaks:moon_shard>]),
+	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:cracked_castle_brick_wall>, false, [<item:absentbydesign:wall_stonebrick_cracked>, <item:ppp_packtweaks:moon_shard>]),
+	
 	// Intergration - Make Supplementaries's Cog Block be crafted with Create cogs
 	
 	new craftingRecipeExtended("SHAPED", <item:supplementaries:cog_block>, true, [[<tag:items:forge:ingots/copper>, <item:create:cogwheel>, <tag:items:forge:ingots/copper>], [<item:create:cogwheel>, <tag:items:forge:storage_blocks/redstone>, <item:create:cogwheel>], [<tag:items:forge:ingots/copper>, <item:create:cogwheel>, <tag:items:forge:ingots/copper>]]),
