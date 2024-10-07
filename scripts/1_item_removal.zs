@@ -53,6 +53,7 @@ val completeItemRemovalByItem as IItemStack[] = [
 	// Arifacts - Don't like the concept of infinite food
 	
 	<item:artifacts:everlasting_beef>,
+	<item:artifacts:eternal_steak>,
 	
 	// Vertical Slab Compat - Some overlap with other compat mods
 	
@@ -157,7 +158,24 @@ val completeItemRemovalByItem as IItemStack[] = [
 	<item:apotheosis:obsidian_arrow>,
 	<item:apotheosis:explosive_arrow>,
 	<item:apotheosis:diamond_mining_arrow>,
-	<item:apotheosis:iron_mining_arrow>
+	<item:apotheosis:iron_mining_arrow>,
+	
+	// Sully's Mod - Unimplemented item
+	
+	<item:sullysmod:glass_vial>,
+	
+	// Twilight Forest - Unimplemented items
+	
+	<item:twilightforest:brittle_potion_flask>,
+	<item:twilightforest:greater_potion_flask>,
+	<item:twilightforest:naga_courtyard_miniature_structure>,
+	<item:twilightforest:twilight_portal_miniature_structure>,
+	<item:twilightforest:cinder_log>,
+	<item:twilightforest:lich_tower_miniature_structure>,
+	<item:twilightforest:cinder_furnace>,
+	<item:twilightforest:ore_meter>,
+	<item:twilightforest:slider>,
+	<item:twilightforest:cinder_wood>
 	
 ];
 

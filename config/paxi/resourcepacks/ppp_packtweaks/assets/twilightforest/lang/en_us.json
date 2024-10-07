@@ -27,5 +27,6 @@
 	"subtitles.twilightforest.entity.squirrel.ambient": "Twilight Squirrel chitters",
 	"subtitles.twilightforest.entity.squirrel.death": "Twilight Squirrel dies",
 	"subtitles.twilightforest.entity.squirrel.hurt": "Twilight Squirrel hurts",
-	"tag.item.twilightforest.squirrel_tempt_items": "Twilight Squirrel Temptables"
+	"tag.item.twilightforest.squirrel_tempt_items": "Twilight Squirrel Temptables",
+	"effect.twilightforest.frosted.description": "Decreases walking speed, covers the user in frost and freezes nearby blocks."
 }

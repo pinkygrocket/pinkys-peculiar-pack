@@ -1,5 +1,7 @@
 {
 	"effect.twilightdelight.aurora_glowing.description": "Marks affected entities with an outline glow with rainbow colors, allowing them to be seen through blocks.",
 	"effect.twilightdelight.temporal_sadness.description": "Reduces movement speed and attack damage.",
-	"effect.twilightdelight.poison_range.description": "Grants immuntity to Poison and causes entites to poison hostile entities around them."
+	"effect.twilightdelight.poison_range.description": "Grants immuntity to Poison and poisons nearby hostile entities.",
+	"effect.twilightdelight.frozen_range.description": "Grants immuntity to Frosted, inflicts Frosted on nearby hostile entities, and freezes nearby blocks.",
+	"effect.twilightdelight.fire_range.description": "Grants immuntity to fire and sets nearby hostile entities on fire."
 }

@@ -224,6 +224,10 @@ public class color {
 /* Variables */
 
 val standardPackRecipes as craftingRecipeExtended[] = [
+
+	new craftingRecipeExtended("SHAPED", <item:create_connected:sequenced_pulse_generator>, true, [[<item:create:electron_tube>, <item:minecraft:clock>, <item:minecraft:air>], [<item:create:electron_tube>, <item:create:brass_sheet>, <item:minecraft:redstone_torch>], [<tag:items:forge:stone>, <tag:items:forge:stone>, <tag:items:forge:stone>]]),
+	
+	// Intergration - Make Twilight Forest's Final Castle bricks craftable with Moon Shards
 	
 	new craftingRecipeExtended("SHAPELESS", <item:twilightforest:castle_brick>, false, [<item:minecraft:stone_bricks>, <item:ppp_packtweaks:moon_shard>]),
 	new craftingRecipeExtended("SHAPELESS", <item:tflostblocks:castle_brick_slab>, false, [<item:minecraft:stone_brick_slab>, <item:ppp_packtweaks:moon_shard>]),
@@ -294,11 +298,7 @@ val standardPackRecipes as craftingRecipeExtended[] = [
 	// Progression/Gamefeel - Make Wooden Shears require flint
 	
 	new craftingRecipeExtended("MIRRORED_ALL", <item:woodenshears:wshears_oak>, true,[[<item:minecraft:air>, <item:minecraft:flint>, <item:minecraft:air>],[<item:minecraft:flint>, <tag:items:forge:rods/wooden>, <item:minecraft:air>],[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]]),
-	
-	// Intergration - Make Twilight Forest's Final Castle bricks craftable with Moon Shards
-	
-	//new craftingRecipeExtended("SHAPED", 
-	
+
 	// Intergration - Require Aether's Golden Pendant to craft Wither Storm's Amulet
 	
 	// Intergration - Add crafting recipes for the custom crates
