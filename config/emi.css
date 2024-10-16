@@ -9,7 +9,7 @@
 	/**
 	 * Whether cheating in items is enabled.
 	 */
-	cheat-mode: false;
+	cheat-mode: true;
 
 	/**
 	 * How much EMI should use tooltips and popups to show controls and information.
@@ -83,7 +83,7 @@
 	 * Whether to have the search bar in the center of the screen, instead of to the
 	 * side.
 	 */
-	center-search-bar: true;
+	center-search-bar: false;
 
 	/**
 	 * Which sidebar type to switch to when searching.
@@ -167,7 +167,7 @@
 	/**
 	 * How much space to maintain between the left sidebar and obstructions, in pixels
 	 */
-	left-sidebar-margins: 2, 2, 2, 2;
+	left-sidebar-margins: 4, 2, 2, 4;
 
 	/**
 	 * Where to position the left sidebar
@@ -182,7 +182,7 @@
 	/**
 	 * Which theme to use for the left sidebar
 	 */
-	left-sidebar-theme: transparent;
+	left-sidebar-theme: vanilla;
 
 	/**
 	 * The pages in the right sidebar
@@ -202,7 +202,7 @@
 	/**
 	 * How much space to maintain between the right sidebar and obstructions, in pixels
 	 */
-	right-sidebar-margins: 2, 2, 2, 2;
+	right-sidebar-margins: 4, 4, 2, 2;
 
 	/**
 	 * Where to position the right sidebar
@@ -217,7 +217,7 @@
 	/**
 	 * Which theme to use for the right sidebar
 	 */
-	right-sidebar-theme: transparent;
+	right-sidebar-theme: vanilla;
 
 	/**
 	 * The pages in the top sidebar
@@ -252,7 +252,7 @@
 	/**
 	 * Which theme to use for the top sidebar
 	 */
-	top-sidebar-theme: transparent;
+	top-sidebar-theme: vanilla;
 
 	/**
 	 * The pages in the bottom sidebar
@@ -273,7 +273,7 @@
 	 * How much space to maintain between the bottom sidebar and obstructions, in
 	 * pixels
 	 */
-	bottom-sidebar-margins: 2, 2, 2, 2;
+	bottom-sidebar-margins: 2, 2, 3, 2;
 
 	/**
 	 * Where to position the bottom sidebar
@@ -288,7 +288,7 @@
 	/**
 	 * Which theme to use for the bottom sidebar
 	 */
-	bottom-sidebar-theme: transparent;
+	bottom-sidebar-theme: vanilla;
 }
 
 #binds {

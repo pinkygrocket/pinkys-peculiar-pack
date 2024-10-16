@@ -8,7 +8,7 @@
 	#Determines if each biome will generate or not.
 	"Strawberry Fields" = true
 	"Lavender Meadow" = true
-	"Bamboo Blossom Forest" = true
+	"Bamboo Blossom Forest" = false
 	"Autumnal Grove" = false
 	"Lush Oasis" = true
 	Lagoon = true

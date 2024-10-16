@@ -47,6 +47,14 @@ StartupEvents.registry('item', (event) => {
 		'thorn'
 	];
 	
+	let nuggetNames = [
+		'stratus'
+	];
+	
+	let plateNames = [
+		'stratus'
+	];
+	
 	scrapNames.forEach((itemName) => {
 		
 		event.create(`ppp_packtweaks:${itemName}_scraps`, 'basic')

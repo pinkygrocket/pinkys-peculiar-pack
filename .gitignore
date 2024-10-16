@@ -20,7 +20,7 @@ hs_err_pid3128.log
 coremods/
 mods/
 
-# User data
+# User data/local data
 
 aes/
 att-debug/

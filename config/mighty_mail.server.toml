@@ -18,7 +18,7 @@ maxMailboxesPerPlayer = 16
 #     ...
 # ]
 # ^ Note: This is just an example. Write your list below.
-bannedItems = []
+bannedItems = ["witherstormmod:formidibomb"]
 # The maximum amount of items that can be queued for delivery for a mail box
 # Valid range: 0 to 256 (inclusive)
 mailQueueSize = 18

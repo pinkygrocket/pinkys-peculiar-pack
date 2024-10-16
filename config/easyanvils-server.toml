@@ -57,7 +57,7 @@
 	#Allowed Values: DISABLED, VANILLA, FIXED
 	prior_work_penalty = "FIXED"
 	#Prevents the prior work penalty from increasing when the item has only been renamed or repaired.
-	penalty_free_renames_and_repairs = true
+	penalty_free_renames_and_repairs = false
 	#Constant to use when "prior_work_penalty" is set to "FIXED". Every subsequent operation will increase by this value in levels.
 	#Range: > 1
 	prior_work_penalty_constant = 4

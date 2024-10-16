@@ -1,4 +1,10 @@
 {
 	"effect.deep_aether.moa_bonus_jumps.description": "Allows Moas to jump more times while airborne; higher levels give more jumps. Can only be applied to Moas.",
-	"effect.deep_aether.valkyrie_valor.description": "Decreases damage taken from undead mobs."
+	"effect.deep_aether.valkyrie_valor.description": "Decreases damage taken from undead mobs.",
+	"aether.pro_tips.line.deep_aether.poison": "§bPoison can be used to un-mystify blocks and items from an Altar.",
+	"lore.block.deep_aether.chromatic_aercloud": "The result of mystifying a Sterling Aercloud in an Altar. Is used to create a Stratus ingot.",
+	"lore.block.deep_aether.sterling_aercloud": "This Aercloud is found way up high where it's hard to reach. When stepped on, lightning turns it into a Cold Aercloud. Can be mystified in an altar to become a Chromatic Aercloud.",
+	"lore.block.deep_aether.raw_clorite": "One of Aether's native rock types. Can be found in large chunks in the Aether. Can be used for decoration or mystified into Clorite.",
+	"block.deep_aether.enchanted_blossom": "Mystical Blossom",
+	"item.deep_aether.enchanted_antidote": "Mystical Antidote"
 }

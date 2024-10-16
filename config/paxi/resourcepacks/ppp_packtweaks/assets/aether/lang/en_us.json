@@ -1,4 +1,5 @@
 {
+	"advancement.aether.enchanted_gravitite.desc": "Use an Altar to obtain Mystical Gravitite",
 	"aether.jei.hint.ice_pendant" : "A magic pendant that freezes water and lava walked on when worn.",
 	"aether.jei.hint.ice_ring" : "A magic ring that freezes water and lava walked on when worn.",
 	"aether.jei.hint.gold_ring" : "A decorative accessory that can be used to craft Ice Rings.",
@@ -6,5 +7,24 @@
 	"aether.jei.hint.gold_pendant" : "A decorative accessory that can be used to craft Ice Pendants.",
 	"aether.jei.hint.iron_pendant" : "A decorative accessory that can be used to craft Ice Pendants.",
 	"aether.jei.hint.regeneration_stone" : "A magical stone that regenerates health passively when equipped. This effect stacks with other Regeneration Stones.",
-	"aether.jei.hint.iron_bubble" : "A magical trinket that allows the wearer to breathe underwater indefintely."
+	"aether.jei.hint.iron_bubble" : "A magical trinket that allows the wearer to breathe underwater indefintely.",
+	"aether.pro_tips.line.aether.gravitite_ore_enchanting": "Gravitite Ore can be mystified into Mystical Gravitite.",
+	"aether.pro_tips.line.aether.remedy_bucket_enchanting": "A Skyroot Remedy Bucket for poison can be obtained by mystifying poison.",
+	"gui.aether.jei.altar.enchanting": "Mystifying",
+	"block.aether.enchanted_aether_grass_block": "Mystical Aether Grass Block",
+	"block.aether.enchanted_gravitite": "Mystical Gravitite",
+	"entity.aether.enchanted_dart": "Mystical Dart",
+	"item.aether.enchanted_berry": "Mystical Berry",
+	"item.aether.enchanted_dart": "Mystical Dart",
+	"item.aether.enchanted_dart_shooter": "Mystical Dart Shooter",
+	"gui.aether.jei.ambrosium_enchanting": "Ambrosium Mystifying",
+	"lore.block.aether.enchanted_gravitite": "After putting Gravitite Ore into an Altar and mystifying it, you get Mystical Gravitite. This can be made into gravitite tools and armor. When powered with a redstone signal, Mystical Gravitite blocks will float into the air, similarly to Gravitite Ore.",
+	"lore.block.aether.quicksoil_glass": "After mystifying Quicksoil, you can get this tinted glass. It is slightly slippery and makes for a great window.",
+	"lore.item.aether.enchanted_dart": "The ammo for Mystical Dart Shooters. This is the strongest of the darts, made by mystifying Golden Darts.",
+	"lore.item.aether.golden_dart": "The ammo for Golden Dart Shooters. Crafted with Skyroot Sticks and Golden Amber, mystifying these converts them to Mystical Darts.",
+	"lore.item.aether.golden_dart_shooter": "A Dart Shooter that shoots Golden Darts; mystifying it on an Altar improves its attack power!",
+	"lore.item.aether.healing_stone": "Obtained from mystifying Holystone, it can be used as a reliable healing source, providing Regeneration. It has a surprisingly juicy flavor.",
+	"lore.item.aether.enchanted_dart_shooter": "A Dart Shooter that shoots Mystical Darts; the strongest one!",
+	"lore.block.aether.enchanted_aether_grass_block": "An Aether Grass Block that has been mystified to allow for increasing harvest rates of Blue Berries.",
+	"lore.block.aether.gravitite_ore": "This is the Aether's rarest ore. It has floating properties and will float upward when there is nothing above it. These can be mystified into Mystical Gravitite blocks."
 }

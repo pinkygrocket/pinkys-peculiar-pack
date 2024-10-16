@@ -1,0 +1,64 @@
+{
+  "values": [
+	{
+      "item": "minecraft:copper_ingot",
+      "range": 0
+    },
+	{
+      "item": "create:zinc_ingot",
+      "range": 0
+    },
+	{
+      "item": "create:brass_ingot",
+      "range": 5
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "range": 10
+    },
+	{
+      "item": "twilightforest:ironwood_ingot",
+      "range": 15
+    },
+    {
+      "item": "minecraft:gold_ingot",
+      "range": 20
+    },
+    {
+      "item": "minecraft:emerald",
+      "range": 25
+    },
+	{
+      "item": "twilightforest:steeleaf_ingot",
+      "range": 30
+    },
+	{
+      "item": "aether:enchanted_gravitite",
+      "range": 30
+    },
+	{
+      "item": "twilightforest:knightmetal_ingot",
+      "range": 35
+    },
+	{
+      "item": "twilightforest:carminite",
+      "range": 35
+    },
+    {
+      "item": "minecraft:diamond",
+      "range": 40
+    },
+	{
+      "item": "twilightforest:fiery_ingot",
+      "range": 50
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "range": 60
+    },
+	{
+      "item": "deep_aether:stratus_ingot",
+      "range": 60
+    }
+  ]
+}

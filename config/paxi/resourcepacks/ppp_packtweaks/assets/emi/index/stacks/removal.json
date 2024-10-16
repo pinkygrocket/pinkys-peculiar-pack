@@ -1,0 +1,6 @@
+{
+  "filters": [
+	"/items_displayed:.*(brick|ingot|trim|sherd|air|shard|upgrade|emerald).*/",
+	"cogsofcarminite:incomplete_gear_gadget"
+  ]
+}

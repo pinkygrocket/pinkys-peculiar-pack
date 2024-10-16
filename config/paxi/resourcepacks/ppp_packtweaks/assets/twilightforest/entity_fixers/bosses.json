@@ -1,0 +1,27 @@
+{
+	"twilightforest:hydra": {
+		"offset": 5,
+		"scale": 1.25
+	},
+	"twilightforest:naga" : {
+		"offset": 4
+	},
+	"twilightforest:alpha_yeti" : {
+		"offset": 5
+	},
+	"twilightforest:snow_queen" : {
+		"offset": 1
+	},
+	"twilightforest:lich" : {
+		"offset": 1,
+		"scale": 1.1
+	},
+	"twilightforest:minoshroom": {
+		"offset": 2,
+		"scale": 1.25
+	},
+	"twilightforest:ur_ghast": {
+		"offset": 5,
+		"scale": 0.8
+	}
+}
