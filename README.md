@@ -43,3 +43,5 @@ This pack also includes assets from some non-mod sources. Each source and its re
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/mosqutio/buzz1.ogg
 * [MOSQUITO](https://freesound.org/people/luchito_97.17/sounds/462408/) by luchito_97.17, licensed under CC-0.
     * config/paxi/resourcepacks/ppp_packtweaks/assets/twilightforest/sounds/mob/mosqutio/buzz2.ogg
+* [サバイバルホラー Survival Horror](https://shymnoiz.bandcamp.com/album/survival-horror) by [ShymNoiz](https://shymnoiz.bandcamp.com/). サバイバルホラー Survival Horror is licensed under All Rights Reserved; ShymNoiz has given permission for this pack to include thier music.
+    * config/paxi/resourcepacks/ppp_packtweaks/assets/witherstormmod/sounds/music
