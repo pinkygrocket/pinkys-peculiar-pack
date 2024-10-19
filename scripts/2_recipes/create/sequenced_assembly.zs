@@ -20,6 +20,7 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 /* Main script */
 
 // Intergration - Add custom recipe for the Formidibomb
+// We don't use an object for this as implementing sequenced assembly recipes are too long for an object.
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("seq_formidibomb")
  .transitionTo(<item:ppp_packtweaks:incomplete_formidibomb>)

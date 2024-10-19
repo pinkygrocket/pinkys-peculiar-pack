@@ -18,7 +18,7 @@
         ]
       }
     },
-	{
+    {
       "armor": [
         "minecraft:golden_helmet",
         "minecraft:golden_chestplate",
@@ -26,23 +26,12 @@
         "minecraft:golden_boots"
       ],
       "particle": {
-			"type" : "visuality:sparkle",
-			"value" : [
-				0.99607843,
-				1.0,
-				0.7411765
-			]
-		}
-    },
-	{
-      "armor": [
-        "twilightforest:fiery_helmet",
-        "twilightforest:fiery_chestplate",
-        "twilightforest:fiery_leggings",
-        "twilightforest:fiery_boots"
-      ],
-      "particle": {
-        "type": "minecraft:flame"
+        "type": "visuality:sparkle",
+        "value": [
+          0.99607843,
+          1.0,
+          0.7411765
+        ]
       }
     }
   ]

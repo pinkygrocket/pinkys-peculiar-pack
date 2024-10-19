@@ -16,7 +16,7 @@ import crafttweaker.forge.api.event.anvil.AnvilRepairEvent;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.data.IData;
 
-/* Variables */
+/* Objects */
 
 public class anvilRepairableItem {
 	
@@ -33,6 +33,10 @@ public class anvilRepairableItem {
 	}
 	
 }
+
+/* Variables */
+
+// Mostly just making items that aren't normally repairable (shields, paragliders, etc.) repairable.
 
 val REPAIRABLE_ITEMS as anvilRepairableItem[] = [
 	new anvilRepairableItem(<item:twilightforest:block_and_chain>, <item:twilightforest:knightmetal_ingot>),
@@ -62,6 +66,7 @@ events.register<crafttweaker.forge.api.event.anvil.AnvilUpdateEvent>(event => {
 			
 			// Repair penalty value set here follows the logic established by Better Anvils' config and not vanilla minecraft
 			// I.E. the scaling is linear, not exponential
+			// Currently this doens't work and doesn't print anything for some reason - will need to get further help
 			
 			var repairPenalty as int;
 			

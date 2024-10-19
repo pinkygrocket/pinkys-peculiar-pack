@@ -50,7 +50,7 @@ public class fletchingTableRecipeExtended {
 
 /* Variables */
 
-// Note here that Supplementaries' Rope Arrows are left out, as they use a "repair" esc-function and I want to avoid weirdness
+// Note here that Supplementaries' Rope Arrows are left out, as they use a "repair" esc-function and I want to avoid weirdness/working with NBT data
 
 val fletchingRecipes as fletchingTableRecipeExtended[] = [
 	new fletchingTableRecipeExtended(<item:xtraarrows:flint_ender_arrow>, [<item:minecraft:ender_pearl>, <tag:items:forge:rods/wooden>, <tag:items:forge:feathers>], true),

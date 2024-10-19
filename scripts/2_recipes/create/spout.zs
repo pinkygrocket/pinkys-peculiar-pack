@@ -51,11 +51,11 @@ public class spoutRecipeExtended {
 
 val SPOUT_ITEMS as spoutRecipeExtended[] = [
 	
-	// Intergration - Make Poison Darts craftable
+	// Intergration - Make Aether's Poison Darts craftable with Deep Aether's Poison fluid
 	
 	new spoutRecipeExtended(<item:aether:golden_dart>, <fluid:deep_aether:poison_fluid> * 125, <item:aether:poison_dart>),
 	
-	// Intergration
+	// Intergration - Make Firey metal tools "infusible" with Firey Blood
 	
 	new spoutRecipeExtended(<item:minecraft:iron_ingot>, <fluid:ppp_packtweaks:fiery_blood> * 100, <item:twilightforest:fiery_ingot>),
 	new spoutRecipeExtended(<item:minecraft:iron_block>, <fluid:ppp_packtweaks:fiery_blood> * 900, <item:twilightforest:fiery_block>),
@@ -67,17 +67,19 @@ val SPOUT_ITEMS as spoutRecipeExtended[] = [
 	new spoutRecipeExtended(<item:farmersdelight:iron_knife>, <fluid:ppp_packtweaks:fiery_blood> * 100,  <item:delightful:fiery_knife>),
 	new spoutRecipeExtended(<item:aether:iron_gloves>, <fluid:ppp_packtweaks:fiery_blood> * 200, <item:umbral_skies:fiery_gloves>),
 	
-	// Integration
+	// Integration - Allow filling of Aether's Skyroot Bucket
 	
 	new spoutRecipeExtended(<item:aether:skyroot_bucket>, <fluid:deep_aether:poison_fluid> * 1000, <item:aether:skyroot_poison_bucket>),
+	new spoutRecipeExtended(<item:aether:skyroot_bucket>, <fluid:minecraft:water> * 1000, <item:aether:skyroot_water_bucket>),
+	new spoutRecipeExtended(<item:aether:skyroot_bucket>, <fluid:minecraft:milk> * 1000, <item:aether:skyroot_milk_bucket>),
 	
-	// Moving a Create DD recipe	
+	// Gamefeel - Moving a Create DD recipe away from Seething
 	
 	new spoutRecipeExtended(<item:minecraft:netherrack>, <fluid:minecraft:lava> * 100, <item:minecraft:magma_block>),
 	
-	// Intergration
+	// Intergration - Allow Aether Dirt to convert into Grass Blocks
 	
-	new spoutRecipeExtended(<item:aether:aether_dirt>, <fluid:minecraft:lava> * 100, <item:aether:aether_grass_block>)
+	new spoutRecipeExtended(<item:aether:aether_dirt>, <fluid:minecraft:water> * 100, <item:aether:aether_grass_block>)
 ];
 
 // Remove Potion Bundles from Spout as it results in exploits

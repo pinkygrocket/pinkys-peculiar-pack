@@ -11,8 +11,11 @@ import crafttweaker.api.data.IData;
 import crafttweaker.util.NameUtil;
 
 /* Objects */
+// Note that for objects, all constants are defined in the object itself.
 
 public class freezingRecipeExtended {
+	
+	/* Object variables */
 	
 	public var name as string : get, set;
 	
@@ -22,7 +25,16 @@ public class freezingRecipeExtended {
 	public var experience as float : get, set;
 	public var replace as bool : get, set;
 	
-	/* Functions */
+	/* Object functions */
+	
+	public this(setOutput as IItemStack, setInput as IIngredient, setReplace as bool) {
+		
+		this.input = setInput;
+		this.output = setOutput;
+		this.duration = 800;
+		this.experience = 1.0;
+		
+	}
 	
 	public this(setOutput as IItemStack, setInput as IIngredient, setDuration as int, setExperience as float, setReplace as bool) {
 		
@@ -59,7 +71,7 @@ public class freezingRecipeExtended {
 		
 		<recipetype:aether:freezing>.addJsonRecipe(this.name + "_aether",  {
 			"type" : "aether:freezing",
-			"category": "freezable_misc",
+			"category": "freezable_misc", // Category is only relevant to the recipe book, which is removed in favor of JEI/EMI
 			"cookingtime" : this.duration,
 			"experience" : this.experience,
 			"ingredient" : this.input as IData,
