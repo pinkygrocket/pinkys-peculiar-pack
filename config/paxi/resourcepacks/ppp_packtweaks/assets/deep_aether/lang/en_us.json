@@ -6,5 +6,6 @@
 	"lore.block.deep_aether.sterling_aercloud": "This Aercloud is found way up high where it's hard to reach. When stepped on, lightning turns it into a Cold Aercloud. Can be mystified in an altar to become a Chromatic Aercloud.",
 	"lore.block.deep_aether.raw_clorite": "One of Aether's native rock types. Can be found in large chunks in the Aether. Can be used for decoration or mystified into Clorite.",
 	"block.deep_aether.enchanted_blossom": "Mystical Blossom",
-	"item.deep_aether.enchanted_antidote": "Mystical Antidote"
+	"item.deep_aether.enchanted_antidote": "Mystical Antidote",
+	"block.deep_aether.stripped_cruderoot_wood": "Stripped Cruderoot Wood"
 }

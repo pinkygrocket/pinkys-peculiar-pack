@@ -1,155 +1,16 @@
 /* Imports */
 
 import crafttweaker.api.tag.MCTag;
-import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.tag.type.KnownTag;
-import crafttweaker.api.block.Block;
-import crafttweaker.api.block.BlockState;
-import crafttweaker.api.world.biome.Biome;
-import crafttweaker.api.resource.ResourceLocation;
-import crafttweaker.api.entity.EntityType;
-import crafttweaker.api.fluid.Fluid;
-import crafttweaker.api.fluid.IFluidStack;
 import crafttweaker.api.tag.type.UnknownTag;
-import crafttweaker.api.mod.Mod;
-import crafttweaker.api.mod.Mods;
 import crafttweaker.api.tag.manager.ITagManager;
 
-import crafttweaker.api.item.ItemDefinition;
+import crafttweaker.api.world.biome.Biome;
+import crafttweaker.api.resource.ResourceLocation;
+
 import stdlib.List;
 
 /* Variables */
-
-val itemTagEntries as IItemStack[][KnownTag<ItemDefinition>] = {
-
-	// Aether
-	<tag:items:forge:milk> : [ <item:aether:skyroot_milk_bucket> ],
-	<tag:items:farmersdelight:serving_containers> : [ <item:ecologics:coconut_husk> ],
-	<tag:items:musicalfoxes:fox_can_play> : [ <item:endertrigon:dragon_horn>, <item:illagerinvasion:horn_of_sight> ],
-	// Quark - Prevent certain Xtra Arrows from being affected by multishot to prevent weird behavior, glitches or exploits
-	<tag:items:quark:ignore_multishot> : [ <item:xtraarrows:flint_ender_arrow>, <item:xtraarrows:flint_tracking_arrow>, <item:xtraarrows:golden_apple_arrow>, <item:xtraarrows:notch_apple_arrow>, <item:xtraarrows:leashing_arrow>, <item:xtraarrows:flint_magnetic_arrow>],
-	
-	// Twilight Forest - Intergration
-	
-	<tag:items:twilightforest:kobold_pacification_breads> : [ <item:delightful:cantaloupe_bread>, <item:upgrade_aquatic:mulberry_bread> ],
-	
-	// Things for custom recipes
-	
-	<tag:items:crafttweaker:maps> : [ <item:minecraft:map>, <item:minecraft:filled_map> ],
-	<tag:items:crafttweaker:adhesives> : [<item:minecraft:slime_ball>, <item:minecraft:honey_bottle>, <item:aether:swet_ball>],
-	<tag:items:crafttweaker:clouds> : [ <item:aether:cold_aercloud>, <item:aether:blue_aercloud>, <item:aether:golden_aercloud>, <item:twilightforest:wispy_cloud>, <item:twilightforest:fluffy_cloud>, <item:twilightforest:rainy_cloud>, <item:twilightforest:snowy_cloud>, <item:deep_aether:sterling_aercloud>, <item:deep_aether:chromatic_aercloud>],
-	<tag:items:crafttweaker:azalea_planks> : [ <item:quark:azalea_planks>, <item:ecologics:azalea_planks> ],
-	<tag:items:crafttweaker:torches> : [ <item:minecraft:torch>, <item:bambooeverything:dry_bamboo_torch>, <item:bambooeverything:bamboo_torch>, <item:bonetorch:bonetorch> ],
-	<tag:items:crafttweaker:hammers> : [ <item:justhammers:iron_impact_hammer>, <item:aether:hammer_of_kingbdogz> ],
-	//<tag:items:crafttweaker:vanilla_overworld_discs>: [],
-	<tag:items:crafttweaker:overworld_discs> : [ <item:integrated_stronghold:music_disc_sight>, <item:integrated_stronghold:music_disc_forlorn>, <item:ecologics:music_disc_coconut>, <item:idas:music_disc_calidum>, <item:idas:music_disc_slither>, <item:sullysmod:music_disc_scour>, <item:minecraft:music_disc_relic>, <item:minecraft:music_disc_otherside>, <item:upgrade_aquatic:music_disc_atlantis>, <item:minecraft:music_disc_5>, <item:minecraft:music_disc_wait>, <item:minecraft:music_disc_11>, <item:minecraft:music_disc_ward>, <item:minecraft:music_disc_strad>, <item:minecraft:music_disc_stal>, <item:minecraft:music_disc_mellohi>, <item:minecraft:music_disc_mall>, <item:minecraft:music_disc_far>, <item:minecraft:music_disc_chirp>, <item:minecraft:music_disc_blocks>, <item:minecraft:music_disc_cat>, <item:minecraft:music_disc_13>],
-	<tag:items:crafttweaker:aether_discs> : [ <item:lost_aether_content:music_disc_legacy>, <item:lost_aether_content:music_disc_sovereign_of_the_skies>, <item:deep_aether:music_disc_nabooru>, <item:deep_aether:music_disc_a_morning_wish>, <item:aether:music_disc_ascending_dawn>, <item:aether:music_disc_aether_tune> ],
-	//<tag:items:crafttweaker:twilight_forest_discs> : [],
-	//<tag:items:crafttweaker:nether_discs> : [],
-	
-	// Minecraft
-	/// Let Absent by Design wool blocks dampen vibrations
-	/// Make Piglins respond to some golden blocks/items added by other mods 
-	/// Add some more item types to tags
-	
-	<tag:items:minecraft:dampens_vibrations> : [<item:absentbydesign:stairs_wool_purple>, <item:absentbydesign:stairs_wool_red>, <item:absentbydesign:stairs_wool_silver>, <item:absentbydesign:stairs_wool_white>, <item:absentbydesign:stairs_wool_yellow>, <item:absentbydesign:slab_wool_black>, <item:absentbydesign:slab_wool_blue>, <item:absentbydesign:slab_wool_brown>, <item:absentbydesign:slab_wool_gray>, <item:absentbydesign:slab_wool_cyan>, <item:absentbydesign:slab_wool_green>, <item:absentbydesign:slab_wool_light_blue>, <item:absentbydesign:slab_wool_lime>, <item:absentbydesign:slab_wool_magenta>, <item:absentbydesign:stairs_wool_blue>, <item:absentbydesign:stairs_wool_black>, <item:absentbydesign:slab_wool_yellow>, <item:absentbydesign:slab_wool_white>, <item:absentbydesign:slab_wool_silver>, <item:absentbydesign:slab_wool_red>, <item:absentbydesign:slab_wool_purple>, <item:absentbydesign:slab_wool_pink>, <item:absentbydesign:slab_wool_orange>, <item:absentbydesign:stairs_wool_brown>, <item:absentbydesign:stairs_wool_cyan>, <item:absentbydesign:stairs_wool_gray>, <item:absentbydesign:stairs_wool_green>, <item:absentbydesign:stairs_wool_light_blue>, <item:absentbydesign:stairs_wool_lime>, <item:absentbydesign:stairs_wool_magenta>, <item:absentbydesign:stairs_wool_orange>, <item:absentbydesign:stairs_wool_pink> ],
-	<tag:items:minecraft:piglin_loved> : [ <item:goldenhopper:golden_hopper_minecart>, <item:telepass:gold_telepass>, <item:absentbydesign:slab_gold>, <item:absentbydesign:slab_raw_gold>, <item:absentbydesign:stairs_gold>, <item:absentbydesign:stairs_raw_gold>, <item:absentbydesign:wall_gold>, <item:absentbydesign:wall_raw_gold>, <item:aether_protect_your_moa:golden_moa_armor>, <item:packedup:gold_pallet>, <item:packedup:golden_apple_basket>, <item:packedup:golden_carrot_crate>, <item:packedup:raw_gold_crate>, <item:crittersandcompanions:gold_dragonfly_armor>, <item:leathered_boots:leathered_gold_boots>, <item:goldenhopper:golden_hopper> ],
-	<tag:items:minecraft:beacon_payment_items> : [ <item:twilightforest:fiery_ingot>, <item:twilightforest:knightmetal_ingot>, <item:twilightforest:ironwood_ingot>, <item:deep_aether:stratus_ingot>, <item:aether:enchanted_gravitite>, <item:twilightforest:steeleaf_ingot>, <item:twilightforest:carminite>],
-	
-	// Exposure - Set up custom filters
-	
-	<tag:items:exposure:filters> : [ <item:witherstormmod:tainted_glass_pane>, <item:endermanoverhaul:corrupted_pearl>, <item:endermanoverhaul:ancient_pearl>, <item:minecraft:ender_pearl>, <item:endermanoverhaul:warped_pearl>, <item:endermanoverhaul:icy_pearl>, <item:endermanoverhaul:bubble_pearl>, <item:endermanoverhaul:crimson_pearl>, <item:endermanoverhaul:soul_pearl>, <item:endermanoverhaul:summoner_pearl>, <item:aether:quicksoil_glass_pane>, <item:tflostblocks:auroralized_glass_pane> ]
-};
-
-val blockTagEntries as Block[][KnownTag<Block>] = {
-	// Create Dreams and Desires - Set up custom catalysts for bulk processing
-	
-	<tag:blocks:create_dd:fan_processing_catalysts/seething> : [ <block:deep_aether:chromatic_aercloud> ],
-	<tag:blocks:create_dd:fan_processing_catalysts/freezing> : [ <block:ascended_quark:polished_icestone> ],
-	<tag:blocks:create_dd:fan_processing_catalysts/sanding> : [ <block:minecraft:sand>, <block:minecraft:red_sand>, <block:mysticsbiomes:lush_sand> ],
-	<tag:blocks:crafttweaker:clouds> : [ <block:aether:cold_aercloud>, <block:aether:blue_aercloud>, <block:aether:golden_aercloud>, <block:twilightforest:wispy_cloud>, <block:twilightforest:fluffy_cloud>, <block:twilightforest:rainy_cloud>, <block:twilightforest:snowy_cloud>, <block:deep_aether:sterling_aercloud>, <block:deep_aether:chromatic_aercloud>],
-	<tag:blocks:crafttweaker:mushrooms> : [ <block:minecraft:brown_mushroom_block>, <block:minecraft:red_mushroom_block>, <block:minecraft:mushroom_stem> ],
-	<tag:blocks:farmersdelight:mineable/knife> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ],
-	<tag:blocks:minecraft:occludes_vibration_signals> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ],
-	<tag:blocks:minecraft:dampens_vibrations> : [<block:absentbydesign:stairs_wool_purple>, <block:absentbydesign:stairs_wool_red>, <block:absentbydesign:stairs_wool_silver>, <block:absentbydesign:stairs_wool_white>, <block:absentbydesign:stairs_wool_yellow>, <block:absentbydesign:slab_wool_black>, <block:absentbydesign:slab_wool_blue>, <block:absentbydesign:slab_wool_brown>, <block:absentbydesign:slab_wool_gray>, <block:absentbydesign:slab_wool_cyan>, <block:absentbydesign:slab_wool_green>, <block:absentbydesign:slab_wool_light_blue>, <block:absentbydesign:slab_wool_lime>, <block:absentbydesign:slab_wool_magenta>, <block:absentbydesign:stairs_wool_blue>, <block:absentbydesign:stairs_wool_black>, <block:absentbydesign:slab_wool_yellow>, <block:absentbydesign:slab_wool_white>, <block:absentbydesign:slab_wool_silver>, <block:absentbydesign:slab_wool_red>, <block:absentbydesign:slab_wool_purple>, <block:absentbydesign:slab_wool_pink>, <block:absentbydesign:slab_wool_orange>, <block:absentbydesign:stairs_wool_brown>, <block:absentbydesign:stairs_wool_cyan>, <block:absentbydesign:stairs_wool_gray>, <block:absentbydesign:stairs_wool_green>, <block:absentbydesign:stairs_wool_light_blue>, <block:absentbydesign:stairs_wool_lime>, <block:absentbydesign:stairs_wool_magenta>, <block:absentbydesign:stairs_wool_orange>, <block:absentbydesign:stairs_wool_pink> ]
-};
-
-val fluidTagEntries as IFluidStack[][KnownTag<Fluid>] = {
-	# <tag:fluids:aether:allowed_bucket_pickup> : [],
-	<tag:fluids:twilightforest:fire_jet_fuel> : [ <fluid:ppp_packtweaks:fiery_blood> ],
-	<tag:fluids:create:bottomless/deny>: [ <fluid:ppp_packtweaks:fiery_blood> ]
-};
-
-// Currently this doesn't do anything, but I'm keeping this for the future in case F&F adds support for other beehives.
-
-val professionTagEntries as ResourceLocation[][UnknownTag] = {
-	<tag:point_of_interest_type:minecraft:acquirable_job_site> : [ <resource:everycomp:faf_beehive>, <resource:betterbeekeeping:mod_beehive> ],
-	<tag:point_of_interest_type:minecraft:village> : [ <resource:everycomp:faf_beehive>, <resource:betterbeekeeping:mod_beehive> ]
-};
-
-val resourcesEntries as ResourceLocation[][KnownTag<EntityType>] = {
-
-	// Aether
-	///	Enable the Wither Storm to ignore Aether invisiblity
-	/// Prevent Skyroot tools from affecting boss drops
-	/// Make sure Farmlife entities are treated as Aether entities
-	<tag:entity_types:aether:ignore_invisibility> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	
-	//<tag:entity_types:aether:whirlwind_unaffected> : [],
-	<tag:entity_types:aether:no_skyroot_double_drops> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	//<tag:entity_types:aether:treated_as_aether_entity> : [],
-	
-	# Delightful
-	//<tag:entity_types:delightful:fatty_animals> : [],
-	//<tag:entity_types:delightful:drops_acorn> : [],
-	
-	# Ecologics
-	<tag:entity_types:ecologics:penguin_hunt_targets> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
-	
-	// Enderman Overhaul
-	/// Prevent teleportation of boss mobs from Aether, Twilight Forest, Wither Storm, and some non-mob entities
-	
-	<tag:entity_types:endermanoverhaul:cant_be_teleported> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king>, <resource:witherstormmod:withered_symbiont>, <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	
-	# Friends and Foes
-	//<tag:entity_types:friendsandfoes:mauler_prey> : [],
-	
-	# Forge
-	
-	### Register Wither Storm as a boss
-	<tag:entity_types:forge:bosses> : [ <resource:witherstormmod:wither_storm> ],
-	
-	
-	### Register Baby Fat and Critters and Companions mobs as fish
-	<tag:entity_types:forge:fishes> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
-	
-	# Minecraft
-	<tag:entity_types:minecraft:axolotl_hunt_targets> : [ <resource:babyfat:ranchu>, <resource:crittersandcompanions:koi_fish> ],
-	<tag:entity_types:minecraft:freeze_immune_entity_types> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	// <tag:entity_types:minecraft:powder_snow_walkable_mobs> : [],
-	
-	# Nullscape
-	
-	### Prevent teleportation of boss mobs from Aether, Twilight Forest and Wither Storm
-	<tag:entity_types:nullscape:not_teleportable> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king>, <resource:witherstormmod:withered_symbiont>, <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	
-	# Sully's Mod - Make tortises scared of bosses from Aether, Twilight Forest and Wither Storm
-	//<tag:entity_types:sullysmod:attacks_baby_tortoises> : [],
-	<tag:entity_types:sullysmod:scares_tortoises> : [ <resource:witherstormmod:wither_storm>, <resource:witherstormmod:wither_storm_head>, <resource:witherstormmod:wither_storm_segment> ],
-	
-	// Twilight Forest
-	/// Make cats and wolves sortable per Chested Companions
-	
-	<tag:entity_types:twilightforest:sortable_entities>: [ <resource:minecraft:cat>, <resource:minecraft:wolf> ],
-	
-	// Wither Storm Mod
-	/// Prevent Wither Sickness from affecting bosses from Aether and Twilight Forest, causes issues
-	/// Prevent the Wither Storm from targeting bosses from Aether and Twilight Forest, causes issues
-	
-	<tag:entity_types:witherstormmod:wither_sickness_immune> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king> ],
-	<tag:entity_types:witherstormmod:wither_storm_targeting_blacklist> : [ <resource:twilightforest:alpha_yeti>, <resource:twilightforest:hydra>, <resource:twilightforest:knight_phantom>, <resource:twilightforest:lich>, <resource:twilightforest:minoshroom>, <resource:twilightforest:naga>, <resource:twilightforest:plateau_boss>, <resource:twilightforest:snow_queen>, <resource:twilightforest:ur_ghast>, <resource:aether:valkyrie_queen>, <resource:aether:slider>, <resource:aether:sun_spirit>, <resource:lost_aether_content:aerwhale_king> ]
-	
-};
 
 val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	# Aether - Add support for Mystic's Biomes
@@ -392,44 +253,11 @@ val worldgenTagsToClear as KnownTag<Worldgen>[] = [
 	<tag:worldgen/biome:dungeons_arise:has_structure/mechanical_nest_biomes>
 ];
 
-val blockTagsToClear as KnownTag<Block>[] = [
-	
-	# Create Dreams and Desires - Ensure only specified blocks can perform seething, freezing and sanding
-	<tag:blocks:create_dd:fan_processing_catalysts/seething>,
-	<tag:blocks:create_dd:fan_processing_catalysts/freezing>,
-	<tag:blocks:create_dd:fan_processing_catalysts/sanding>
-	
-];
-
 /* Main script */
-
-for tagEntry in blockTagsToClear {
-
-	tagEntry.clear();
-	
-}
 
 for tagEntry in worldgenTagsToClear {
 
 	tagEntry.clear();
-	
-}
-
-for tagEntry, itemList in itemTagEntries {
-	
-	tagEntry.add(itemList);
-	
-}
-
-for tagEntry, blockList in blockTagEntries {
-	
-	tagEntry.add(blockList);
-	
-}
-
-for tagEntry, poiList in professionTagEntries {
-	
-	tagEntry.addId(poiList);
 	
 }
 
@@ -440,43 +268,5 @@ for tagEntry, biomeList in worldgenTagEntries {
 		tagEntry.addId(biome);
 		
 	}
-	
-}
-
-for tagEntry, entityList in resourcesEntries {
-	
-	tagEntry.addId(entityList);
-	
-}
-
-// EMI is weird and likes to show tags for mods that aren't in the game, creating bloat.
-// This script clears tags from mods that aren't in the game.
-// Since it only runs on world load, this should't break datapacks or users adding mods.
-
-for managerEntry in <tagmanager:items>.tags {
-
-	var managerModID = managerEntry.id.namespace;
-	
-	if(loadedMods.isModLoaded(managerModID) || managerModID == "c" || managerModID == "items_displayed" || managerModID == "ppp_packtweaks") {
-		
-		for itemEntry in managerEntry.idElements {
-		
-			var itemModID = itemEntry.namespace;
-		
-			if(loadedMods.isModLoaded(itemModID) || itemModID == "ppp_packtweaks") {
-		
-			} else {
-		
-				<tagmanager:items>.removeId(managerEntry, itemEntry);
-			
-			}
-		
-		}
-	
-	} else {
-		
-		managerEntry.clear();
-	}
-
 	
 }

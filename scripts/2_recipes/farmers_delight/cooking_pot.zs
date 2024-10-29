@@ -96,3 +96,8 @@ val COOKING_RECIPES as cookingRecipeExtended[] = [
 
 /* Main script */
 
+for entry in COOKING_RECIPES {
+	
+	entry.registerRecipe();
+	
+}

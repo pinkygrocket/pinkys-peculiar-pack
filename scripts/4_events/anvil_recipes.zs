@@ -53,7 +53,10 @@ val REPAIRABLE_ITEMS as anvilRepairableItem[] = [
 	new anvilRepairableItem(<item:lost_aether_content:gravitite_shield>, <item:aether:enchanted_gravitite>),
 	new anvilRepairableItem(<item:paraglider:paraglider>, <item:minecraft:leather>),
 	new anvilRepairableItem(<item:sculkhornid:sculkhorn>, <item:minecraft:echo_shard>),
-	new anvilRepairableItem(<item:sculkhornid:sculkhorn_sonicboom>, <item:minecraft:echo_shard>)
+	new anvilRepairableItem(<item:sculkhornid:sculkhorn_sonicboom>, <item:minecraft:echo_shard>),
+	new anvilRepairableItem(<item:illagerinvasion:platinum_infused_hatchet>, <item:illagerinvasion:platinum_sheet>),
+	new anvilRepairableItem(<item:paraglider:deku_leaf>, <item:minecraft:leather>),
+	new anvilRepairableItem(<item:farmersdelight:skillet>, <item:minecraft:iron_ingot>)
 ];
 
 /* Main script */

@@ -18,6 +18,8 @@ import crafttweaker.api.item.ItemDefinition;
 import mods.jeitweaker.Jei;
 import mods.jeitweaker.ingredient.JeiIngredient;
 
+import crafttweaker.api.text.Component;
+
 /* Variables */
 
 /* 	We use a plain array for removing items, and no regexs, for a couple of compatability reasons with EMI.
@@ -536,6 +538,11 @@ val completeItemRemovalByItem as IItemStack[] = [
 	<item:create_dd:incomplete_calculation_mechanism>,
 	<item:create_dd:incomplete_infernal_mechanism>,
 	<item:create_dd:incomplete_sealed_mechanism>,
+	<item:create_dd:light_gray_padded_tiled_rubber>,
+	<item:create_dd:light_gray_padded_rubber>,
+	<item:create_dd:light_gray_padded_rubber_stairs>,
+	<item:create_dd:light_gray_padded_rubber_slab>,
+	<item:create_dd:light_gray_padded_mosaic_rubber>,
 	<item:v_slab_compat:create_dd/yellow_padded_rubber_vertical_slab>,
 	<item:v_slab_compat:create_dd/pink_padded_rubber_vertical_slab>,
 	<item:v_slab_compat:create_dd/raw_padded_rubber_vertical_slab>,
@@ -562,6 +569,22 @@ val completeItemRemovalByItem as IItemStack[] = [
 	<item:v_slab_compat:create_dd/cut_dolomite_brick_vertical_slab>,
 	<item:v_slab_compat:create_dd/small_dolomite_brick_vertical_slab>,
 	<item:v_slab_compat:create_dd/polished_cut_dolomite_vertical_slab>,
+	<item:create_dd:black_blueprint_block>,
+	<item:create_dd:blueprint_block>,
+	<item:create_dd:brown_blueprint_block>,
+	<item:create_dd:cyan_blueprint_block>,
+	<item:create_dd:gray_blueprint_block>,
+	<item:create_dd:green_blueprint_block>,
+	<item:create_dd:light_blueprint_block>,
+	<item:create_dd:light_gray_blueprint_block>,
+	<item:create_dd:lime_blueprint_block>,
+	<item:create_dd:magenta_blueprint_block>,
+	<item:create_dd:orange_blueprint_block>,
+	<item:create_dd:pink_blueprint_block>,
+	<item:create_dd:purple_blueprint_block>,
+	<item:create_dd:red_blueprint_block>,
+	<item:create_dd:white_blueprint_block>,
+	<item:create_dd:yellow_blueprint_block>,
 	
 	// Every Comp - Some overlap
 	
@@ -680,7 +703,8 @@ for input in completeItemRemovalByItem {
 	
 	
 	<tag:items:c:hidden_from_recipe_viewers>.add(input);
+	input.addTooltip("Disabled for Pinky's Peculiar Pack");
 	
 }
 
-//<recipetype:witherstormmod:anvil>.removeAll();
+<recipetype:witherstormmod:anvil>.removeAll();

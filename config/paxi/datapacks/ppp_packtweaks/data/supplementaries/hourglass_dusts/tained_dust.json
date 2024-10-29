@@ -1,0 +1,6 @@
+{
+  "items": ["witherstormmod:tainted_dust"],
+  "duration": 400,
+  "light_level": 4,
+  "texture":  "supplementaries:block/hourglass_redstone"
+}
