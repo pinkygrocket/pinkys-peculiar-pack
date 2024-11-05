@@ -43,10 +43,10 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	
 	# When Dungeons Arise - Add Aether and Twilight Forest support
 	<tag:worldgen/biome:dungeons_arise:has_structure/lighthouse_biomes> : [ <resource:minecraft:beach>, <resource:minecraft:snowy_beach> ],
-	<tag:worldgen/biome:dungeons_arise:has_structure/giant_mushroom_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
-	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_house_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
-	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_mines_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
-	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_village_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/giant_mushroom_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest>,  <resource:twilightforest:mushroom_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_house_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest>,  <resource:twilightforest:mushroom_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_mines_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest>,  <resource:twilightforest:mushroom_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills> ],
+	<tag:worldgen/biome:dungeons_arise:has_structure/mushroom_village_biomes> : [ <resource:twilightforest:dense_mushroom_forest>, <resource:twilightforest:mushroom_forest>,  <resource:twilightforest:mushroom_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills> ],
 	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_challenger_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
 	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_conqueror_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
 	<tag:worldgen/biome:dungeons_arise:has_structure/heavenly_rider_biomes> : [ <resource:deep_aether:aerglow_forest>, <resource:deep_aether:aerlavender_fields>, <resource:deep_aether:blue_aerglow_forest>, <resource:deep_aether:golden_grove>, <resource:deep_aether:golden_heights>, <resource:deep_aether:mystic_aerglow_forest>, <resource:aether:skyroot_forest>, <resource:aether:skyroot_grove>, <resource:aether:skyroot_meadow>, <resource:aether:skyroot_woodland>, <resource:deep_aether:yagroot_swamp> ],
@@ -112,8 +112,12 @@ val worldgenTagEntries as ResourceLocation[][KnownTag<Worldgen>] = {
 	<tag:worldgen/biome:minecraft:spawns_cold_variant_frogs> : [ <resource:twilightforest:mountains> ],
 	<tag:worldgen/biome:minecraft:spawns_snow_foxes> : [ <resource:twilightforest:mountains> ],
 	
-	# Twilight Forest - Add custom Mountains biome
-	<tag:worldgen/biome:twilightforest:in_twilight_forest> : [ <resource:twilightforest:mountains> ],
+	# Twilight Forest - Add custom biomes
+	<tag:worldgen/biome:twilightforest:in_twilight_forest> : [ <resource:twilightforest:mountains>, <resource:twilightforest:forest_hills>, <resource:twilightforest:dense_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills>, <resource:twilightforest:firefly_forest_hills>, <resource:twilightforest:mushroom_forest_hills> ],
+	<tag:worldgen/biome:twilightforest:valid_hollow_hill_biomes> : [ <resource:twilightforest:forest_hills>, <resource:twilightforest:dense_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills>, <resource:twilightforest:firefly_forest_hills>, <resource:twilightforest:mushroom_forest_hills> ],
+	<tag:worldgen/biome:twilightforest:valid_lich_tower_biomes> : [ <resource:twilightforest:forest_hills>, <resource:twilightforest:dense_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills>, <resource:twilightforest:firefly_forest_hills>, <resource:twilightforest:mushroom_forest_hills> ],
+	<tag:worldgen/biome:twilightforest:valid_naga_courtyard_biomes> : [ <resource:twilightforest:forest_hills>, <resource:twilightforest:dense_forest_hills>, <resource:twilightforest:dense_mushroom_forest_hills>, <resource:twilightforest:firefly_forest_hills>, <resource:twilightforest:mushroom_forest_hills> ],
+	<tag:worldgen/biome:twilightforest:valid_mushroom_tower_biomes> : [ <resource:twilightforest:dense_mushroom_forest_hills> ],
 	
 	# YUNG's Bridges - Allow YUNG's Bridges to generate in the Twilight Forest
 	<tag:worldgen/biome:yungsbridges:has_structure/bridge> : [ <resource:twilightforest:stream> ],

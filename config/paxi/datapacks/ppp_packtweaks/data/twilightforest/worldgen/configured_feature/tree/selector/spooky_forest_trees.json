@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "twilightforest:tree/dead_canopy_tree",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:tree/twilight_oak_tree",
+          "placement": []
+        }
+      },
+	  {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:tree/red_maple_tree",
+          "placement": []
+        }
+      },
+	  {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:tree/orange_maple_tree",
+          "placement": []
+        }
+      },
+	  {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:tree/yellow_maple_tree",
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.01,
+        "feature": {
+          "feature": "twilightforest:tree/large_twilight_oak_tree",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

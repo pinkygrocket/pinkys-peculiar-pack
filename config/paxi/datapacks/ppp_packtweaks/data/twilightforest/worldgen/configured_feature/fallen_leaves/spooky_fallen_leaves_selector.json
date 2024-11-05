@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "twilightforest:fallen_leaves",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:fallen_leaves/orange_maple_fallen_leaves",
+          "placement": []
+        }
+      },
+	  {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:fallen_leaves/red_maple_fallen_leaves",
+          "placement": []
+        }
+      },
+	  {
+        "chance": 0.1,
+        "feature": {
+          "feature": "twilightforest:fallen_leaves/yellow_maple_fallen_leaves",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

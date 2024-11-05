@@ -1,0 +1,787 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:red_tulip"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:red_tulip_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:red_tulip_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:red_tulip_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:orange_tulip"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:orange_tulip_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:orange_tulip_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:orange_tulip_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:pink_tulip"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:pink_tulip_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:pink_tulip_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:pink_tulip_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:white_tulip"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:white_tulip_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:white_tulip_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:white_tulip_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:dandelion"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:dandelion_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:dandelion_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:dandelion_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:poppy"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:poppy_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:poppy_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:poppy_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:oxeye_daisy"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:oxeye_daisy_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:oxeye_daisy_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:oxeye_daisy_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:cornflower"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:cornflower_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:cornflower_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:cornflower_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:lily_of_the_valley"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:lily_of_the_valley_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:lily_of_the_valley_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:lily_of_the_valley_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:blue_orchid"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:blue_orchid_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:blue_orchid_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:blue_orchid_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:allium"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:allium",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:allium",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:allium",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      },
+	  {
+        "feature": {
+          "type": "minecraft:random_patch",
+          "config": {
+            "feature": {
+              "feature": {
+                "type": "minecraft:simple_block",
+                "config": {
+                  "to_place": {
+                    "type": "minecraft:weighted_state_provider",
+					"entries": [
+						{
+							"weight": 8,
+							"data": {
+								"Name": "minecraft:azure_bluet"
+							}
+						},
+						{
+							"weight": 4,
+							"data": {
+								"Name": "flowerpatch:azure_bluet_patch",
+								"Properties": {
+									"flowers": "2"
+								}
+							}
+						},
+						{
+							"weight": 2,
+							"data": {
+								"Name": "flowerpatch:azure_bluet_patch",
+								"Properties": {
+									"flowers": "3"
+								}
+							}
+						},
+						{
+							"weight": 1,
+							"data": {
+								"Name": "flowerpatch:azure_bluet_patch",
+								"Properties": {
+									"flowers": "4"
+								}
+							}
+						}
+					]
+                  }
+                }
+              },
+              "placement": [
+                {
+                  "type": "minecraft:block_predicate_filter",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            "tries": 48,
+            "xz_spread": 7,
+            "y_spread": 3
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

@@ -15,7 +15,11 @@
 													"twilightforest:dense_forest",
 													"twilightforest:mushroom_forest",
 													"twilightforest:oak_savannah",
-													"twilightforest:firefly_forest"
+													"twilightforest:firefly_forest",
+													"twilightforest:forest_hills",
+													"twilightforest:dense_forest_hills",
+													"twilightforest:mushroom_forest_hills",
+													"twilightforest:firefly_forest_hills"
 												],
 												"layer_type": "twilightforest:random_biomes",
 												"rare_biome_chance": 15,
@@ -24,7 +28,8 @@
 													"twilightforest:dense_mushroom_forest",
 													"twilightforest:enchanted_forest",
 													"twilightforest:clearing",
-													"twilightforest:spooky_forest"
+													"twilightforest:spooky_forest",
+													"twilightforest:dense_mushroom_forest_hills"
 												],
 												"salt": 1
 											},

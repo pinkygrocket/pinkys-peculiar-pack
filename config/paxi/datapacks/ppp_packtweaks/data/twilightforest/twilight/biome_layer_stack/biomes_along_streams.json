@@ -21,6 +21,30 @@
           "twilightforest:mushroom_forest",
           "twilightforest:dense_mushroom_forest"
         ],
+		[
+          "twilightforest:mushroom_forest",
+          "twilightforest:dense_mushroom_forest_hills"
+        ],
+		[
+          "twilightforest:mushroom_forest",
+          "twilightforest:mushroom_forest_hills"
+        ],
+		[
+			"twilightforest:dense_mushroom_forest",
+			"twilightforest:dense_mushroom_forest_hills"
+		],
+		[
+			"twilightforest:firefly_forest",
+			"twilightforest:firefly_forest_hills"
+		],
+		[
+			"twilightforest:dense_forest",
+			"twilightforest:dense_forest_hills"
+		],
+		[
+			"twilightforest:forest",
+			"twilightforest:forest_hills"
+		],
         [
           "twilightforest:swamp",
           "twilightforest:fire_swamp"

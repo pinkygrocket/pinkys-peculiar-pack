@@ -77,6 +77,51 @@
             "key_biome": "twilightforest:dense_forest",
             "scale": 1.0
           },
+		  {
+            "biome_layers": {
+              "-1.0": "twilightforest:dense_forest_hills",
+              "-3.0": "twilightforest:underground"
+            },
+            "depth": 1.0,
+            "key_biome": "twilightforest:dense_forest_hills",
+            "scale": 1.75
+          },
+		  {
+            "biome_layers": {
+              "-1.0": "twilightforest:mushroom_forest_hills",
+              "-3.0": "twilightforest:underground"
+            },
+            "depth": 1.0,
+            "key_biome": "twilightforest:mushroom_forest_hills",
+            "scale": 1.75
+          },
+		  {
+            "biome_layers": {
+              "-1.0": "twilightforest:dense_mushroom_forest_hills",
+              "-3.0": "twilightforest:underground"
+            },
+            "depth": 1.0,
+            "key_biome": "twilightforest:dense_mushroom_forest_hills",
+            "scale": 1.75
+          },
+		  {
+            "biome_layers": {
+              "-1.0": "twilightforest:firefly_forest_hills",
+              "-3.0": "twilightforest:underground"
+            },
+            "depth": 1.0,
+            "key_biome": "twilightforest:firefly_forest_hills",
+            "scale": 1.75
+          },
+		  {
+            "biome_layers": {
+              "-1.0": "twilightforest:forest_hills",
+              "-3.0": "twilightforest:underground"
+            },
+            "depth": 1.0,
+            "key_biome": "twilightforest:forest_hills",
+            "scale": 1.75
+          },
           {
             "biome_layers": {
               "-1.0": "twilightforest:dense_mushroom_forest",

@@ -25,7 +25,7 @@ import mods.createtweaker.SequencedAssemblyRecipeBuilder;
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("seq_formidibomb")
  .transitionTo(<item:ppp_packtweaks:incomplete_formidibomb>)
  .require(<item:witherstormmod:super_tnt>)
- .addOutput(<item:witherstormmod:formidibomb>, 900.0)
+ .addOutput(<item:witherstormmod:formidibomb>, 1800.0)
  .addOutput(<item:witherstormmod:command_block_book>, 80.0)
  .addOutput(<item:create:precision_mechanism>, 3.75)
  .addOutput(<item:cogsofcarminite:knightmetal_sheet>, 3.75)
